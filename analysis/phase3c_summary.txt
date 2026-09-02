@@ -1,0 +1,16 @@
+Phase 3C data-only expansion summary
+====================================
+Previous enriched species: 90
+Newly enriched species: 31
+Total enriched species after patch: 121
+Previous populated trait cells: 705
+New populated trait cells: 230
+Total populated trait cells after patch: 935
+Provenance records after patch: 935
+
+Design notes:
+- No Prolog, backend, tests, package.json, or generator files are included.
+- No measurements are exposed as questions.
+- Traits remain simple sighting/photo observations.
+- This batch deliberately broadens bats, squirrels/flying squirrels, bamboo rats, shrews/mole-shrews, and lagomorphs.
+- Uncertain or highly variable visual characteristics remain blank.

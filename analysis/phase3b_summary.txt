@@ -1,0 +1,10 @@
+Phase 3B Data Expansion Summary
+==============================
+Base enriched species: 75
+Newly enriched species: 15
+Total enriched species: 90
+New populated trait cells: 107
+Total populated trait cells: 705
+Total provenance records: 705
+
+This patch does not include or modify Prolog files. Regenerate Prolog knowledge after merging.

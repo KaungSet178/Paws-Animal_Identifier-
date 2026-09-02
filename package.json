@@ -1,0 +1,31 @@
+{
+  "name": "myanmar-mammal-expert-system",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Phase 3 reasoning-readiness and trait-discrimination analysis for the Myanmar mammal expert system.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "enrich:mammals": "node scripts/enrichMammalTaxonomy.js",
+    "init:traits": "node scripts/initializeMammalTraits.js",
+    "prepare:data": "npm run enrich:mammals && npm run init:traits",
+    "validate:mammals": "node scripts/validateMammalMasterDataset.js",
+    "validate:trait-schema": "node scripts/validateTraitSchema.js",
+    "validate:traits": "node scripts/validateMammalTraits.js",
+    "validate:questions": "node scripts/validateQuestionSchema.js",
+    "validate:data": "npm run validate:mammals && npm run validate:trait-schema && npm run validate:traits && npm run validate:questions",
+    "report:coverage": "node scripts/reportTraitCoverage.js",
+    "analyze:discrimination": "node scripts/analyzeTraitDiscrimination.js",
+    "generate:prolog": "node scripts/generatePrologKnowledge.js",
+    "validate:prolog": "npm run generate:prolog && node scripts/validatePrologKnowledge.js",
+    "test:prolog": "npm run generate:prolog && node test/prologReasoning.test.js",
+    "backend:dev": "npm --prefix backend run dev",
+    "backend:start": "npm --prefix backend start",
+    "backend:test": "npm --prefix backend test"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0",
+    "csv-stringify": "^6.6.0"
+  }
+}

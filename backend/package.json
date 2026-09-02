@@ -1,0 +1,21 @@
+{
+  "name": "myanmar-mammal-expert-system-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express REST API for the Myanmar Mammal Expert System Prolog engine.",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^6.2.1",
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1"
+  }
+}

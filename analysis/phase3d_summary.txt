@@ -1,0 +1,18 @@
+Phase 3D targeted discriminator summary
+---------------------------------------
+Covered species: 121
+Species-ready: 97
+Need one/two extra discriminators: 24
+Insufficient current traits: 0
+Exact profile collision groups: 1
+Populated trait cells: 958
+Provenance records: 958
+Invalid enum values: 0
+Missing/duplicate provenance: 0
+
+Remaining exact collision:
+- Petaurista elegans
+- Petaurista philippensis
+
+Notable corrected value:
+- Megaerops niphanae bat_tail_visibility: no_tail_visible -> tail_within_membrane

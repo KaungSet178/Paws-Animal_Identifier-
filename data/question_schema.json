@@ -1,0 +1,510 @@
+{
+  "version": "0.4.0",
+  "policy": {
+    "selection": "adaptive_information_gain_with_weighted_discrimination",
+    "fixed_category_selection": false,
+    "unknown_answer": "unknown",
+    "unknown_effect": "neutral",
+    "no_measurement_questions": true,
+    "ask_only_if_visible_or_relevant": true,
+    "prefer_easy_high_weight_questions": true,
+    "technical_anatomy_should_be_avoided_or_visually_explained": true,
+    "species_level_result_not_forced": true
+  },
+  "opening_pool": [
+    "body_covering",
+    "body_form",
+    "movement_seen",
+    "observation_place",
+    "body_size_impression"
+  ],
+  "general_followup_pool": [
+    "tail_impression",
+    "primary_color",
+    "body_pattern",
+    "ear_size_impression",
+    "snout_shape_simple",
+    "leg_foot_appearance",
+    "time_seen"
+  ],
+  "specialized_pools": {
+    "Chiroptera": [
+      "bat_nose_shape",
+      "ear_size_impression",
+      "ear_shape_simple",
+      "bat_tail_visibility",
+      "primary_color",
+      "observation_place"
+    ],
+    "Rodentia": [
+      "rodent_tail_type",
+      "quills_or_spines_visible",
+      "gliding_membrane_visible",
+      "body_pattern",
+      "ear_size_impression",
+      "observation_place"
+    ],
+    "Primates": [
+      "tail_impression",
+      "primate_face_marking",
+      "primary_color",
+      "body_pattern",
+      "observation_place",
+      "primate_brow_pattern"
+    ],
+    "Carnivora": [
+      "body_form",
+      "body_pattern",
+      "carnivore_face_marking",
+      "tail_impression",
+      "carnivore_tail_marking",
+      "primary_color"
+    ],
+    "Lagomorpha": [
+      "ear_size_impression",
+      "tail_impression",
+      "primary_color",
+      "observation_place"
+    ],
+    "Eulipotyphla": [
+      "body_form",
+      "snout_shape_simple",
+      "mole_front_feet",
+      "tail_impression",
+      "observation_place"
+    ],
+    "Pholidota": [
+      "body_covering",
+      "tail_impression",
+      "movement_seen",
+      "observation_place"
+    ],
+    "Proboscidea": [
+      "body_size_impression",
+      "snout_shape_simple",
+      "tusks_visible",
+      "body_covering"
+    ],
+    "Dermoptera": [
+      "gliding_membrane_visible",
+      "body_form",
+      "movement_seen",
+      "tail_impression"
+    ],
+    "Scandentia": [
+      "body_form",
+      "snout_shape_simple",
+      "tail_impression",
+      "primary_color",
+      "observation_place"
+    ],
+    "Terrestrial_Artiodactyla_Perissodactyla": [
+      "horns_or_antlers",
+      "horn_shape_simple",
+      "body_size_impression",
+      "body_pattern",
+      "tail_impression",
+      "leg_foot_appearance"
+    ],
+    "Cetacea": [
+      "cetacean_dorsal_fin",
+      "cetacean_beak",
+      "cetacean_color_pattern",
+      "body_size_impression",
+      "observation_place"
+    ],
+    "Sirenia": [
+      "tail_shape",
+      "body_size_impression",
+      "body_covering",
+      "observation_place"
+    ]
+  },
+  "questions": {
+    "body_size_impression": {
+      "prompt": "Roughly how big did it look?",
+      "option_labels": {
+        "mouse_or_smaller": "Mouse-sized or smaller",
+        "rabbit_or_cat_sized": "About rabbit/cat sized",
+        "dog_sized": "About dog sized",
+        "deer_sized": "About deer sized",
+        "cow_or_larger": "Cow-sized or larger"
+      },
+      "always_offer_unknown": true
+    },
+    "body_form": {
+      "prompt": "Which overall body shape looked closest?",
+      "option_labels": {
+        "bat_like": "Bat-like",
+        "mouse_rat_like": "Mouse/rat-like",
+        "squirrel_like": "Squirrel-like",
+        "rabbit_hare_like": "Rabbit/hare-like",
+        "shrew_mole_like": "Shrew/mole-like",
+        "monkey_like": "Monkey-like",
+        "cat_like": "Cat-like",
+        "dog_like": "Dog-like",
+        "long_body_short_legs": "Long body with short legs",
+        "hoofed_like": "Deer/cattle-like",
+        "elephant_like": "Elephant-like",
+        "pangolin_like": "Pangolin-like",
+        "gliding_mammal_like": "Gliding mammal-like",
+        "whale_dolphin_like": "Whale/dolphin-like",
+        "dugong_like": "Dugong-like",
+        "other": "Other",
+        "bear_like": "Bear-like",
+        "pig_like": "Pig-like",
+        "rhino_like": "Rhino-like",
+        "tapir_like": "Tapir-like",
+        "porcupine_like": "Stocky porcupine-like"
+      },
+      "always_offer_unknown": true
+    },
+    "body_covering": {
+      "prompt": "What was most noticeable on its body?",
+      "option_labels": {
+        "fur_or_hair": "Fur or hair",
+        "spines_or_quills": "Spines or quills",
+        "scales": "Scales",
+        "mostly_smooth_skin": "Mostly smooth-looking skin",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "movement_seen": {
+      "prompt": "How did you see it moving?",
+      "option_labels": {
+        "walking_or_running": "Walking/running",
+        "hopping": "Hopping",
+        "climbing": "Climbing",
+        "flying": "Flying",
+        "gliding": "Gliding",
+        "swimming": "Swimming",
+        "digging_or_burrowing": "Digging/burrowing",
+        "not_seen": "I did not see it move"
+      },
+      "always_offer_unknown": true
+    },
+    "observation_place": {
+      "prompt": "Where did you see it?",
+      "option_labels": {
+        "ground": "On the ground",
+        "tree_or_bush": "In a tree or bush",
+        "air": "In the air",
+        "freshwater_or_wetland": "Freshwater/wetland",
+        "sea_or_coast": "Sea/coast",
+        "cave": "Cave",
+        "building_or_roof": "Building/roof",
+        "other": "Other"
+      },
+      "always_offer_unknown": true
+    },
+    "time_seen": {
+      "prompt": "When did you see it?",
+      "option_labels": {
+        "day": "Daytime",
+        "dawn_or_dusk": "Dawn or dusk",
+        "night": "Night",
+        "not_sure": "Not sure"
+      },
+      "always_offer_unknown": true
+    },
+    "primary_color": {
+      "prompt": "What was the main visible color?",
+      "option_labels": {
+        "black": "Black",
+        "dark_brown": "Dark brown",
+        "brown": "Brown",
+        "grey": "Grey",
+        "white_or_cream": "White/cream",
+        "reddish_or_orange": "Reddish/orange",
+        "yellowish_or_buff": "Yellowish/buff",
+        "mixed": "Mixed colors"
+      },
+      "always_offer_unknown": true
+    },
+    "body_pattern": {
+      "prompt": "Did it have an obvious body pattern?",
+      "option_labels": {
+        "plain": "Mostly plain",
+        "spotted": "Spots",
+        "striped": "Stripes",
+        "banded": "Bands",
+        "patched": "Large patches",
+        "masked": "Mask-like marking",
+        "ringed": "Rings",
+        "dorsal_stripe": "Stripe along the back",
+        "mixed": "Mixed pattern"
+      },
+      "always_offer_unknown": true
+    },
+    "tail_impression": {
+      "prompt": "Which description best matches the tail?",
+      "option_labels": {
+        "no_obvious_tail": "No obvious tail",
+        "short": "Short",
+        "medium": "Medium",
+        "long": "Long",
+        "very_long": "Very long",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "tail_shape": {
+      "prompt": "What did the tail look like?",
+      "option_labels": {
+        "thin": "Thin",
+        "bushy": "Bushy",
+        "thick": "Thick",
+        "ringed": "Ringed",
+        "flattened": "Flattened/paddle-like",
+        "fluked": "Two-lobed fluke",
+        "tufted_tip": "Tuft at the tip",
+        "other": "Other",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "ear_size_impression": {
+      "prompt": "How noticeable were the ears?",
+      "option_labels": {
+        "not_obvious": "Not obvious",
+        "small": "Small",
+        "medium": "Medium",
+        "large": "Large",
+        "very_large": "Very large"
+      },
+      "always_offer_unknown": true
+    },
+    "ear_shape_simple": {
+      "prompt": "What shape did the ears look like?",
+      "option_labels": {
+        "rounded": "Rounded",
+        "pointed": "Pointed",
+        "long_upright": "Long and upright",
+        "broad": "Broad",
+        "funnel_like": "Funnel-like",
+        "other": "Other",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "snout_shape_simple": {
+      "prompt": "What did the snout or nose look like?",
+      "option_labels": {
+        "short_blunt": "Short/blunt",
+        "long_pointed": "Long/pointed",
+        "pig_like": "Pig-like",
+        "trunk_like": "Trunk-like",
+        "long_narrow": "Long and narrow",
+        "other": "Other",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "leg_foot_appearance": {
+      "prompt": "If you could see the feet, which looked closest?",
+      "option_labels": {
+        "hooves": "Hooves",
+        "paws": "Paws",
+        "grasping_hands_or_feet": "Hand-like/grasping feet",
+        "webbed_feet": "Webbed feet",
+        "broad_digging_feet": "Broad digging feet",
+        "small_rodent_like_feet": "Small rodent-like feet",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "horns_or_antlers": {
+      "prompt": "Did it have obvious horns or antlers?",
+      "option_labels": {
+        "none_visible": "None visible",
+        "horns": "Horns",
+        "branched_antlers": "Branched antlers",
+        "not_clear": "Not clear",
+        "single_horn": "One obvious horn"
+      },
+      "always_offer_unknown": true
+    },
+    "horn_shape_simple": {
+      "prompt": "What shape were the horns?",
+      "option_labels": {
+        "short_straight": "Short and fairly straight",
+        "long_straight": "Long and fairly straight",
+        "curved": "Curved",
+        "spiral": "Spiral/twisted",
+        "other": "Other",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "tusks_visible": {
+      "prompt": "Were obvious tusks visible?",
+      "option_labels": {
+        "yes": "Yes",
+        "no": "No",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "quills_or_spines_visible": {
+      "prompt": "Were obvious quills or spines visible?",
+      "option_labels": {
+        "yes": "Yes",
+        "no": "No",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "gliding_membrane_visible": {
+      "prompt": "Could you see a flap of skin between the legs used for gliding?",
+      "option_labels": {
+        "yes": "Yes",
+        "no": "No",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "bat_nose_shape": {
+      "prompt": "If it was a bat, what did the nose look like?",
+      "option_labels": {
+        "plain": "Plain/simple nose",
+        "leaf_like": "Leaf-like flap",
+        "horseshoe_like": "Horseshoe-shaped fold",
+        "tube_like": "Tube-like nostrils",
+        "other": "Other",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "bat_tail_visibility": {
+      "prompt": "If visible, which best describes the bat's tail area?",
+      "option_labels": {
+        "no_tail_visible": "No tail visible",
+        "tail_visible": "Tail clearly visible",
+        "tail_within_membrane": "Tail mostly within the rear membrane",
+        "tail_tip_beyond_membrane": "Tail tip extends beyond the rear membrane",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "rodent_tail_type": {
+      "prompt": "If it looked rodent-like, what did the tail look like?",
+      "option_labels": {
+        "bushy": "Bushy",
+        "furry_not_bushy": "Furry but not bushy",
+        "mostly_bare_or_scaly": "Mostly bare/scaly",
+        "short_thick": "Short and thick",
+        "other": "Other",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "primate_face_marking": {
+      "prompt": "Did the face or head have a noticeable marking?",
+      "option_labels": {
+        "plain": "No obvious marking",
+        "pale_face": "Pale face",
+        "dark_face": "Dark face",
+        "eye_rings": "Eye rings",
+        "cheek_whiskers": "Prominent cheek whiskers",
+        "crest_or_crown": "Crest/crown",
+        "beard_or_moustache": "Beard/moustache",
+        "mixed": "Several markings",
+        "not_clear": "Not clear",
+        "white_face_ring": "White/light ring around the face",
+        "reddish_face": "Pink/red-looking bare face"
+      },
+      "always_offer_unknown": true
+    },
+    "carnivore_face_marking": {
+      "prompt": "Did the face have a noticeable marking?",
+      "option_labels": {
+        "plain": "No obvious marking",
+        "dark_mask": "Dark mask",
+        "pale_mask": "Pale mask",
+        "eye_stripes": "Stripes near the eyes",
+        "cheek_stripes": "Cheek stripes",
+        "mixed": "Several markings",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "carnivore_tail_marking": {
+      "prompt": "Did the tail have a noticeable marking?",
+      "option_labels": {
+        "plain": "Mostly plain",
+        "rings": "Rings",
+        "dark_tip": "Dark tip",
+        "white_tip": "White tip",
+        "tufted_tip": "Tufted tip",
+        "other": "Other",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "cetacean_dorsal_fin": {
+      "prompt": "Did you see a fin on the middle of its back?",
+      "option_labels": {
+        "none_visible": "No fin visible",
+        "small": "Small fin",
+        "tall": "Tall fin",
+        "curved_back": "Curved-back fin",
+        "rounded_low": "Low/rounded fin",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "cetacean_beak": {
+      "prompt": "Did the head have an obvious dolphin-like beak?",
+      "option_labels": {
+        "no_distinct_beak": "No obvious beak",
+        "short_beak": "Short beak",
+        "obvious_long_beak": "Long obvious beak",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "cetacean_color_pattern": {
+      "prompt": "What large color pattern was visible?",
+      "option_labels": {
+        "uniform_dark": "Mostly dark",
+        "mostly_grey": "Mostly grey",
+        "light_belly": "Light belly",
+        "side_patch": "Light/contrasting side patch",
+        "eye_patch": "Eye patch",
+        "saddle_patch": "Saddle-like back patch",
+        "mottled": "Mottled",
+        "striped": "Striped",
+        "mixed": "Mixed pattern",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "mole_front_feet": {
+      "prompt": "If the front feet were visible, did they look unusually broad for digging?",
+      "option_labels": {
+        "normal_small_feet": "No",
+        "broad_digging_feet": "Yes, broad digging feet",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
+    },
+    "primate_brow_pattern": {
+      "prompt": "If it was a black adult hoolock gibbon, what did the white eyebrows look like?",
+      "option_labels": {
+        "connected_or_nearly_connected": "Joined or almost joined",
+        "two_separate_brows": "Two separate white brows",
+        "thin_separate_wide_gap": "Thin brows with a wide gap",
+        "not_clear": "Not clear"
+      },
+      "always_offer_unknown": true,
+      "usage_note": "Only ask for a clearly seen black adult hoolock. Females, juveniles, or unclear views should answer Not sure."
+    }
+  },
+  "stopping_guidance": {
+    "species": "Return a species only when easy observable traits separate it reliably from close candidates.",
+    "genus": "Return a genus when remaining congeners cannot be reliably separated from ordinary observation.",
+    "family": "Return a family when visual evidence is insufficient for genus/species.",
+    "insufficient": "Return insufficient evidence rather than forcing an answer."
+  }
+}

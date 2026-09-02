@@ -1,0 +1,607 @@
+{
+  "schema_version": "0.4.0",
+  "project": "Myanmar Mammal Expert System",
+  "scope": "365 canonical mammals from the 2024 Myanmar checklist",
+  "principles": {
+    "source_required_for_nonblank_values": true,
+    "dataset_missing_representation": "blank",
+    "user_not_sure_representation": "unknown",
+    "unknown_is_neutral_evidence": true,
+    "do_not_infer_from_taxonomic_name": true,
+    "do_not_require_wildlife_capture_or_handling": true,
+    "no_measurement_questions": true,
+    "questions_should_be_answerable_from_quick_sighting_or_ordinary_photo": true,
+    "species_level_result_not_guaranteed": true,
+    "color_traits_are_low_weight": true
+  },
+  "traits": [
+    {
+      "id": "body_size_impression",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "all",
+      "allowed_values": [
+        "mouse_or_smaller",
+        "rabbit_or_cat_sized",
+        "dog_sized",
+        "deer_sized",
+        "cow_or_larger"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Coarse visual size comparison using familiar animals; no measurement required."
+    },
+    {
+      "id": "body_form",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "all",
+      "allowed_values": [
+        "bat_like",
+        "mouse_rat_like",
+        "squirrel_like",
+        "rabbit_hare_like",
+        "shrew_mole_like",
+        "monkey_like",
+        "cat_like",
+        "dog_like",
+        "long_body_short_legs",
+        "hoofed_like",
+        "elephant_like",
+        "pangolin_like",
+        "gliding_mammal_like",
+        "whale_dolphin_like",
+        "dugong_like",
+        "bear_like",
+        "pig_like",
+        "rhino_like",
+        "tapir_like",
+        "porcupine_like",
+        "other"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 4,
+      "description": "Overall silhouette/body plan visible from a sighting or ordinary photo."
+    },
+    {
+      "id": "body_covering",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "all",
+      "allowed_values": [
+        "fur_or_hair",
+        "spines_or_quills",
+        "scales",
+        "mostly_smooth_skin",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 4,
+      "description": "Most obvious external body covering."
+    },
+    {
+      "id": "movement_seen",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "all",
+      "allowed_values": [
+        "walking_or_running",
+        "hopping",
+        "climbing",
+        "flying",
+        "gliding",
+        "swimming",
+        "digging_or_burrowing",
+        "not_seen"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "How the animal was seen moving; observation-based rather than inferred ecology."
+    },
+    {
+      "id": "observation_place",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "all",
+      "allowed_values": [
+        "ground",
+        "tree_or_bush",
+        "air",
+        "freshwater_or_wetland",
+        "sea_or_coast",
+        "cave",
+        "building_or_roof",
+        "other"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Where the user actually saw the animal."
+    },
+    {
+      "id": "time_seen",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "all",
+      "allowed_values": [
+        "day",
+        "dawn_or_dusk",
+        "night",
+        "not_sure"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 1,
+      "description": "When the sighting occurred. Low weight because activity can vary."
+    },
+    {
+      "id": "primary_color",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "all",
+      "allowed_values": [
+        "black",
+        "dark_brown",
+        "brown",
+        "grey",
+        "white_or_cream",
+        "reddish_or_orange",
+        "yellowish_or_buff",
+        "mixed"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 1,
+      "description": "Coarse visible color; low weight because appearance can vary."
+    },
+    {
+      "id": "body_pattern",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "all",
+      "allowed_values": [
+        "plain",
+        "spotted",
+        "striped",
+        "banded",
+        "patched",
+        "masked",
+        "ringed",
+        "dorsal_stripe",
+        "mixed"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Large, obvious body pattern."
+    },
+    {
+      "id": "tail_impression",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "all",
+      "allowed_values": [
+        "no_obvious_tail",
+        "short",
+        "medium",
+        "long",
+        "very_long",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Simple visual tail impression; no measurement required."
+    },
+    {
+      "id": "tail_shape",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "when_tail_visible",
+      "allowed_values": [
+        "thin",
+        "bushy",
+        "thick",
+        "ringed",
+        "flattened",
+        "fluked",
+        "tufted_tip",
+        "other",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Distinctive visible tail shape."
+    },
+    {
+      "id": "ear_size_impression",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "when_external_ears_present",
+      "allowed_values": [
+        "not_obvious",
+        "small",
+        "medium",
+        "large",
+        "very_large"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "How noticeable the external ears look relative to the head."
+    },
+    {
+      "id": "ear_shape_simple",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "when_external_ears_present",
+      "allowed_values": [
+        "rounded",
+        "pointed",
+        "long_upright",
+        "broad",
+        "funnel_like",
+        "other",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Simple visible external-ear shape."
+    },
+    {
+      "id": "snout_shape_simple",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "all",
+      "allowed_values": [
+        "short_blunt",
+        "long_pointed",
+        "pig_like",
+        "trunk_like",
+        "long_narrow",
+        "other",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Simple visible muzzle/snout shape."
+    },
+    {
+      "id": "leg_foot_appearance",
+      "group": "shared_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "when_feet_visible",
+      "allowed_values": [
+        "hooves",
+        "paws",
+        "grasping_hands_or_feet",
+        "webbed_feet",
+        "broad_digging_feet",
+        "small_rodent_like_feet",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Gross visible leg/foot type."
+    },
+    {
+      "id": "horns_or_antlers",
+      "group": "ungulate",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Artiodactyla_or_Perissodactyla_terrestrial",
+      "allowed_values": [
+        "none_visible",
+        "single_horn",
+        "horns",
+        "branched_antlers",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 4,
+      "description": "Whether obvious horns or branched antlers are visible."
+    },
+    {
+      "id": "horn_shape_simple",
+      "group": "ungulate",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "horned_ungulates",
+      "allowed_values": [
+        "short_straight",
+        "long_straight",
+        "curved",
+        "spiral",
+        "other",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Simple horn shape, asked only if horns are visible."
+    },
+    {
+      "id": "tusks_visible",
+      "group": "specialized_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "taxa_where_external_tusks_may_be_visible",
+      "allowed_values": [
+        "yes",
+        "no",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Whether obvious external tusks are visible."
+    },
+    {
+      "id": "quills_or_spines_visible",
+      "group": "specialized_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "taxa_where_spines_or_quills_are_relevant",
+      "allowed_values": [
+        "yes",
+        "no",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 5,
+      "description": "Highly noticeable quills or spines."
+    },
+    {
+      "id": "gliding_membrane_visible",
+      "group": "specialized_observable",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "gliding_mammals",
+      "allowed_values": [
+        "yes",
+        "no",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 5,
+      "description": "Visible skin membrane used for gliding."
+    },
+    {
+      "id": "bat_nose_shape",
+      "group": "chiroptera",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Chiroptera",
+      "allowed_values": [
+        "plain",
+        "leaf_like",
+        "horseshoe_like",
+        "tube_like",
+        "other",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 4,
+      "description": "Gross nose structure visible in a close but non-handled observation/photo."
+    },
+    {
+      "id": "bat_tail_visibility",
+      "group": "chiroptera",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Chiroptera",
+      "allowed_values": [
+        "no_tail_visible",
+        "tail_visible",
+        "tail_within_membrane",
+        "tail_tip_beyond_membrane",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Visible relationship of the tail to the rear membrane; only asked if clear."
+    },
+    {
+      "id": "rodent_tail_type",
+      "group": "rodentia",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Rodentia",
+      "allowed_values": [
+        "bushy",
+        "furry_not_bushy",
+        "mostly_bare_or_scaly",
+        "short_thick",
+        "other",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Gross tail appearance in rodents."
+    },
+    {
+      "id": "primate_face_marking",
+      "group": "primates",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Primates",
+      "allowed_values": [
+        "plain",
+        "pale_face",
+        "dark_face",
+        "eye_rings",
+        "cheek_whiskers",
+        "crest_or_crown",
+        "beard_or_moustache",
+        "mixed",
+        "white_face_ring",
+        "reddish_face",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Obvious face/head marking in primates."
+    },
+    {
+      "id": "carnivore_face_marking",
+      "group": "carnivora",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Carnivora",
+      "allowed_values": [
+        "plain",
+        "dark_mask",
+        "pale_mask",
+        "eye_stripes",
+        "cheek_stripes",
+        "mixed",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Obvious facial marking in carnivorans."
+    },
+    {
+      "id": "carnivore_tail_marking",
+      "group": "carnivora",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Carnivora",
+      "allowed_values": [
+        "plain",
+        "rings",
+        "dark_tip",
+        "white_tip",
+        "tufted_tip",
+        "other",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Obvious tail marking in carnivorans."
+    },
+    {
+      "id": "cetacean_dorsal_fin",
+      "group": "cetacea",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Cetacea",
+      "allowed_values": [
+        "none_visible",
+        "small",
+        "tall",
+        "curved_back",
+        "rounded_low",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 4,
+      "description": "Visible dorsal-fin presence and broad shape."
+    },
+    {
+      "id": "cetacean_beak",
+      "group": "cetacea",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Cetacea",
+      "allowed_values": [
+        "no_distinct_beak",
+        "short_beak",
+        "obvious_long_beak",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Whether the head has an obvious dolphin-like beak."
+    },
+    {
+      "id": "cetacean_color_pattern",
+      "group": "cetacea",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Cetacea",
+      "allowed_values": [
+        "uniform_dark",
+        "mostly_grey",
+        "light_belly",
+        "side_patch",
+        "eye_patch",
+        "saddle_patch",
+        "mottled",
+        "striped",
+        "mixed",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Large-scale visible color pattern."
+    },
+    {
+      "id": "mole_front_feet",
+      "group": "eulipotyphla",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "fossorial_Eulipotyphla",
+      "allowed_values": [
+        "normal_small_feet",
+        "broad_digging_feet",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 4,
+      "description": "Whether the front feet look obviously enlarged for digging."
+    },
+    {
+      "id": "primate_brow_pattern",
+      "group": "primates",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "adult_male_hoolock_when_white_brows_are_clearly_visible",
+      "allowed_values": [
+        "connected_or_nearly_connected",
+        "two_separate_brows",
+        "thin_separate_wide_gap",
+        "not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 4,
+      "description": "Typical adult-male hoolock white-eyebrow pattern. Ask only when a black adult hoolock and its brows are clearly visible; otherwise use unknown."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+Phase 2A Pilot Structural Validation
+Date: 2026-09-02
+
+Canonical mammal rows in package: 365
+Trait rows: 365
+Trait definitions: 29
+Pilot species with at least one populated trait: 26
+Populated observable trait cells: 169
+Matching provenance records: 169
+Invalid enum values: 0
+Missing provenance for populated values: 0
+Question/schema reference mismatches: 0
+Measurement questions added: 0
+
+Note: npm install could not complete in the artifact build environment due to network timeout, so the package was validated with an equivalent local structural checker plus Node syntax checks. On the user's machine, run:
+  npm install
+  npm run prepare:data
+  npm run validate:data
+  npm run report:coverage
