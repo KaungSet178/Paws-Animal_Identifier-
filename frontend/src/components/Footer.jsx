@@ -12,9 +12,7 @@ export default function Footer() {
             <span className="footer-logo">
               <PawPrint size={40} strokeWidth={2} />
             </span>
-            <span className="footer-brand-name">
-              Mammal <span className="hero-accent">ID</span>
-            </span>
+            <span className="footer-brand-name">PAWS</span>
           </div>
           <p className="footer-tagline">
             A field guide that helps you identify Myanmar&rsquo;s wild mammals from what you
@@ -47,7 +45,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>&copy; {YEAR} Myanmar Mammal ID</span>
+        <span>&copy; {YEAR} PAWS</span>
         <span>For educational use. Not a substitute for professional wildlife advice.</span>
       </div>
     </footer>

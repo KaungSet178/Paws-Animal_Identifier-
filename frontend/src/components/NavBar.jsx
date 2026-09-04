@@ -10,9 +10,7 @@ export default function NavBar() {
         <span className="navbar-logo">
           <PawPrint size={22} strokeWidth={2.25} />
         </span>
-        <span>
-          Myanmar <span className="hero-accent">Mammal</span> ID
-        </span>
+        <span>PAWS</span>
       </Link>
       <div className="navbar-links">
         <Link to="/identify" className={pathname.startsWith('/identify') ? 'nav-link active' : 'nav-link'}>

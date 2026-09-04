@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Binoculars, Loader2, PawPrint, ScanSearch, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Binoculars, Loader2, PawPrint, ScanSearch, ShieldCheck } from 'lucide-react'
 import SafetyBanner from '../components/SafetyBanner'
 import { getHealth } from '../api'
 
@@ -26,9 +26,8 @@ export default function Home() {
     <div className="page">
       <header className="hero">
         <div className="hero-overlay">
-          <p className="hero-eyebrow">Myanmar Wildlife Field Guide</p>
           <h1>
-            Mammal <span className="hero-accent">ID</span>
+            <span className="hero-accent">PAWS</span>: Animals Identification
           </h1>
           <p className="hero-lookfor">
             <span className="hero-highlight">Identify</span> unfamiliar Myanmar mammals from
@@ -80,10 +79,6 @@ export default function Home() {
             </div>
           </div>
 
-          <button type="button" className="primary-button hero-cta" onClick={() => navigate('/identify')}>
-            Begin Identification
-          </button>
-
           {backendReady === false && (
             <p className="hero-warning">
               The identification service could not be reached. Make sure the backend is running.
@@ -103,6 +98,21 @@ export default function Home() {
             &ldquo;Not sure&rdquo;.
           </p>
         </div>
+
+        <button
+          type="button"
+          className="home-cta-card"
+          onClick={() => navigate('/identify')}
+        >
+          <span className="home-cta-card-icon">
+            <ScanSearch size={26} />
+          </span>
+          <span className="home-cta-card-text">
+            <strong>Begin Identification</strong>
+            <span>Start answering questions about the animal you saw.</span>
+          </span>
+          <ArrowRight className="home-cta-card-arrow" size={22} />
+        </button>
 
         <div className="how-it-works-grid">
           <div className="how-it-works-card">
