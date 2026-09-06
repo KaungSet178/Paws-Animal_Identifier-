@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "generate:species": "node scripts/generate-species-data.mjs",
+    "enrich:images": "node scripts/enrich-images.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { PawPrint } from 'lucide-react'
+import Wordmark from './Wordmark'
 
 const YEAR = new Date().getFullYear()
 
@@ -12,7 +13,7 @@ export default function Footer() {
             <span className="footer-logo">
               <PawPrint size={40} strokeWidth={2} />
             </span>
-            <span className="footer-brand-name">PAWS</span>
+            <Wordmark className="footer-brand-name" />
           </div>
           <p className="footer-tagline">
             A field guide that helps you identify Myanmar&rsquo;s wild mammals from what you
@@ -45,7 +46,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>&copy; {YEAR} PAWS</span>
+        <span>&copy; {YEAR} <Wordmark /></span>
         <span>For educational use. Not a substitute for professional wildlife advice.</span>
       </div>
     </footer>
