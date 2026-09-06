@@ -2,11 +2,16 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight, Binoculars, Loader2, PawPrint, ScanSearch, ShieldCheck } from 'lucide-react'
 import SafetyBanner from '../components/SafetyBanner'
+import Wordmark from '../components/Wordmark'
+import heroImage from '../assets/hero_image.jpg'
 import { getHealth } from '../api'
+import useScrollReveal from '../useScrollReveal'
 
 export default function Home() {
   const navigate = useNavigate()
   const [backendReady, setBackendReady] = useState(null)
+
+  useScrollReveal([backendReady])
 
   useEffect(() => {
     let active = true
@@ -24,10 +29,11 @@ export default function Home() {
 
   return (
     <div className="page">
-      <header className="hero">
+      <header className="hero" style={{ backgroundImage: `url(${heroImage})` }}>
         <div className="hero-overlay">
+          <p className="hero-eyebrow">Wildlife Field Guide</p>
           <h1>
-            <span className="hero-accent">PAWS</span>: Animals Identification
+            <Wordmark className="hero-wordmark" />
           </h1>
           <p className="hero-lookfor">
             <span className="hero-highlight">Identify</span> unfamiliar Myanmar mammals from
@@ -88,7 +94,7 @@ export default function Home() {
       </header>
 
       <section className="category-section">
-        <div className="category-intro">
+        <div className="category-intro reveal">
           <p className="category-eyebrow">How It Works</p>
           <h2>What did you see?</h2>
           <p className="category-subtitle">
@@ -101,7 +107,7 @@ export default function Home() {
 
         <button
           type="button"
-          className="home-cta-card"
+          className="home-cta-card reveal"
           onClick={() => navigate('/identify')}
         >
           <span className="home-cta-card-icon">
@@ -115,12 +121,12 @@ export default function Home() {
         </button>
 
         <div className="how-it-works-grid">
-          <div className="how-it-works-card">
+          <div className="how-it-works-card reveal">
             <span className="how-it-works-step">1</span>
             <h3>Answer questions</h3>
             <p>Pick the option that best matches what you observed, one trait at a time.</p>
           </div>
-          <div className="how-it-works-card">
+          <div className="how-it-works-card reveal">
             <span className="how-it-works-step">2</span>
             <h3>Get a result</h3>
             <p>
@@ -128,7 +134,7 @@ export default function Home() {
               questions.
             </p>
           </div>
-          <div className="how-it-works-card">
+          <div className="how-it-works-card reveal">
             <span className="how-it-works-step">3</span>
             <h3>Learn more</h3>
             <p>See a photo, description, and distribution details for the identified species.</p>
@@ -141,7 +147,7 @@ export default function Home() {
           </div>
         ) : (
           <SafetyBanner
-            className="safety-banner-centered"
+            className="safety-banner-centered reveal"
             text="Safety: Never approach, touch, or attempt to catch a wild animal to answer these questions. Observe from a safe distance."
           />
         )}

@@ -148,10 +148,14 @@ export default function Identify() {
 
       {status === 'questioning' && currentQuestion && (
         <section className="question-screen">
-          {observations.length > 0 && (
+          {observations.length > 0 ? (
             <button type="button" className="question-back" onClick={goBack} disabled={loading}>
               <ArrowLeft size={18} /> Back
             </button>
+          ) : (
+            <Link to="/" className="question-back">
+              <ArrowLeft size={18} /> Back
+            </Link>
           )}
 
           <p className="question-progress">Question {observations.length + 1}</p>

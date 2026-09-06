@@ -83,3 +83,37 @@ export function getSpeciesDetail(key, options = {}) {
   const path = `/api/species/${encodeURIComponent(key)}`
   return options.signal ? request(path, { signal: options.signal }) : cachedRequest(path)
 }
+
+// A small concurrency gate. The Explore grid would otherwise fire hundreds of
+// enrichment requests at once, and the backend's upstream providers (Wikipedia,
+// iNaturalist) start returning HTTP 429 under that burst — with the empty result
+// then cached server-side for hours. Draining a few at a time avoids the burst.
+function createLimiter(max) {
+  let active = 0
+  const queue = []
+
+  const pump = () => {
+    if (active >= max || queue.length === 0) return
+    active += 1
+    const { task, resolve, reject } = queue.shift()
+    Promise.resolve()
+      .then(task)
+      .then(resolve, reject)
+      .finally(() => {
+        active -= 1
+        pump()
+      })
+  }
+
+  return (task) =>
+    new Promise((resolve, reject) => {
+      queue.push({ task, resolve, reject })
+      pump()
+    })
+}
+
+const cardImageLimiter = createLimiter(3)
+
+export function getSpeciesCardImage(key) {
+  return cardImageLimiter(() => getSpeciesDetail(key)).then((data) => data?.image?.url || null)
+}
