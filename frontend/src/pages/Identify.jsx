@@ -24,6 +24,10 @@ function attributeLabel(attribute) {
 function QuestionOptionImage({ src, label }) {
   const [failed, setFailed] = useState(false)
 
+  useEffect(() => {
+    setFailed(false)
+  }, [src])
+
   if (!src || failed) return null
 
   return (
