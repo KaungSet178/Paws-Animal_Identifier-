@@ -3,6 +3,8 @@
     animal/1, scientific_name/2, common_name/2, animal_order/2, animal_family/2,
     trait/3, trait_weight/2, trait_allowed/2, trait_group/2, trait_applicability/2,
     question/3, question_pool/2, specialized_pool/2,
+    domain_gate/2, domain_gate_order/2, domain_gate_body_form/2,
+    question_domain_gate/2, question_penalty/5, question_block_if/4, question_bonus/5,
     generated_candidate_count/1, generated_trait_fact_count/1
 ]).
 :- discontiguous animal/1.
@@ -18,6 +20,13 @@
 :- discontiguous question/3.
 :- discontiguous question_pool/2.
 :- discontiguous specialized_pool/2.
+:- discontiguous domain_gate/2.
+:- discontiguous domain_gate_order/2.
+:- discontiguous domain_gate_body_form/2.
+:- discontiguous question_domain_gate/2.
+:- discontiguous question_penalty/5.
+:- discontiguous question_block_if/4.
+:- discontiguous question_bonus/5.
 
 animal(ailurus_fulgens).
 scientific_name(ailurus_fulgens, "Ailurus fulgens").
@@ -64,8 +73,28 @@ trait(aonyx_cinereus, body_covering, fur_or_hair).
 trait(aonyx_cinereus, movement_seen, swimming).
 trait(aonyx_cinereus, observation_place, freshwater_or_wetland).
 trait(aonyx_cinereus, primary_color, dark_brown).
+trait(aonyx_cinereus, body_pattern, patched).
+trait(aonyx_cinereus, tail_shape, flattened).
 trait(aonyx_cinereus, leg_foot_appearance, webbed_feet).
 trait(aonyx_cinereus, carnivore_face_marking, pale_mask).
+
+animal(apodemus_agrarius).
+scientific_name(apodemus_agrarius, "Apodemus agrarius").
+common_name(apodemus_agrarius, "Striped Field Mouse").
+animal_order(apodemus_agrarius, 'Rodentia').
+animal_family(apodemus_agrarius, 'Muridae').
+trait(apodemus_agrarius, body_form, mouse_rat_like).
+trait(apodemus_agrarius, body_covering, fur_or_hair).
+trait(apodemus_agrarius, movement_seen, walking_or_running).
+trait(apodemus_agrarius, observation_place, ground).
+trait(apodemus_agrarius, primary_color, brown).
+trait(apodemus_agrarius, body_pattern, dorsal_stripe).
+trait(apodemus_agrarius, tail_impression, medium).
+trait(apodemus_agrarius, ear_size_impression, small).
+trait(apodemus_agrarius, ear_shape_simple, rounded).
+trait(apodemus_agrarius, snout_shape_simple, long_pointed).
+trait(apodemus_agrarius, leg_foot_appearance, small_rodent_like_feet).
+trait(apodemus_agrarius, rodent_tail_type, mostly_bare_or_scaly).
 
 animal(arctictis_binturong).
 scientific_name(arctictis_binturong, "Arctictis binturong").
@@ -95,6 +124,17 @@ trait(arctogalidia_trivirgata, primary_color, mixed).
 trait(arctogalidia_trivirgata, body_pattern, striped).
 trait(arctogalidia_trivirgata, tail_impression, very_long).
 trait(arctogalidia_trivirgata, carnivore_face_marking, mixed).
+
+animal(arctonyx_albogularis).
+scientific_name(arctonyx_albogularis, "Arctonyx albogularis").
+common_name(arctonyx_albogularis, "Northern Hog Badger").
+animal_order(arctonyx_albogularis, 'Carnivora').
+animal_family(arctonyx_albogularis, 'Mustelidae').
+trait(arctonyx_albogularis, body_form, long_body_short_legs).
+trait(arctonyx_albogularis, body_covering, fur_or_hair).
+trait(arctonyx_albogularis, primary_color, mixed).
+trait(arctonyx_albogularis, body_pattern, patched).
+trait(arctonyx_albogularis, tail_impression, short).
 
 animal(arctonyx_collaris).
 scientific_name(arctonyx_collaris, "Arctonyx collaris").
@@ -135,6 +175,45 @@ trait(axis_porcinus, ear_size_impression, large).
 trait(axis_porcinus, ear_shape_simple, rounded).
 trait(axis_porcinus, snout_shape_simple, short_blunt).
 
+animal(balaenoptera_acutorostrata).
+scientific_name(balaenoptera_acutorostrata, "Balaenoptera acutorostrata").
+common_name(balaenoptera_acutorostrata, "Common Minke Whale").
+animal_order(balaenoptera_acutorostrata, 'Artiodactyla').
+animal_family(balaenoptera_acutorostrata, 'Balaenopteridae').
+trait(balaenoptera_acutorostrata, body_form, whale_dolphin_like).
+trait(balaenoptera_acutorostrata, body_covering, mostly_smooth_skin).
+trait(balaenoptera_acutorostrata, movement_seen, swimming).
+trait(balaenoptera_acutorostrata, observation_place, sea_or_coast).
+trait(balaenoptera_acutorostrata, primary_color, grey).
+trait(balaenoptera_acutorostrata, cetacean_dorsal_fin, curved_back).
+trait(balaenoptera_acutorostrata, cetacean_color_pattern, light_belly).
+
+animal(balaenoptera_borealis).
+scientific_name(balaenoptera_borealis, "Balaenoptera borealis").
+common_name(balaenoptera_borealis, "Sei Whale").
+animal_order(balaenoptera_borealis, 'Artiodactyla').
+animal_family(balaenoptera_borealis, 'Balaenopteridae').
+trait(balaenoptera_borealis, body_form, whale_dolphin_like).
+trait(balaenoptera_borealis, body_covering, mostly_smooth_skin).
+trait(balaenoptera_borealis, movement_seen, swimming).
+trait(balaenoptera_borealis, observation_place, sea_or_coast).
+trait(balaenoptera_borealis, primary_color, grey).
+trait(balaenoptera_borealis, cetacean_dorsal_fin, curved_back).
+trait(balaenoptera_borealis, cetacean_color_pattern, light_belly).
+
+animal(balaenoptera_edeni).
+scientific_name(balaenoptera_edeni, "Balaenoptera edeni").
+common_name(balaenoptera_edeni, "Eden's Whale").
+animal_order(balaenoptera_edeni, 'Artiodactyla').
+animal_family(balaenoptera_edeni, 'Balaenopteridae').
+trait(balaenoptera_edeni, body_form, whale_dolphin_like).
+trait(balaenoptera_edeni, body_covering, mostly_smooth_skin).
+trait(balaenoptera_edeni, movement_seen, swimming).
+trait(balaenoptera_edeni, observation_place, sea_or_coast).
+trait(balaenoptera_edeni, primary_color, grey).
+trait(balaenoptera_edeni, cetacean_dorsal_fin, curved_back).
+trait(balaenoptera_edeni, cetacean_color_pattern, light_belly).
+
 animal(balaenoptera_musculus).
 scientific_name(balaenoptera_musculus, "Balaenoptera musculus").
 common_name(balaenoptera_musculus, "Blue Whale").
@@ -151,6 +230,107 @@ trait(balaenoptera_musculus, tail_shape, fluked).
 trait(balaenoptera_musculus, cetacean_dorsal_fin, small).
 trait(balaenoptera_musculus, cetacean_beak, no_distinct_beak).
 trait(balaenoptera_musculus, cetacean_color_pattern, mottled).
+
+animal(balaenoptera_physalus).
+scientific_name(balaenoptera_physalus, "Balaenoptera physalus").
+common_name(balaenoptera_physalus, "Fin Whale").
+animal_order(balaenoptera_physalus, 'Artiodactyla').
+animal_family(balaenoptera_physalus, 'Balaenopteridae').
+trait(balaenoptera_physalus, body_form, whale_dolphin_like).
+trait(balaenoptera_physalus, body_covering, mostly_smooth_skin).
+trait(balaenoptera_physalus, movement_seen, swimming).
+trait(balaenoptera_physalus, observation_place, sea_or_coast).
+trait(balaenoptera_physalus, primary_color, grey).
+trait(balaenoptera_physalus, cetacean_dorsal_fin, curved_back).
+trait(balaenoptera_physalus, cetacean_color_pattern, light_belly).
+
+animal(bandicota_bengalensis).
+scientific_name(bandicota_bengalensis, "Bandicota bengalensis").
+common_name(bandicota_bengalensis, "Lesser Bandicoot Rat").
+animal_order(bandicota_bengalensis, 'Rodentia').
+animal_family(bandicota_bengalensis, 'Muridae').
+trait(bandicota_bengalensis, body_form, mouse_rat_like).
+trait(bandicota_bengalensis, body_covering, fur_or_hair).
+trait(bandicota_bengalensis, movement_seen, digging_or_burrowing).
+trait(bandicota_bengalensis, observation_place, ground).
+trait(bandicota_bengalensis, time_seen, night).
+trait(bandicota_bengalensis, primary_color, brown).
+trait(bandicota_bengalensis, body_pattern, plain).
+trait(bandicota_bengalensis, tail_impression, medium).
+trait(bandicota_bengalensis, ear_size_impression, small).
+trait(bandicota_bengalensis, ear_shape_simple, rounded).
+trait(bandicota_bengalensis, snout_shape_simple, short_blunt).
+trait(bandicota_bengalensis, leg_foot_appearance, small_rodent_like_feet).
+trait(bandicota_bengalensis, rodent_tail_type, mostly_bare_or_scaly).
+
+animal(bandicota_indica).
+scientific_name(bandicota_indica, "Bandicota indica").
+common_name(bandicota_indica, "Greater Bandicoot Rat").
+animal_order(bandicota_indica, 'Rodentia').
+animal_family(bandicota_indica, 'Muridae').
+trait(bandicota_indica, body_form, mouse_rat_like).
+trait(bandicota_indica, body_covering, fur_or_hair).
+trait(bandicota_indica, movement_seen, digging_or_burrowing).
+trait(bandicota_indica, observation_place, ground).
+trait(bandicota_indica, time_seen, night).
+trait(bandicota_indica, primary_color, dark_brown).
+trait(bandicota_indica, body_pattern, plain).
+trait(bandicota_indica, tail_impression, medium).
+trait(bandicota_indica, snout_shape_simple, short_blunt).
+trait(bandicota_indica, leg_foot_appearance, small_rodent_like_feet).
+trait(bandicota_indica, rodent_tail_type, mostly_bare_or_scaly).
+
+animal(belomys_pearsonii).
+scientific_name(belomys_pearsonii, "Belomys pearsonii").
+common_name(belomys_pearsonii, "Hairy-footed Flying Squirrel").
+animal_order(belomys_pearsonii, 'Rodentia').
+animal_family(belomys_pearsonii, 'Sciuridae').
+trait(belomys_pearsonii, body_form, gliding_mammal_like).
+trait(belomys_pearsonii, body_covering, fur_or_hair).
+trait(belomys_pearsonii, movement_seen, gliding).
+trait(belomys_pearsonii, observation_place, tree_or_bush).
+trait(belomys_pearsonii, primary_color, brown).
+trait(belomys_pearsonii, body_pattern, mixed).
+trait(belomys_pearsonii, tail_impression, medium).
+trait(belomys_pearsonii, tail_shape, bushy).
+trait(belomys_pearsonii, ear_size_impression, medium).
+trait(belomys_pearsonii, ear_shape_simple, rounded).
+trait(belomys_pearsonii, gliding_membrane_visible, yes).
+trait(belomys_pearsonii, rodent_tail_type, bushy).
+
+animal(berylmys_berdmorei).
+scientific_name(berylmys_berdmorei, "Berylmys berdmorei").
+common_name(berylmys_berdmorei, "Berdmore's White-toothed Rat").
+animal_order(berylmys_berdmorei, 'Rodentia').
+animal_family(berylmys_berdmorei, 'Muridae').
+trait(berylmys_berdmorei, body_form, mouse_rat_like).
+trait(berylmys_berdmorei, body_covering, fur_or_hair).
+trait(berylmys_berdmorei, movement_seen, digging_or_burrowing).
+trait(berylmys_berdmorei, observation_place, ground).
+trait(berylmys_berdmorei, primary_color, grey).
+trait(berylmys_berdmorei, body_pattern, patched).
+trait(berylmys_berdmorei, tail_impression, long).
+trait(berylmys_berdmorei, ear_size_impression, large).
+trait(berylmys_berdmorei, ear_shape_simple, rounded).
+trait(berylmys_berdmorei, leg_foot_appearance, small_rodent_like_feet).
+trait(berylmys_berdmorei, rodent_tail_type, furry_not_bushy).
+
+animal(berylmys_bowersi).
+scientific_name(berylmys_bowersi, "Berylmys bowersi").
+common_name(berylmys_bowersi, "Berylmys bowersi").
+animal_order(berylmys_bowersi, 'Rodentia').
+animal_family(berylmys_bowersi, 'Muridae').
+trait(berylmys_bowersi, body_form, mouse_rat_like).
+trait(berylmys_bowersi, body_covering, fur_or_hair).
+trait(berylmys_bowersi, movement_seen, digging_or_burrowing).
+trait(berylmys_bowersi, observation_place, ground).
+trait(berylmys_bowersi, primary_color, grey).
+trait(berylmys_bowersi, body_pattern, patched).
+trait(berylmys_bowersi, tail_impression, very_long).
+trait(berylmys_bowersi, ear_size_impression, large).
+trait(berylmys_bowersi, ear_shape_simple, rounded).
+trait(berylmys_bowersi, leg_foot_appearance, small_rodent_like_feet).
+trait(berylmys_bowersi, rodent_tail_type, furry_not_bushy).
 
 animal(bos_gaurus).
 scientific_name(bos_gaurus, "Bos gaurus").
@@ -209,6 +389,21 @@ trait(budorcas_taxicolor, leg_foot_appearance, hooves).
 trait(budorcas_taxicolor, horns_or_antlers, horns).
 trait(budorcas_taxicolor, horn_shape_simple, curved).
 
+animal(callosciurus_caniceps).
+scientific_name(callosciurus_caniceps, "Callosciurus caniceps").
+common_name(callosciurus_caniceps, "Northern Gray-bellied Squirrel").
+animal_order(callosciurus_caniceps, 'Rodentia').
+animal_family(callosciurus_caniceps, 'Sciuridae').
+trait(callosciurus_caniceps, body_form, squirrel_like).
+trait(callosciurus_caniceps, body_covering, fur_or_hair).
+trait(callosciurus_caniceps, movement_seen, climbing).
+trait(callosciurus_caniceps, observation_place, tree_or_bush).
+trait(callosciurus_caniceps, primary_color, mixed).
+trait(callosciurus_caniceps, body_pattern, plain).
+trait(callosciurus_caniceps, tail_impression, long).
+trait(callosciurus_caniceps, tail_shape, bushy).
+trait(callosciurus_caniceps, rodent_tail_type, bushy).
+
 animal(callosciurus_erythraeus).
 scientific_name(callosciurus_erythraeus, "Callosciurus erythraeus").
 common_name(callosciurus_erythraeus, "Pallas's Squirrel").
@@ -218,9 +413,11 @@ trait(callosciurus_erythraeus, body_form, squirrel_like).
 trait(callosciurus_erythraeus, body_covering, fur_or_hair).
 trait(callosciurus_erythraeus, movement_seen, climbing).
 trait(callosciurus_erythraeus, observation_place, tree_or_bush).
+trait(callosciurus_erythraeus, time_seen, day).
 trait(callosciurus_erythraeus, primary_color, mixed).
 trait(callosciurus_erythraeus, tail_impression, long).
 trait(callosciurus_erythraeus, tail_shape, bushy).
+trait(callosciurus_erythraeus, rodent_tail_type, bushy).
 
 animal(callosciurus_finlaysonii).
 scientific_name(callosciurus_finlaysonii, "Callosciurus finlaysonii").
@@ -229,9 +426,12 @@ animal_order(callosciurus_finlaysonii, 'Rodentia').
 animal_family(callosciurus_finlaysonii, 'Sciuridae').
 trait(callosciurus_finlaysonii, body_form, squirrel_like).
 trait(callosciurus_finlaysonii, body_covering, fur_or_hair).
+trait(callosciurus_finlaysonii, movement_seen, climbing).
+trait(callosciurus_finlaysonii, time_seen, day).
 trait(callosciurus_finlaysonii, primary_color, mixed).
 trait(callosciurus_finlaysonii, tail_impression, long).
 trait(callosciurus_finlaysonii, tail_shape, bushy).
+trait(callosciurus_finlaysonii, rodent_tail_type, bushy).
 
 animal(callosciurus_pygerythrus).
 scientific_name(callosciurus_pygerythrus, "Callosciurus pygerythrus").
@@ -240,9 +440,27 @@ animal_order(callosciurus_pygerythrus, 'Rodentia').
 animal_family(callosciurus_pygerythrus, 'Sciuridae').
 trait(callosciurus_pygerythrus, body_form, squirrel_like).
 trait(callosciurus_pygerythrus, body_covering, fur_or_hair).
+trait(callosciurus_pygerythrus, movement_seen, climbing).
+trait(callosciurus_pygerythrus, time_seen, day).
 trait(callosciurus_pygerythrus, primary_color, brown).
 trait(callosciurus_pygerythrus, tail_impression, long).
 trait(callosciurus_pygerythrus, tail_shape, bushy).
+trait(callosciurus_pygerythrus, rodent_tail_type, bushy).
+
+animal(callosciurus_quinquestriatus).
+scientific_name(callosciurus_quinquestriatus, "Callosciurus quinquestriatus").
+common_name(callosciurus_quinquestriatus, "Anderson's Squirrel").
+animal_order(callosciurus_quinquestriatus, 'Rodentia').
+animal_family(callosciurus_quinquestriatus, 'Sciuridae').
+trait(callosciurus_quinquestriatus, body_form, squirrel_like).
+trait(callosciurus_quinquestriatus, body_covering, fur_or_hair).
+trait(callosciurus_quinquestriatus, movement_seen, climbing).
+trait(callosciurus_quinquestriatus, observation_place, tree_or_bush).
+trait(callosciurus_quinquestriatus, primary_color, brown).
+trait(callosciurus_quinquestriatus, body_pattern, striped).
+trait(callosciurus_quinquestriatus, tail_impression, long).
+trait(callosciurus_quinquestriatus, tail_shape, bushy).
+trait(callosciurus_quinquestriatus, rodent_tail_type, bushy).
 
 animal(canis_aureus).
 scientific_name(canis_aureus, "Canis aureus").
@@ -289,6 +507,31 @@ trait(cannomys_badius, ear_size_impression, small).
 trait(cannomys_badius, leg_foot_appearance, broad_digging_feet).
 trait(cannomys_badius, rodent_tail_type, mostly_bare_or_scaly).
 
+animal(capricornis_milneedwardsi).
+scientific_name(capricornis_milneedwardsi, "Capricornis milneedwardsi").
+common_name(capricornis_milneedwardsi, "Capricornis milneedwardsi").
+animal_order(capricornis_milneedwardsi, 'Artiodactyla').
+animal_family(capricornis_milneedwardsi, 'Bovidae').
+trait(capricornis_milneedwardsi, body_form, hoofed_like).
+trait(capricornis_milneedwardsi, body_covering, fur_or_hair).
+trait(capricornis_milneedwardsi, primary_color, dark_brown).
+trait(capricornis_milneedwardsi, tail_impression, short).
+trait(capricornis_milneedwardsi, ear_size_impression, large).
+trait(capricornis_milneedwardsi, horns_or_antlers, horns).
+
+animal(capricornis_rubidus).
+scientific_name(capricornis_rubidus, "Capricornis rubidus").
+common_name(capricornis_rubidus, "Red Serow").
+animal_order(capricornis_rubidus, 'Artiodactyla').
+animal_family(capricornis_rubidus, 'Bovidae').
+trait(capricornis_rubidus, body_form, hoofed_like).
+trait(capricornis_rubidus, body_covering, fur_or_hair).
+trait(capricornis_rubidus, primary_color, reddish_or_orange).
+trait(capricornis_rubidus, body_pattern, dorsal_stripe).
+trait(capricornis_rubidus, tail_impression, short).
+trait(capricornis_rubidus, horns_or_antlers, horns).
+trait(capricornis_rubidus, horn_shape_simple, curved).
+
 animal(catopuma_temminckii).
 scientific_name(catopuma_temminckii, "Catopuma temminckii").
 common_name(catopuma_temminckii, "Asian Golden Cat").
@@ -316,6 +559,52 @@ trait(chimarrogale_himalayica, observation_place, freshwater_or_wetland).
 trait(chimarrogale_himalayica, primary_color, grey).
 trait(chimarrogale_himalayica, tail_shape, thin).
 trait(chimarrogale_himalayica, ear_size_impression, small).
+
+animal(chimarrogale_styani).
+scientific_name(chimarrogale_styani, "Chimarrogale styani").
+common_name(chimarrogale_styani, "Chinese Water Shrew").
+animal_order(chimarrogale_styani, 'Eulipotyphla').
+animal_family(chimarrogale_styani, 'Soricidae').
+trait(chimarrogale_styani, body_form, shrew_mole_like).
+trait(chimarrogale_styani, body_covering, fur_or_hair).
+trait(chimarrogale_styani, movement_seen, swimming).
+trait(chimarrogale_styani, observation_place, freshwater_or_wetland).
+trait(chimarrogale_styani, primary_color, dark_brown).
+trait(chimarrogale_styani, body_pattern, patched).
+trait(chimarrogale_styani, tail_impression, long).
+trait(chimarrogale_styani, snout_shape_simple, long_pointed).
+trait(chimarrogale_styani, leg_foot_appearance, webbed_feet).
+
+animal(chiromyscus_chiropus).
+scientific_name(chiromyscus_chiropus, "Chiromyscus chiropus").
+common_name(chiromyscus_chiropus, "Burmese Tree Rat").
+animal_order(chiromyscus_chiropus, 'Rodentia').
+animal_family(chiromyscus_chiropus, 'Muridae').
+trait(chiromyscus_chiropus, body_form, mouse_rat_like).
+trait(chiromyscus_chiropus, body_covering, fur_or_hair).
+trait(chiromyscus_chiropus, movement_seen, climbing).
+trait(chiromyscus_chiropus, observation_place, tree_or_bush).
+trait(chiromyscus_chiropus, primary_color, reddish_or_orange).
+trait(chiromyscus_chiropus, body_pattern, patched).
+trait(chiromyscus_chiropus, tail_impression, very_long).
+trait(chiromyscus_chiropus, ear_size_impression, large).
+trait(chiromyscus_chiropus, ear_shape_simple, rounded).
+trait(chiromyscus_chiropus, leg_foot_appearance, small_rodent_like_feet).
+trait(chiromyscus_chiropus, rodent_tail_type, furry_not_bushy).
+
+animal(chiropodomys_gliroides).
+scientific_name(chiropodomys_gliroides, "Chiropodomys gliroides").
+common_name(chiropodomys_gliroides, "Indomalayan Pencil-tailed Tree Mouse").
+animal_order(chiropodomys_gliroides, 'Rodentia').
+animal_family(chiropodomys_gliroides, 'Muridae').
+trait(chiropodomys_gliroides, body_form, mouse_rat_like).
+trait(chiropodomys_gliroides, body_covering, fur_or_hair).
+trait(chiropodomys_gliroides, movement_seen, climbing).
+trait(chiropodomys_gliroides, observation_place, tree_or_bush).
+trait(chiropodomys_gliroides, tail_impression, very_long).
+trait(chiropodomys_gliroides, tail_shape, tufted_tip).
+trait(chiropodomys_gliroides, leg_foot_appearance, small_rodent_like_feet).
+trait(chiropodomys_gliroides, rodent_tail_type, furry_not_bushy).
 
 animal(craseonycteris_thonglongyai).
 scientific_name(craseonycteris_thonglongyai, "Craseonycteris thonglongyai").
@@ -379,6 +668,7 @@ trait(cynopterus_sphinx, movement_seen, flying).
 trait(cynopterus_sphinx, primary_color, reddish_or_orange).
 trait(cynopterus_sphinx, body_pattern, plain).
 trait(cynopterus_sphinx, snout_shape_simple, long_narrow).
+trait(cynopterus_sphinx, bat_tail_visibility, tail_tip_beyond_membrane).
 
 animal(dicerorhinus_sumatrensis).
 scientific_name(dicerorhinus_sumatrensis, "Dicerorhinus sumatrensis").
@@ -394,6 +684,21 @@ trait(dicerorhinus_sumatrensis, primary_color, reddish_or_orange).
 trait(dicerorhinus_sumatrensis, body_pattern, plain).
 trait(dicerorhinus_sumatrensis, horns_or_antlers, horns).
 
+animal(dremomys_lokriah).
+scientific_name(dremomys_lokriah, "Dremomys lokriah").
+common_name(dremomys_lokriah, "Orange-bellied Himalayan Squirrel").
+animal_order(dremomys_lokriah, 'Rodentia').
+animal_family(dremomys_lokriah, 'Sciuridae').
+trait(dremomys_lokriah, body_form, squirrel_like).
+trait(dremomys_lokriah, body_covering, fur_or_hair).
+trait(dremomys_lokriah, movement_seen, climbing).
+trait(dremomys_lokriah, observation_place, tree_or_bush).
+trait(dremomys_lokriah, primary_color, grey).
+trait(dremomys_lokriah, body_pattern, patched).
+trait(dremomys_lokriah, tail_impression, long).
+trait(dremomys_lokriah, tail_shape, bushy).
+trait(dremomys_lokriah, rodent_tail_type, bushy).
+
 animal(dremomys_pernyi).
 scientific_name(dremomys_pernyi, "Dremomys pernyi").
 common_name(dremomys_pernyi, "Perny's Long-nosed Squirrel").
@@ -407,6 +712,7 @@ trait(dremomys_pernyi, time_seen, day).
 trait(dremomys_pernyi, primary_color, grey).
 trait(dremomys_pernyi, tail_shape, bushy).
 trait(dremomys_pernyi, snout_shape_simple, long_pointed).
+trait(dremomys_pernyi, rodent_tail_type, bushy).
 
 animal(dremomys_rufigenis).
 scientific_name(dremomys_rufigenis, "Dremomys rufigenis").
@@ -415,6 +721,8 @@ animal_order(dremomys_rufigenis, 'Rodentia').
 animal_family(dremomys_rufigenis, 'Sciuridae').
 trait(dremomys_rufigenis, body_form, squirrel_like).
 trait(dremomys_rufigenis, body_covering, fur_or_hair).
+trait(dremomys_rufigenis, movement_seen, climbing).
+trait(dremomys_rufigenis, time_seen, day).
 trait(dremomys_rufigenis, primary_color, grey).
 trait(dremomys_rufigenis, tail_impression, short).
 trait(dremomys_rufigenis, tail_shape, thick).
@@ -491,6 +799,41 @@ trait(eonycteris_spelaea, snout_shape_simple, long_narrow).
 trait(eonycteris_spelaea, bat_nose_shape, plain).
 trait(eonycteris_spelaea, bat_tail_visibility, tail_tip_beyond_membrane).
 
+animal(eupetaurus_nivamons).
+scientific_name(eupetaurus_nivamons, "Eupetaurus nivamons").
+common_name(eupetaurus_nivamons, "Yunnan Woolly Flying Squirrel").
+animal_order(eupetaurus_nivamons, 'Rodentia').
+animal_family(eupetaurus_nivamons, 'Sciuridae').
+trait(eupetaurus_nivamons, body_form, gliding_mammal_like).
+trait(eupetaurus_nivamons, body_covering, fur_or_hair).
+trait(eupetaurus_nivamons, movement_seen, gliding).
+trait(eupetaurus_nivamons, observation_place, tree_or_bush).
+trait(eupetaurus_nivamons, primary_color, brown).
+trait(eupetaurus_nivamons, body_pattern, patched).
+trait(eupetaurus_nivamons, tail_impression, very_long).
+trait(eupetaurus_nivamons, tail_shape, bushy).
+trait(eupetaurus_nivamons, ear_size_impression, medium).
+trait(eupetaurus_nivamons, ear_shape_simple, pointed).
+trait(eupetaurus_nivamons, gliding_membrane_visible, yes).
+trait(eupetaurus_nivamons, rodent_tail_type, bushy).
+
+animal(euroscaptor_grandis).
+scientific_name(euroscaptor_grandis, "Euroscaptor grandis").
+common_name(euroscaptor_grandis, "Greater Chinese Mole").
+animal_order(euroscaptor_grandis, 'Eulipotyphla').
+animal_family(euroscaptor_grandis, 'Talpidae').
+trait(euroscaptor_grandis, body_form, shrew_mole_like).
+trait(euroscaptor_grandis, body_covering, fur_or_hair).
+trait(euroscaptor_grandis, movement_seen, digging_or_burrowing).
+trait(euroscaptor_grandis, observation_place, ground).
+trait(euroscaptor_grandis, primary_color, dark_brown).
+trait(euroscaptor_grandis, body_pattern, plain).
+trait(euroscaptor_grandis, tail_impression, short).
+trait(euroscaptor_grandis, ear_size_impression, not_obvious).
+trait(euroscaptor_grandis, snout_shape_simple, long_pointed).
+trait(euroscaptor_grandis, leg_foot_appearance, broad_digging_feet).
+trait(euroscaptor_grandis, mole_front_feet, broad_digging_feet).
+
 animal(felis_chaus).
 scientific_name(felis_chaus, "Felis chaus").
 common_name(felis_chaus, "Jungle Cat").
@@ -504,6 +847,20 @@ trait(felis_chaus, tail_impression, short).
 trait(felis_chaus, ear_size_impression, large).
 trait(felis_chaus, ear_shape_simple, rounded).
 trait(felis_chaus, carnivore_tail_marking, rings).
+
+animal(feresa_attenuata).
+scientific_name(feresa_attenuata, "Feresa attenuata").
+common_name(feresa_attenuata, "Pygmy Killer Whale").
+animal_order(feresa_attenuata, 'Artiodactyla').
+animal_family(feresa_attenuata, 'Delphinidae').
+trait(feresa_attenuata, body_form, whale_dolphin_like).
+trait(feresa_attenuata, body_covering, mostly_smooth_skin).
+trait(feresa_attenuata, movement_seen, swimming).
+trait(feresa_attenuata, observation_place, sea_or_coast).
+trait(feresa_attenuata, primary_color, black).
+trait(feresa_attenuata, cetacean_dorsal_fin, tall).
+trait(feresa_attenuata, cetacean_beak, no_distinct_beak).
+trait(feresa_attenuata, cetacean_color_pattern, light_belly).
 
 animal(galeopterus_variegatus).
 scientific_name(galeopterus_variegatus, "Galeopterus variegatus").
@@ -519,6 +876,34 @@ trait(galeopterus_variegatus, body_pattern, patched).
 trait(galeopterus_variegatus, ear_size_impression, small).
 trait(galeopterus_variegatus, snout_shape_simple, short_blunt).
 trait(galeopterus_variegatus, gliding_membrane_visible, yes).
+
+animal(globicephala_macrorhynchus).
+scientific_name(globicephala_macrorhynchus, "Globicephala macrorhynchus").
+common_name(globicephala_macrorhynchus, "Short-finned Pilot Whale").
+animal_order(globicephala_macrorhynchus, 'Artiodactyla').
+animal_family(globicephala_macrorhynchus, 'Delphinidae').
+trait(globicephala_macrorhynchus, body_form, whale_dolphin_like).
+trait(globicephala_macrorhynchus, body_covering, mostly_smooth_skin).
+trait(globicephala_macrorhynchus, movement_seen, swimming).
+trait(globicephala_macrorhynchus, observation_place, sea_or_coast).
+trait(globicephala_macrorhynchus, primary_color, black).
+trait(globicephala_macrorhynchus, cetacean_dorsal_fin, rounded_low).
+trait(globicephala_macrorhynchus, cetacean_beak, no_distinct_beak).
+trait(globicephala_macrorhynchus, cetacean_color_pattern, saddle_patch).
+
+animal(grampus_griseus).
+scientific_name(grampus_griseus, "Grampus griseus").
+common_name(grampus_griseus, "Risso's Dolphin").
+animal_order(grampus_griseus, 'Artiodactyla').
+animal_family(grampus_griseus, 'Delphinidae').
+trait(grampus_griseus, body_form, whale_dolphin_like).
+trait(grampus_griseus, body_covering, mostly_smooth_skin).
+trait(grampus_griseus, movement_seen, swimming).
+trait(grampus_griseus, observation_place, sea_or_coast).
+trait(grampus_griseus, primary_color, grey).
+trait(grampus_griseus, cetacean_dorsal_fin, curved_back).
+trait(grampus_griseus, cetacean_beak, no_distinct_beak).
+trait(grampus_griseus, cetacean_color_pattern, mottled).
 
 animal(helarctos_malayanus).
 scientific_name(helarctos_malayanus, "Helarctos malayanus").
@@ -562,6 +947,23 @@ trait(hipposideros_armiger, movement_seen, flying).
 trait(hipposideros_armiger, observation_place, cave).
 trait(hipposideros_armiger, primary_color, brown).
 trait(hipposideros_armiger, bat_nose_shape, leaf_like).
+
+animal(hipposideros_diadema).
+scientific_name(hipposideros_diadema, "Hipposideros diadema").
+common_name(hipposideros_diadema, "Diadem Roundleaf Bat").
+animal_order(hipposideros_diadema, 'Chiroptera').
+animal_family(hipposideros_diadema, 'Hipposideridae').
+trait(hipposideros_diadema, body_form, bat_like).
+trait(hipposideros_diadema, body_covering, fur_or_hair).
+trait(hipposideros_diadema, movement_seen, flying).
+trait(hipposideros_diadema, observation_place, cave).
+trait(hipposideros_diadema, time_seen, night).
+trait(hipposideros_diadema, primary_color, brown).
+trait(hipposideros_diadema, body_pattern, patched).
+trait(hipposideros_diadema, ear_size_impression, medium).
+trait(hipposideros_diadema, ear_shape_simple, pointed).
+trait(hipposideros_diadema, bat_nose_shape, leaf_like).
+trait(hipposideros_diadema, bat_tail_visibility, tail_within_membrane).
 
 animal(hoolock_hoolock).
 scientific_name(hoolock_hoolock, "Hoolock hoolock").
@@ -622,6 +1024,23 @@ trait(hylobates_lar, tail_impression, no_obvious_tail).
 trait(hylobates_lar, leg_foot_appearance, grasping_hands_or_feet).
 trait(hylobates_lar, primate_face_marking, white_face_ring).
 
+animal(hylomys_suillus).
+scientific_name(hylomys_suillus, "Hylomys suillus").
+common_name(hylomys_suillus, "Javan Short-tailed Gymnure").
+animal_order(hylomys_suillus, 'Eulipotyphla').
+animal_family(hylomys_suillus, 'Erinaceidae').
+trait(hylomys_suillus, body_form, shrew_mole_like).
+trait(hylomys_suillus, body_covering, fur_or_hair).
+trait(hylomys_suillus, movement_seen, walking_or_running).
+trait(hylomys_suillus, observation_place, ground).
+trait(hylomys_suillus, primary_color, brown).
+trait(hylomys_suillus, body_pattern, plain).
+trait(hylomys_suillus, tail_impression, short).
+trait(hylomys_suillus, ear_size_impression, small).
+trait(hylomys_suillus, ear_shape_simple, rounded).
+trait(hylomys_suillus, snout_shape_simple, long_pointed).
+trait(hylomys_suillus, leg_foot_appearance, small_rodent_like_feet).
+
 animal(hylopetes_alboniger).
 scientific_name(hylopetes_alboniger, "Hylopetes alboniger").
 common_name(hylopetes_alboniger, "Particolored Flying Squirrel").
@@ -676,6 +1095,50 @@ trait(hystrix_brachyura, primary_color, dark_brown).
 trait(hystrix_brachyura, body_pattern, banded).
 trait(hystrix_brachyura, tail_impression, short).
 trait(hystrix_brachyura, quills_or_spines_visible, yes).
+
+animal(kerivoula_picta).
+scientific_name(kerivoula_picta, "Kerivoula picta").
+common_name(kerivoula_picta, "Painted Woolly Bat").
+animal_order(kerivoula_picta, 'Chiroptera').
+animal_family(kerivoula_picta, 'Vespertilionidae').
+trait(kerivoula_picta, body_form, bat_like).
+trait(kerivoula_picta, body_covering, fur_or_hair).
+trait(kerivoula_picta, movement_seen, flying).
+trait(kerivoula_picta, observation_place, tree_or_bush).
+trait(kerivoula_picta, time_seen, night).
+trait(kerivoula_picta, primary_color, reddish_or_orange).
+trait(kerivoula_picta, body_pattern, mixed).
+trait(kerivoula_picta, ear_size_impression, large).
+trait(kerivoula_picta, ear_shape_simple, funnel_like).
+trait(kerivoula_picta, bat_nose_shape, plain).
+
+animal(kogia_breviceps).
+scientific_name(kogia_breviceps, "Kogia breviceps").
+common_name(kogia_breviceps, "Pygmy Sperm Whale").
+animal_order(kogia_breviceps, 'Artiodactyla').
+animal_family(kogia_breviceps, 'Kogiidae').
+trait(kogia_breviceps, body_form, whale_dolphin_like).
+trait(kogia_breviceps, body_covering, mostly_smooth_skin).
+trait(kogia_breviceps, movement_seen, swimming).
+trait(kogia_breviceps, observation_place, sea_or_coast).
+trait(kogia_breviceps, primary_color, grey).
+trait(kogia_breviceps, cetacean_dorsal_fin, rounded_low).
+trait(kogia_breviceps, cetacean_beak, no_distinct_beak).
+trait(kogia_breviceps, cetacean_color_pattern, light_belly).
+
+animal(kogia_sima).
+scientific_name(kogia_sima, "Kogia sima").
+common_name(kogia_sima, "Dwarf Sperm Whale").
+animal_order(kogia_sima, 'Artiodactyla').
+animal_family(kogia_sima, 'Kogiidae').
+trait(kogia_sima, body_form, whale_dolphin_like).
+trait(kogia_sima, body_covering, mostly_smooth_skin).
+trait(kogia_sima, movement_seen, swimming).
+trait(kogia_sima, observation_place, sea_or_coast).
+trait(kogia_sima, primary_color, grey).
+trait(kogia_sima, cetacean_dorsal_fin, small).
+trait(kogia_sima, cetacean_beak, no_distinct_beak).
+trait(kogia_sima, cetacean_color_pattern, light_belly).
 
 animal(lepus_comus).
 scientific_name(lepus_comus, "Lepus comus").
@@ -743,6 +1206,7 @@ trait(lutrogale_perspicillata, body_covering, fur_or_hair).
 trait(lutrogale_perspicillata, movement_seen, swimming).
 trait(lutrogale_perspicillata, observation_place, freshwater_or_wetland).
 trait(lutrogale_perspicillata, primary_color, brown).
+trait(lutrogale_perspicillata, body_pattern, plain).
 trait(lutrogale_perspicillata, tail_shape, flattened).
 trait(lutrogale_perspicillata, snout_shape_simple, short_blunt).
 trait(lutrogale_perspicillata, leg_foot_appearance, webbed_feet).
@@ -833,6 +1297,7 @@ trait(macroglossus_sobrinus, body_size_impression, mouse_or_smaller).
 trait(macroglossus_sobrinus, body_form, bat_like).
 trait(macroglossus_sobrinus, body_covering, fur_or_hair).
 trait(macroglossus_sobrinus, movement_seen, flying).
+trait(macroglossus_sobrinus, time_seen, night).
 trait(macroglossus_sobrinus, primary_color, reddish_or_orange).
 trait(macroglossus_sobrinus, body_pattern, plain).
 trait(macroglossus_sobrinus, ear_size_impression, medium).
@@ -873,6 +1338,34 @@ trait(martes_flavigula, primary_color, mixed).
 trait(martes_flavigula, body_pattern, patched).
 trait(martes_flavigula, tail_impression, long).
 trait(martes_flavigula, tail_shape, bushy).
+
+animal(martes_foina).
+scientific_name(martes_foina, "Martes foina").
+common_name(martes_foina, "Stone Marten").
+animal_order(martes_foina, 'Carnivora').
+animal_family(martes_foina, 'Mustelidae').
+trait(martes_foina, body_form, long_body_short_legs).
+trait(martes_foina, body_covering, fur_or_hair).
+trait(martes_foina, primary_color, brown).
+trait(martes_foina, body_pattern, patched).
+trait(martes_foina, tail_impression, long).
+trait(martes_foina, tail_shape, bushy).
+
+animal(maxomys_surifer).
+scientific_name(maxomys_surifer, "Maxomys surifer").
+common_name(maxomys_surifer, "Indomalayan Spiny Rat").
+animal_order(maxomys_surifer, 'Rodentia').
+animal_family(maxomys_surifer, 'Muridae').
+trait(maxomys_surifer, body_form, mouse_rat_like).
+trait(maxomys_surifer, body_covering, fur_or_hair).
+trait(maxomys_surifer, movement_seen, walking_or_running).
+trait(maxomys_surifer, observation_place, ground).
+trait(maxomys_surifer, primary_color, reddish_or_orange).
+trait(maxomys_surifer, body_pattern, patched).
+trait(maxomys_surifer, tail_impression, long).
+trait(maxomys_surifer, snout_shape_simple, long_pointed).
+trait(maxomys_surifer, leg_foot_appearance, small_rodent_like_feet).
+trait(maxomys_surifer, rodent_tail_type, mostly_bare_or_scaly).
 
 animal(megaderma_spasma).
 scientific_name(megaderma_spasma, "Megaderma spasma").
@@ -927,6 +1420,8 @@ animal_order(melogale_moschata, 'Carnivora').
 animal_family(melogale_moschata, 'Mustelidae').
 trait(melogale_moschata, body_form, long_body_short_legs).
 trait(melogale_moschata, body_covering, fur_or_hair).
+trait(melogale_moschata, observation_place, ground).
+trait(melogale_moschata, time_seen, night).
 trait(melogale_moschata, primary_color, dark_brown).
 trait(melogale_moschata, body_pattern, dorsal_stripe).
 trait(melogale_moschata, tail_impression, medium).
@@ -958,8 +1453,23 @@ trait(menetes_berdmorei, body_form, squirrel_like).
 trait(menetes_berdmorei, body_covering, fur_or_hair).
 trait(menetes_berdmorei, movement_seen, walking_or_running).
 trait(menetes_berdmorei, observation_place, ground).
+trait(menetes_berdmorei, time_seen, day).
 trait(menetes_berdmorei, primary_color, grey).
 trait(menetes_berdmorei, body_pattern, striped).
+trait(menetes_berdmorei, rodent_tail_type, bushy).
+
+animal(moschus_fuscus).
+scientific_name(moschus_fuscus, "Moschus fuscus").
+common_name(moschus_fuscus, "Black Musk-deer").
+animal_order(moschus_fuscus, 'Artiodactyla').
+animal_family(moschus_fuscus, 'Moschidae').
+trait(moschus_fuscus, body_form, hoofed_like).
+trait(moschus_fuscus, body_covering, fur_or_hair).
+trait(moschus_fuscus, movement_seen, hopping).
+trait(moschus_fuscus, primary_color, brown).
+trait(moschus_fuscus, body_pattern, spotted).
+trait(moschus_fuscus, ear_size_impression, large).
+trait(moschus_fuscus, horns_or_antlers, none_visible).
 
 animal(muntiacus_feae).
 scientific_name(muntiacus_feae, "Muntiacus feae").
@@ -976,6 +1486,141 @@ trait(muntiacus_feae, body_pattern, plain).
 trait(muntiacus_feae, tail_impression, long).
 trait(muntiacus_feae, leg_foot_appearance, hooves).
 
+animal(muntiacus_gongshanensis).
+scientific_name(muntiacus_gongshanensis, "Muntiacus gongshanensis").
+common_name(muntiacus_gongshanensis, "Gongshan Muntjac").
+animal_order(muntiacus_gongshanensis, 'Artiodactyla').
+animal_family(muntiacus_gongshanensis, 'Cervidae').
+trait(muntiacus_gongshanensis, body_form, hoofed_like).
+trait(muntiacus_gongshanensis, body_covering, fur_or_hair).
+trait(muntiacus_gongshanensis, observation_place, ground).
+trait(muntiacus_gongshanensis, primary_color, dark_brown).
+trait(muntiacus_gongshanensis, body_pattern, patched).
+trait(muntiacus_gongshanensis, leg_foot_appearance, hooves).
+
+animal(muntiacus_putaoensis).
+scientific_name(muntiacus_putaoensis, "Muntiacus putaoensis").
+common_name(muntiacus_putaoensis, "Leaf Muntjac").
+animal_order(muntiacus_putaoensis, 'Artiodactyla').
+animal_family(muntiacus_putaoensis, 'Cervidae').
+trait(muntiacus_putaoensis, body_form, hoofed_like).
+trait(muntiacus_putaoensis, body_covering, fur_or_hair).
+trait(muntiacus_putaoensis, observation_place, ground).
+trait(muntiacus_putaoensis, primary_color, yellowish_or_buff).
+trait(muntiacus_putaoensis, body_pattern, masked).
+trait(muntiacus_putaoensis, leg_foot_appearance, hooves).
+
+animal(muntiacus_vaginalis).
+scientific_name(muntiacus_vaginalis, "Muntiacus vaginalis").
+common_name(muntiacus_vaginalis, "Northern Red Muntjac").
+animal_order(muntiacus_vaginalis, 'Artiodactyla').
+animal_family(muntiacus_vaginalis, 'Cervidae').
+trait(muntiacus_vaginalis, body_form, hoofed_like).
+trait(muntiacus_vaginalis, body_covering, fur_or_hair).
+trait(muntiacus_vaginalis, primary_color, reddish_or_orange).
+trait(muntiacus_vaginalis, body_pattern, patched).
+trait(muntiacus_vaginalis, snout_shape_simple, long_narrow).
+trait(muntiacus_vaginalis, leg_foot_appearance, hooves).
+
+animal(mus_caroli).
+scientific_name(mus_caroli, "Mus caroli").
+common_name(mus_caroli, "Ryukyu Mouse").
+animal_order(mus_caroli, 'Rodentia').
+animal_family(mus_caroli, 'Muridae').
+trait(mus_caroli, body_form, mouse_rat_like).
+trait(mus_caroli, body_covering, fur_or_hair).
+trait(mus_caroli, movement_seen, walking_or_running).
+trait(mus_caroli, observation_place, ground).
+trait(mus_caroli, primary_color, brown).
+trait(mus_caroli, body_pattern, patched).
+trait(mus_caroli, tail_impression, long).
+trait(mus_caroli, ear_size_impression, medium).
+trait(mus_caroli, ear_shape_simple, rounded).
+trait(mus_caroli, snout_shape_simple, long_pointed).
+trait(mus_caroli, leg_foot_appearance, small_rodent_like_feet).
+trait(mus_caroli, rodent_tail_type, mostly_bare_or_scaly).
+
+animal(mus_cervicolor).
+scientific_name(mus_cervicolor, "Mus cervicolor").
+common_name(mus_cervicolor, "Fawn-colored Mouse").
+animal_order(mus_cervicolor, 'Rodentia').
+animal_family(mus_cervicolor, 'Muridae').
+trait(mus_cervicolor, body_form, mouse_rat_like).
+trait(mus_cervicolor, body_covering, fur_or_hair).
+trait(mus_cervicolor, movement_seen, walking_or_running).
+trait(mus_cervicolor, observation_place, ground).
+trait(mus_cervicolor, primary_color, brown).
+trait(mus_cervicolor, body_pattern, plain).
+trait(mus_cervicolor, tail_impression, medium).
+trait(mus_cervicolor, ear_size_impression, medium).
+trait(mus_cervicolor, ear_shape_simple, rounded).
+trait(mus_cervicolor, snout_shape_simple, long_pointed).
+trait(mus_cervicolor, leg_foot_appearance, small_rodent_like_feet).
+trait(mus_cervicolor, rodent_tail_type, mostly_bare_or_scaly).
+
+animal(mus_musculus).
+scientific_name(mus_musculus, "Mus musculus").
+common_name(mus_musculus, "House Mouse").
+animal_order(mus_musculus, 'Rodentia').
+animal_family(mus_musculus, 'Muridae').
+trait(mus_musculus, body_form, mouse_rat_like).
+trait(mus_musculus, body_covering, fur_or_hair).
+trait(mus_musculus, movement_seen, walking_or_running).
+trait(mus_musculus, observation_place, building_or_roof).
+trait(mus_musculus, time_seen, night).
+trait(mus_musculus, primary_color, brown).
+trait(mus_musculus, body_pattern, plain).
+trait(mus_musculus, tail_impression, long).
+trait(mus_musculus, ear_size_impression, large).
+trait(mus_musculus, ear_shape_simple, rounded).
+trait(mus_musculus, snout_shape_simple, long_pointed).
+trait(mus_musculus, leg_foot_appearance, small_rodent_like_feet).
+trait(mus_musculus, rodent_tail_type, mostly_bare_or_scaly).
+
+animal(mus_pahari).
+scientific_name(mus_pahari, "Mus pahari").
+common_name(mus_pahari, "Indochinese Shrew-like Mouse").
+animal_order(mus_pahari, 'Rodentia').
+animal_family(mus_pahari, 'Muridae').
+trait(mus_pahari, body_form, mouse_rat_like).
+trait(mus_pahari, body_covering, fur_or_hair).
+trait(mus_pahari, movement_seen, walking_or_running).
+trait(mus_pahari, observation_place, ground).
+trait(mus_pahari, primary_color, grey).
+trait(mus_pahari, body_pattern, patched).
+trait(mus_pahari, tail_impression, medium).
+trait(mus_pahari, ear_size_impression, small).
+trait(mus_pahari, ear_shape_simple, rounded).
+trait(mus_pahari, snout_shape_simple, long_pointed).
+trait(mus_pahari, leg_foot_appearance, small_rodent_like_feet).
+trait(mus_pahari, rodent_tail_type, furry_not_bushy).
+
+animal(mustela_kathiah).
+scientific_name(mustela_kathiah, "Mustela kathiah").
+common_name(mustela_kathiah, "Yellow-bellied Weasel").
+animal_order(mustela_kathiah, 'Carnivora').
+animal_family(mustela_kathiah, 'Mustelidae').
+trait(mustela_kathiah, body_form, long_body_short_legs).
+trait(mustela_kathiah, body_covering, fur_or_hair).
+trait(mustela_kathiah, observation_place, ground).
+trait(mustela_kathiah, time_seen, night).
+trait(mustela_kathiah, primary_color, dark_brown).
+trait(mustela_kathiah, body_pattern, patched).
+trait(mustela_kathiah, tail_impression, long).
+trait(mustela_kathiah, tail_shape, bushy).
+
+animal(mustela_sibirica).
+scientific_name(mustela_sibirica, "Mustela sibirica").
+common_name(mustela_sibirica, "Siberian Weasel").
+animal_order(mustela_sibirica, 'Carnivora').
+animal_family(mustela_sibirica, 'Mustelidae').
+trait(mustela_sibirica, body_form, long_body_short_legs).
+trait(mustela_sibirica, body_covering, fur_or_hair).
+trait(mustela_sibirica, primary_color, yellowish_or_buff).
+trait(mustela_sibirica, body_pattern, masked).
+trait(mustela_sibirica, tail_impression, long).
+trait(mustela_sibirica, carnivore_face_marking, dark_mask).
+
 animal(mustela_strigidorsa).
 scientific_name(mustela_strigidorsa, "Mustela strigidorsa").
 common_name(mustela_strigidorsa, "Back-striped Weasel").
@@ -983,9 +1628,51 @@ animal_order(mustela_strigidorsa, 'Carnivora').
 animal_family(mustela_strigidorsa, 'Mustelidae').
 trait(mustela_strigidorsa, body_form, long_body_short_legs).
 trait(mustela_strigidorsa, body_covering, fur_or_hair).
+trait(mustela_strigidorsa, observation_place, ground).
 trait(mustela_strigidorsa, primary_color, dark_brown).
 trait(mustela_strigidorsa, body_pattern, dorsal_stripe).
 trait(mustela_strigidorsa, tail_impression, long).
+
+animal(naemorhedus_cranbrooki).
+scientific_name(naemorhedus_cranbrooki, "Naemorhedus cranbrooki").
+common_name(naemorhedus_cranbrooki, "Cranbrook's Goral").
+animal_order(naemorhedus_cranbrooki, 'Artiodactyla').
+animal_family(naemorhedus_cranbrooki, 'Bovidae').
+trait(naemorhedus_cranbrooki, body_form, hoofed_like).
+trait(naemorhedus_cranbrooki, body_covering, fur_or_hair).
+trait(naemorhedus_cranbrooki, observation_place, ground).
+trait(naemorhedus_cranbrooki, primary_color, reddish_or_orange).
+trait(naemorhedus_cranbrooki, body_pattern, dorsal_stripe).
+trait(naemorhedus_cranbrooki, leg_foot_appearance, hooves).
+trait(naemorhedus_cranbrooki, horns_or_antlers, horns).
+trait(naemorhedus_cranbrooki, horn_shape_simple, curved).
+
+animal(naemorhedus_evansi).
+scientific_name(naemorhedus_evansi, "Naemorhedus evansi").
+common_name(naemorhedus_evansi, "Burmese Goral").
+animal_order(naemorhedus_evansi, 'Artiodactyla').
+animal_family(naemorhedus_evansi, 'Bovidae').
+trait(naemorhedus_evansi, body_form, hoofed_like).
+trait(naemorhedus_evansi, body_covering, fur_or_hair).
+trait(naemorhedus_evansi, primary_color, brown).
+trait(naemorhedus_evansi, body_pattern, dorsal_stripe).
+trait(naemorhedus_evansi, tail_shape, bushy).
+trait(naemorhedus_evansi, horns_or_antlers, horns).
+trait(naemorhedus_evansi, horn_shape_simple, curved).
+
+animal(naemorhedus_griseus).
+scientific_name(naemorhedus_griseus, "Naemorhedus griseus").
+common_name(naemorhedus_griseus, "Chinese Goral").
+animal_order(naemorhedus_griseus, 'Artiodactyla').
+animal_family(naemorhedus_griseus, 'Bovidae').
+trait(naemorhedus_griseus, body_form, hoofed_like).
+trait(naemorhedus_griseus, body_covering, fur_or_hair).
+trait(naemorhedus_griseus, observation_place, ground).
+trait(naemorhedus_griseus, primary_color, grey).
+trait(naemorhedus_griseus, body_pattern, dorsal_stripe).
+trait(naemorhedus_griseus, leg_foot_appearance, hooves).
+trait(naemorhedus_griseus, horns_or_antlers, horns).
+trait(naemorhedus_griseus, horn_shape_simple, curved).
 
 animal(nectogale_elegans).
 scientific_name(nectogale_elegans, "Nectogale elegans").
@@ -1018,6 +1705,20 @@ trait(neofelis_nebulosa, ear_size_impression, small).
 trait(neofelis_nebulosa, ear_shape_simple, rounded).
 trait(neofelis_nebulosa, carnivore_tail_marking, rings).
 
+animal(neophocaena_phocaenoides).
+scientific_name(neophocaena_phocaenoides, "Neophocaena phocaenoides").
+common_name(neophocaena_phocaenoides, "Indo-Pacific Finless Porpoise").
+animal_order(neophocaena_phocaenoides, 'Artiodactyla').
+animal_family(neophocaena_phocaenoides, 'Phocoenidae').
+trait(neophocaena_phocaenoides, body_form, whale_dolphin_like).
+trait(neophocaena_phocaenoides, body_covering, mostly_smooth_skin).
+trait(neophocaena_phocaenoides, movement_seen, swimming).
+trait(neophocaena_phocaenoides, observation_place, sea_or_coast).
+trait(neophocaena_phocaenoides, primary_color, grey).
+trait(neophocaena_phocaenoides, cetacean_dorsal_fin, none_visible).
+trait(neophocaena_phocaenoides, cetacean_beak, no_distinct_beak).
+trait(neophocaena_phocaenoides, cetacean_color_pattern, light_belly).
+
 animal(neotetracus_sinensis).
 scientific_name(neotetracus_sinensis, "Neotetracus sinensis").
 common_name(neotetracus_sinensis, "Shrew Gymnure").
@@ -1030,6 +1731,22 @@ trait(neotetracus_sinensis, observation_place, ground).
 trait(neotetracus_sinensis, time_seen, night).
 trait(neotetracus_sinensis, primary_color, brown).
 trait(neotetracus_sinensis, tail_impression, long).
+
+animal(niviventer_fulvescens).
+scientific_name(niviventer_fulvescens, "Niviventer fulvescens").
+common_name(niviventer_fulvescens, "Indochinese White-bellied Rat").
+animal_order(niviventer_fulvescens, 'Rodentia').
+animal_family(niviventer_fulvescens, 'Muridae').
+trait(niviventer_fulvescens, body_form, mouse_rat_like).
+trait(niviventer_fulvescens, body_covering, fur_or_hair).
+trait(niviventer_fulvescens, movement_seen, walking_or_running).
+trait(niviventer_fulvescens, observation_place, ground).
+trait(niviventer_fulvescens, primary_color, reddish_or_orange).
+trait(niviventer_fulvescens, body_pattern, patched).
+trait(niviventer_fulvescens, tail_impression, very_long).
+trait(niviventer_fulvescens, snout_shape_simple, long_pointed).
+trait(niviventer_fulvescens, leg_foot_appearance, small_rodent_like_feet).
+trait(niviventer_fulvescens, rodent_tail_type, furry_not_bushy).
 
 animal(nycticebus_bengalensis).
 scientific_name(nycticebus_bengalensis, "Nycticebus bengalensis").
@@ -1057,6 +1774,20 @@ trait(ochotona_forresti, body_form, rabbit_hare_like).
 trait(ochotona_forresti, body_covering, fur_or_hair).
 trait(ochotona_forresti, observation_place, ground).
 trait(ochotona_forresti, primary_color, dark_brown).
+
+animal(ochotona_thibetana).
+scientific_name(ochotona_thibetana, "Ochotona thibetana").
+common_name(ochotona_thibetana, "Moupin Pika").
+animal_order(ochotona_thibetana, 'Lagomorpha').
+animal_family(ochotona_thibetana, 'Ochotonidae').
+trait(ochotona_thibetana, body_form, rabbit_hare_like).
+trait(ochotona_thibetana, body_covering, fur_or_hair).
+trait(ochotona_thibetana, observation_place, ground).
+trait(ochotona_thibetana, time_seen, day).
+trait(ochotona_thibetana, primary_color, yellowish_or_buff).
+trait(ochotona_thibetana, tail_impression, no_obvious_tail).
+trait(ochotona_thibetana, ear_size_impression, small).
+trait(ochotona_thibetana, ear_shape_simple, rounded).
 
 animal(orcaella_brevirostris).
 scientific_name(orcaella_brevirostris, "Orcaella brevirostris").
@@ -1131,6 +1862,21 @@ trait(panthera_tigris, primary_color, reddish_or_orange).
 trait(panthera_tigris, body_pattern, striped).
 trait(panthera_tigris, carnivore_tail_marking, rings).
 
+animal(paradoxurus_musangus).
+scientific_name(paradoxurus_musangus, "Paradoxurus musangus").
+common_name(paradoxurus_musangus, "Paradoxurus musangus").
+animal_order(paradoxurus_musangus, 'Carnivora').
+animal_family(paradoxurus_musangus, 'Viverridae').
+trait(paradoxurus_musangus, body_form, long_body_short_legs).
+trait(paradoxurus_musangus, body_covering, fur_or_hair).
+trait(paradoxurus_musangus, movement_seen, climbing).
+trait(paradoxurus_musangus, observation_place, tree_or_bush).
+trait(paradoxurus_musangus, time_seen, night).
+trait(paradoxurus_musangus, primary_color, dark_brown).
+trait(paradoxurus_musangus, body_pattern, mixed).
+trait(paradoxurus_musangus, tail_impression, long).
+trait(paradoxurus_musangus, carnivore_face_marking, dark_mask).
+
 animal(pardofelis_marmorata).
 scientific_name(pardofelis_marmorata, "Pardofelis marmorata").
 common_name(pardofelis_marmorata, "Marbled Cat").
@@ -1147,6 +1893,19 @@ trait(pardofelis_marmorata, tail_impression, long).
 trait(pardofelis_marmorata, ear_shape_simple, rounded).
 trait(pardofelis_marmorata, carnivore_tail_marking, dark_tip).
 
+animal(peponocephala_electra).
+scientific_name(peponocephala_electra, "Peponocephala electra").
+common_name(peponocephala_electra, "Melon-headed Whale").
+animal_order(peponocephala_electra, 'Artiodactyla').
+animal_family(peponocephala_electra, 'Delphinidae').
+trait(peponocephala_electra, body_form, whale_dolphin_like).
+trait(peponocephala_electra, body_covering, mostly_smooth_skin).
+trait(peponocephala_electra, movement_seen, swimming).
+trait(peponocephala_electra, observation_place, sea_or_coast).
+trait(peponocephala_electra, primary_color, black).
+trait(peponocephala_electra, cetacean_beak, no_distinct_beak).
+trait(peponocephala_electra, cetacean_color_pattern, mixed).
+
 animal(petaurista_alborufus).
 scientific_name(petaurista_alborufus, "Petaurista alborufus").
 common_name(petaurista_alborufus, "Red-and-white Giant Flying Squirrel").
@@ -1160,6 +1919,22 @@ trait(petaurista_alborufus, primary_color, reddish_or_orange).
 trait(petaurista_alborufus, body_pattern, patched).
 trait(petaurista_alborufus, tail_impression, long).
 trait(petaurista_alborufus, gliding_membrane_visible, yes).
+
+animal(petaurista_caniceps).
+scientific_name(petaurista_caniceps, "Petaurista caniceps").
+common_name(petaurista_caniceps, "Gray-headed Giant Flying Squirrel").
+animal_order(petaurista_caniceps, 'Rodentia').
+animal_family(petaurista_caniceps, 'Sciuridae').
+trait(petaurista_caniceps, body_form, gliding_mammal_like).
+trait(petaurista_caniceps, body_covering, fur_or_hair).
+trait(petaurista_caniceps, movement_seen, gliding).
+trait(petaurista_caniceps, observation_place, tree_or_bush).
+trait(petaurista_caniceps, primary_color, mixed).
+trait(petaurista_caniceps, body_pattern, patched).
+trait(petaurista_caniceps, tail_impression, very_long).
+trait(petaurista_caniceps, tail_shape, bushy).
+trait(petaurista_caniceps, gliding_membrane_visible, yes).
+trait(petaurista_caniceps, rodent_tail_type, bushy).
 
 animal(petaurista_elegans).
 scientific_name(petaurista_elegans, "Petaurista elegans").
@@ -1175,6 +1950,22 @@ trait(petaurista_elegans, primary_color, dark_brown).
 trait(petaurista_elegans, tail_impression, very_long).
 trait(petaurista_elegans, tail_shape, bushy).
 trait(petaurista_elegans, gliding_membrane_visible, yes).
+
+animal(petaurista_magnificus).
+scientific_name(petaurista_magnificus, "Petaurista magnificus").
+common_name(petaurista_magnificus, "Petaurista magnificus").
+animal_order(petaurista_magnificus, 'Rodentia').
+animal_family(petaurista_magnificus, 'Sciuridae').
+trait(petaurista_magnificus, body_form, gliding_mammal_like).
+trait(petaurista_magnificus, body_covering, fur_or_hair).
+trait(petaurista_magnificus, movement_seen, gliding).
+trait(petaurista_magnificus, observation_place, tree_or_bush).
+trait(petaurista_magnificus, primary_color, reddish_or_orange).
+trait(petaurista_magnificus, body_pattern, mixed).
+trait(petaurista_magnificus, tail_impression, very_long).
+trait(petaurista_magnificus, tail_shape, bushy).
+trait(petaurista_magnificus, gliding_membrane_visible, yes).
+trait(petaurista_magnificus, rodent_tail_type, bushy).
 
 animal(petaurista_petaurista).
 scientific_name(petaurista_petaurista, "Petaurista petaurista").
@@ -1205,6 +1996,23 @@ trait(petaurista_philippensis, tail_impression, very_long).
 trait(petaurista_philippensis, tail_shape, bushy).
 trait(petaurista_philippensis, gliding_membrane_visible, yes).
 
+animal(petinomys_vordermanni).
+scientific_name(petinomys_vordermanni, "Petinomys vordermanni").
+common_name(petinomys_vordermanni, "Vordermann's Flying Squirrel").
+animal_order(petinomys_vordermanni, 'Rodentia').
+animal_family(petinomys_vordermanni, 'Sciuridae').
+trait(petinomys_vordermanni, body_form, gliding_mammal_like).
+trait(petinomys_vordermanni, body_covering, fur_or_hair).
+trait(petinomys_vordermanni, movement_seen, gliding).
+trait(petinomys_vordermanni, observation_place, tree_or_bush).
+trait(petinomys_vordermanni, primary_color, mixed).
+trait(petinomys_vordermanni, body_pattern, masked).
+trait(petinomys_vordermanni, tail_impression, long).
+trait(petinomys_vordermanni, tail_shape, bushy).
+trait(petinomys_vordermanni, ear_size_impression, medium).
+trait(petinomys_vordermanni, gliding_membrane_visible, yes).
+trait(petinomys_vordermanni, rodent_tail_type, bushy).
+
 animal(physeter_macrocephalus).
 scientific_name(physeter_macrocephalus, "Physeter macrocephalus").
 common_name(physeter_macrocephalus, "Sperm Whale").
@@ -1220,6 +2028,20 @@ trait(physeter_macrocephalus, tail_shape, fluked).
 trait(physeter_macrocephalus, cetacean_dorsal_fin, small).
 trait(physeter_macrocephalus, cetacean_beak, no_distinct_beak).
 trait(physeter_macrocephalus, cetacean_color_pattern, mostly_grey).
+
+animal(presbytis_femoralis).
+scientific_name(presbytis_femoralis, "Presbytis femoralis").
+common_name(presbytis_femoralis, "Raffles's Banded Langur").
+animal_order(presbytis_femoralis, 'Primates').
+animal_family(presbytis_femoralis, 'Cercopithecidae').
+trait(presbytis_femoralis, body_form, monkey_like).
+trait(presbytis_femoralis, body_covering, fur_or_hair).
+trait(presbytis_femoralis, movement_seen, climbing).
+trait(presbytis_femoralis, observation_place, tree_or_bush).
+trait(presbytis_femoralis, time_seen, day).
+trait(presbytis_femoralis, primary_color, black).
+trait(presbytis_femoralis, body_pattern, patched).
+trait(presbytis_femoralis, primate_face_marking, eye_rings).
 
 animal(prionailurus_bengalensis).
 scientific_name(prionailurus_bengalensis, "Prionailurus bengalensis").
@@ -1296,6 +2118,20 @@ trait(pseudois_nayaur, leg_foot_appearance, hooves).
 trait(pseudois_nayaur, horns_or_antlers, horns).
 trait(pseudois_nayaur, horn_shape_simple, curved).
 
+animal(pseudorca_crassidens).
+scientific_name(pseudorca_crassidens, "Pseudorca crassidens").
+common_name(pseudorca_crassidens, "False Killer Whale").
+animal_order(pseudorca_crassidens, 'Artiodactyla').
+animal_family(pseudorca_crassidens, 'Delphinidae').
+trait(pseudorca_crassidens, body_form, whale_dolphin_like).
+trait(pseudorca_crassidens, body_covering, mostly_smooth_skin).
+trait(pseudorca_crassidens, movement_seen, swimming).
+trait(pseudorca_crassidens, observation_place, sea_or_coast).
+trait(pseudorca_crassidens, primary_color, black).
+trait(pseudorca_crassidens, cetacean_dorsal_fin, curved_back).
+trait(pseudorca_crassidens, cetacean_beak, no_distinct_beak).
+trait(pseudorca_crassidens, cetacean_color_pattern, light_belly).
+
 animal(pteropus_hypomelanus).
 scientific_name(pteropus_hypomelanus, "Pteropus hypomelanus").
 common_name(pteropus_hypomelanus, "Island Flying Fox").
@@ -1309,6 +2145,24 @@ trait(pteropus_hypomelanus, observation_place, tree_or_bush).
 trait(pteropus_hypomelanus, time_seen, night).
 trait(pteropus_hypomelanus, primary_color, brown).
 trait(pteropus_hypomelanus, body_pattern, patched).
+trait(pteropus_hypomelanus, bat_tail_visibility, no_tail_visible).
+
+animal(pteropus_medius).
+scientific_name(pteropus_medius, "Pteropus medius").
+common_name(pteropus_medius, "Indian Flying Fox").
+animal_order(pteropus_medius, 'Chiroptera').
+animal_family(pteropus_medius, 'Pteropodidae').
+trait(pteropus_medius, body_form, bat_like).
+trait(pteropus_medius, body_covering, fur_or_hair).
+trait(pteropus_medius, movement_seen, flying).
+trait(pteropus_medius, observation_place, tree_or_bush).
+trait(pteropus_medius, time_seen, night).
+trait(pteropus_medius, primary_color, mixed).
+trait(pteropus_medius, body_pattern, patched).
+trait(pteropus_medius, ear_size_impression, medium).
+trait(pteropus_medius, ear_shape_simple, rounded).
+trait(pteropus_medius, bat_nose_shape, plain).
+trait(pteropus_medius, bat_tail_visibility, no_tail_visible).
 
 animal(pteropus_vampyrus).
 scientific_name(pteropus_vampyrus, "Pteropus vampyrus").
@@ -1324,6 +2178,100 @@ trait(pteropus_vampyrus, time_seen, night).
 trait(pteropus_vampyrus, primary_color, dark_brown).
 trait(pteropus_vampyrus, ear_shape_simple, pointed).
 trait(pteropus_vampyrus, snout_shape_simple, long_pointed).
+
+animal(rattus_andamanensis).
+scientific_name(rattus_andamanensis, "Rattus andamanensis").
+common_name(rattus_andamanensis, "Indochinese Forest Rat").
+animal_order(rattus_andamanensis, 'Rodentia').
+animal_family(rattus_andamanensis, 'Muridae').
+trait(rattus_andamanensis, body_form, mouse_rat_like).
+trait(rattus_andamanensis, body_covering, fur_or_hair).
+trait(rattus_andamanensis, movement_seen, walking_or_running).
+trait(rattus_andamanensis, observation_place, ground).
+trait(rattus_andamanensis, time_seen, night).
+trait(rattus_andamanensis, primary_color, brown).
+trait(rattus_andamanensis, body_pattern, plain).
+trait(rattus_andamanensis, tail_impression, long).
+trait(rattus_andamanensis, ear_size_impression, medium).
+trait(rattus_andamanensis, ear_shape_simple, rounded).
+trait(rattus_andamanensis, snout_shape_simple, long_pointed).
+trait(rattus_andamanensis, leg_foot_appearance, small_rodent_like_feet).
+trait(rattus_andamanensis, rodent_tail_type, mostly_bare_or_scaly).
+
+animal(rattus_exulans).
+scientific_name(rattus_exulans, "Rattus exulans").
+common_name(rattus_exulans, "Pacific Rat").
+animal_order(rattus_exulans, 'Rodentia').
+animal_family(rattus_exulans, 'Muridae').
+trait(rattus_exulans, body_form, mouse_rat_like).
+trait(rattus_exulans, body_covering, fur_or_hair).
+trait(rattus_exulans, movement_seen, walking_or_running).
+trait(rattus_exulans, observation_place, ground).
+trait(rattus_exulans, time_seen, night).
+trait(rattus_exulans, primary_color, brown).
+trait(rattus_exulans, body_pattern, patched).
+trait(rattus_exulans, tail_impression, long).
+trait(rattus_exulans, ear_size_impression, large).
+trait(rattus_exulans, ear_shape_simple, rounded).
+trait(rattus_exulans, snout_shape_simple, long_pointed).
+trait(rattus_exulans, leg_foot_appearance, small_rodent_like_feet).
+trait(rattus_exulans, rodent_tail_type, mostly_bare_or_scaly).
+
+animal(rattus_nitidus).
+scientific_name(rattus_nitidus, "Rattus nitidus").
+common_name(rattus_nitidus, "White-footed Indochinese Rat").
+animal_order(rattus_nitidus, 'Rodentia').
+animal_family(rattus_nitidus, 'Muridae').
+trait(rattus_nitidus, body_form, mouse_rat_like).
+trait(rattus_nitidus, body_covering, fur_or_hair).
+trait(rattus_nitidus, movement_seen, climbing).
+trait(rattus_nitidus, observation_place, ground).
+trait(rattus_nitidus, primary_color, grey).
+trait(rattus_nitidus, body_pattern, plain).
+trait(rattus_nitidus, tail_impression, long).
+trait(rattus_nitidus, ear_size_impression, medium).
+trait(rattus_nitidus, ear_shape_simple, rounded).
+trait(rattus_nitidus, snout_shape_simple, long_pointed).
+trait(rattus_nitidus, leg_foot_appearance, small_rodent_like_feet).
+trait(rattus_nitidus, rodent_tail_type, mostly_bare_or_scaly).
+
+animal(rattus_norvegicus).
+scientific_name(rattus_norvegicus, "Rattus norvegicus").
+common_name(rattus_norvegicus, "Brown Rat").
+animal_order(rattus_norvegicus, 'Rodentia').
+animal_family(rattus_norvegicus, 'Muridae').
+trait(rattus_norvegicus, body_form, mouse_rat_like).
+trait(rattus_norvegicus, body_covering, fur_or_hair).
+trait(rattus_norvegicus, movement_seen, walking_or_running).
+trait(rattus_norvegicus, observation_place, ground).
+trait(rattus_norvegicus, time_seen, night).
+trait(rattus_norvegicus, primary_color, brown).
+trait(rattus_norvegicus, body_pattern, plain).
+trait(rattus_norvegicus, tail_impression, long).
+trait(rattus_norvegicus, ear_size_impression, medium).
+trait(rattus_norvegicus, ear_shape_simple, rounded).
+trait(rattus_norvegicus, snout_shape_simple, long_pointed).
+trait(rattus_norvegicus, leg_foot_appearance, small_rodent_like_feet).
+trait(rattus_norvegicus, rodent_tail_type, mostly_bare_or_scaly).
+
+animal(rattus_rattus).
+scientific_name(rattus_rattus, "Rattus rattus").
+common_name(rattus_rattus, "Roof Rat").
+animal_order(rattus_rattus, 'Rodentia').
+animal_family(rattus_rattus, 'Muridae').
+trait(rattus_rattus, body_form, mouse_rat_like).
+trait(rattus_rattus, body_covering, fur_or_hair).
+trait(rattus_rattus, movement_seen, climbing).
+trait(rattus_rattus, observation_place, building_or_roof).
+trait(rattus_rattus, time_seen, night).
+trait(rattus_rattus, primary_color, black).
+trait(rattus_rattus, body_pattern, plain).
+trait(rattus_rattus, tail_impression, very_long).
+trait(rattus_rattus, ear_size_impression, large).
+trait(rattus_rattus, ear_shape_simple, rounded).
+trait(rattus_rattus, snout_shape_simple, long_pointed).
+trait(rattus_rattus, leg_foot_appearance, small_rodent_like_feet).
+trait(rattus_rattus, rodent_tail_type, mostly_bare_or_scaly).
 
 animal(ratufa_bicolor).
 scientific_name(ratufa_bicolor, "Ratufa bicolor").
@@ -1362,6 +2310,21 @@ trait(rhinoceros_unicornis, primary_color, grey).
 trait(rhinoceros_unicornis, snout_shape_simple, short_blunt).
 trait(rhinoceros_unicornis, horns_or_antlers, single_horn).
 
+animal(rhinolophus_trifoliatus).
+scientific_name(rhinolophus_trifoliatus, "Rhinolophus trifoliatus").
+common_name(rhinolophus_trifoliatus, "Trefoil Horseshoe Bat").
+animal_order(rhinolophus_trifoliatus, 'Chiroptera').
+animal_family(rhinolophus_trifoliatus, 'Rhinolophidae').
+trait(rhinolophus_trifoliatus, body_form, bat_like).
+trait(rhinolophus_trifoliatus, body_covering, fur_or_hair).
+trait(rhinolophus_trifoliatus, movement_seen, flying).
+trait(rhinolophus_trifoliatus, observation_place, tree_or_bush).
+trait(rhinolophus_trifoliatus, time_seen, night).
+trait(rhinolophus_trifoliatus, primary_color, grey).
+trait(rhinolophus_trifoliatus, ear_size_impression, medium).
+trait(rhinolophus_trifoliatus, bat_nose_shape, horseshoe_like).
+trait(rhinolophus_trifoliatus, bat_tail_visibility, tail_tip_beyond_membrane).
+
 animal(rhinopithecus_strykeri).
 scientific_name(rhinopithecus_strykeri, "Rhinopithecus strykeri").
 common_name(rhinopithecus_strykeri, "Stryker's Snub-nosed Monkey").
@@ -1381,6 +2344,8 @@ animal_family(rhizomys_pruinosus, 'Spalacidae').
 trait(rhizomys_pruinosus, body_size_impression, rabbit_or_cat_sized).
 trait(rhizomys_pruinosus, body_form, mouse_rat_like).
 trait(rhizomys_pruinosus, body_covering, fur_or_hair).
+trait(rhizomys_pruinosus, movement_seen, walking_or_running).
+trait(rhizomys_pruinosus, observation_place, ground).
 trait(rhizomys_pruinosus, primary_color, brown).
 trait(rhizomys_pruinosus, body_pattern, mixed).
 trait(rhizomys_pruinosus, tail_impression, short).
@@ -1402,6 +2367,38 @@ trait(rhizomys_sinensis, ear_size_impression, not_obvious).
 trait(rhizomys_sinensis, leg_foot_appearance, broad_digging_feet).
 trait(rhizomys_sinensis, rodent_tail_type, mostly_bare_or_scaly).
 
+animal(rousettus_amplexicaudatus).
+scientific_name(rousettus_amplexicaudatus, "Rousettus amplexicaudatus").
+common_name(rousettus_amplexicaudatus, "Geoffroy's Rousette").
+animal_order(rousettus_amplexicaudatus, 'Chiroptera').
+animal_family(rousettus_amplexicaudatus, 'Pteropodidae').
+trait(rousettus_amplexicaudatus, body_form, bat_like).
+trait(rousettus_amplexicaudatus, body_covering, fur_or_hair).
+trait(rousettus_amplexicaudatus, movement_seen, flying).
+trait(rousettus_amplexicaudatus, observation_place, cave).
+trait(rousettus_amplexicaudatus, time_seen, night).
+trait(rousettus_amplexicaudatus, primary_color, grey).
+trait(rousettus_amplexicaudatus, body_pattern, plain).
+trait(rousettus_amplexicaudatus, ear_size_impression, medium).
+trait(rousettus_amplexicaudatus, bat_nose_shape, plain).
+trait(rousettus_amplexicaudatus, bat_tail_visibility, tail_visible).
+
+animal(rousettus_leschenaultii).
+scientific_name(rousettus_leschenaultii, "Rousettus leschenaultii").
+common_name(rousettus_leschenaultii, "Leschenault's Rousette").
+animal_order(rousettus_leschenaultii, 'Chiroptera').
+animal_family(rousettus_leschenaultii, 'Pteropodidae').
+trait(rousettus_leschenaultii, body_form, bat_like).
+trait(rousettus_leschenaultii, body_covering, fur_or_hair).
+trait(rousettus_leschenaultii, movement_seen, flying).
+trait(rousettus_leschenaultii, primary_color, brown).
+trait(rousettus_leschenaultii, tail_impression, short).
+trait(rousettus_leschenaultii, ear_size_impression, large).
+trait(rousettus_leschenaultii, ear_shape_simple, pointed).
+trait(rousettus_leschenaultii, snout_shape_simple, long_narrow).
+trait(rousettus_leschenaultii, bat_nose_shape, plain).
+trait(rousettus_leschenaultii, bat_tail_visibility, tail_tip_beyond_membrane).
+
 animal(rucervus_eldii).
 scientific_name(rucervus_eldii, "Rucervus eldii").
 common_name(rucervus_eldii, "Brow-antlered Deer").
@@ -1410,7 +2407,9 @@ animal_family(rucervus_eldii, 'Cervidae').
 trait(rucervus_eldii, body_size_impression, deer_sized).
 trait(rucervus_eldii, body_form, hoofed_like).
 trait(rucervus_eldii, body_covering, fur_or_hair).
+trait(rucervus_eldii, movement_seen, walking_or_running).
 trait(rucervus_eldii, primary_color, brown).
+trait(rucervus_eldii, body_pattern, plain).
 trait(rucervus_eldii, tail_impression, short).
 trait(rucervus_eldii, ear_size_impression, large).
 
@@ -1425,6 +2424,35 @@ trait(rusa_unicolor, body_covering, fur_or_hair).
 trait(rusa_unicolor, primary_color, dark_brown).
 trait(rusa_unicolor, body_pattern, plain).
 trait(rusa_unicolor, tail_shape, bushy).
+
+animal(scotomanes_ornatus).
+scientific_name(scotomanes_ornatus, "Scotomanes ornatus").
+common_name(scotomanes_ornatus, "Harlequin Bat").
+animal_order(scotomanes_ornatus, 'Chiroptera').
+animal_family(scotomanes_ornatus, 'Vespertilionidae').
+trait(scotomanes_ornatus, body_form, bat_like).
+trait(scotomanes_ornatus, body_covering, fur_or_hair).
+trait(scotomanes_ornatus, movement_seen, flying).
+trait(scotomanes_ornatus, time_seen, night).
+trait(scotomanes_ornatus, primary_color, reddish_or_orange).
+trait(scotomanes_ornatus, body_pattern, mixed).
+trait(scotomanes_ornatus, ear_size_impression, medium).
+trait(scotomanes_ornatus, ear_shape_simple, rounded).
+trait(scotomanes_ornatus, bat_nose_shape, plain).
+
+animal(sousa_chinensis).
+scientific_name(sousa_chinensis, "Sousa chinensis").
+common_name(sousa_chinensis, "Indo-Pacific Humpback Dolphin").
+animal_order(sousa_chinensis, 'Artiodactyla').
+animal_family(sousa_chinensis, 'Delphinidae').
+trait(sousa_chinensis, body_form, whale_dolphin_like).
+trait(sousa_chinensis, body_covering, mostly_smooth_skin).
+trait(sousa_chinensis, movement_seen, swimming).
+trait(sousa_chinensis, observation_place, sea_or_coast).
+trait(sousa_chinensis, primary_color, white_or_cream).
+trait(sousa_chinensis, cetacean_dorsal_fin, small).
+trait(sousa_chinensis, cetacean_beak, obvious_long_beak).
+trait(sousa_chinensis, cetacean_color_pattern, mottled).
 
 animal(sphaerias_blanfordi).
 scientific_name(sphaerias_blanfordi, "Sphaerias blanfordi").
@@ -1441,6 +2469,35 @@ trait(sphaerias_blanfordi, ear_shape_simple, rounded).
 trait(sphaerias_blanfordi, snout_shape_simple, short_blunt).
 trait(sphaerias_blanfordi, bat_tail_visibility, no_tail_visible).
 
+animal(stenella_attenuata).
+scientific_name(stenella_attenuata, "Stenella attenuata").
+common_name(stenella_attenuata, "Pantropical Spotted Dolphin").
+animal_order(stenella_attenuata, 'Artiodactyla').
+animal_family(stenella_attenuata, 'Delphinidae').
+trait(stenella_attenuata, body_form, whale_dolphin_like).
+trait(stenella_attenuata, body_covering, mostly_smooth_skin).
+trait(stenella_attenuata, movement_seen, swimming).
+trait(stenella_attenuata, observation_place, sea_or_coast).
+trait(stenella_attenuata, primary_color, mixed).
+trait(stenella_attenuata, body_pattern, spotted).
+trait(stenella_attenuata, cetacean_beak, obvious_long_beak).
+trait(stenella_attenuata, cetacean_color_pattern, mottled).
+
+animal(stenella_coeruleoalba).
+scientific_name(stenella_coeruleoalba, "Stenella coeruleoalba").
+common_name(stenella_coeruleoalba, "Striped Dolphin").
+animal_order(stenella_coeruleoalba, 'Artiodactyla').
+animal_family(stenella_coeruleoalba, 'Delphinidae').
+trait(stenella_coeruleoalba, body_form, whale_dolphin_like).
+trait(stenella_coeruleoalba, body_covering, mostly_smooth_skin).
+trait(stenella_coeruleoalba, movement_seen, swimming).
+trait(stenella_coeruleoalba, observation_place, sea_or_coast).
+trait(stenella_coeruleoalba, primary_color, grey).
+trait(stenella_coeruleoalba, body_pattern, striped).
+trait(stenella_coeruleoalba, cetacean_dorsal_fin, tall).
+trait(stenella_coeruleoalba, cetacean_beak, obvious_long_beak).
+trait(stenella_coeruleoalba, cetacean_color_pattern, striped).
+
 animal(stenella_longirostris).
 scientific_name(stenella_longirostris, "Stenella longirostris").
 common_name(stenella_longirostris, "Spinner Dolphin").
@@ -1455,6 +2512,20 @@ trait(stenella_longirostris, tail_shape, fluked).
 trait(stenella_longirostris, cetacean_beak, obvious_long_beak).
 trait(stenella_longirostris, cetacean_color_pattern, light_belly).
 
+animal(steno_bredanensis).
+scientific_name(steno_bredanensis, "Steno bredanensis").
+common_name(steno_bredanensis, "Rough-toothed Dolphin").
+animal_order(steno_bredanensis, 'Artiodactyla').
+animal_family(steno_bredanensis, 'Delphinidae').
+trait(steno_bredanensis, body_form, whale_dolphin_like).
+trait(steno_bredanensis, body_covering, mostly_smooth_skin).
+trait(steno_bredanensis, movement_seen, swimming).
+trait(steno_bredanensis, observation_place, sea_or_coast).
+trait(steno_bredanensis, primary_color, grey).
+trait(steno_bredanensis, cetacean_dorsal_fin, tall).
+trait(steno_bredanensis, cetacean_beak, obvious_long_beak).
+trait(steno_bredanensis, cetacean_color_pattern, light_belly).
+
 animal(suncus_etruscus).
 scientific_name(suncus_etruscus, "Suncus etruscus").
 common_name(suncus_etruscus, "Etruscan Shrew").
@@ -1465,6 +2536,9 @@ trait(suncus_etruscus, body_form, shrew_mole_like).
 trait(suncus_etruscus, body_covering, fur_or_hair).
 trait(suncus_etruscus, observation_place, ground).
 trait(suncus_etruscus, primary_color, grey).
+trait(suncus_etruscus, tail_impression, long).
+trait(suncus_etruscus, ear_size_impression, large).
+trait(suncus_etruscus, snout_shape_simple, long_pointed).
 
 animal(suncus_murinus).
 scientific_name(suncus_murinus, "Suncus murinus").
@@ -1498,9 +2572,12 @@ animal_family(tamiops_mcclellandii, 'Sciuridae').
 trait(tamiops_mcclellandii, body_size_impression, mouse_or_smaller).
 trait(tamiops_mcclellandii, body_form, squirrel_like).
 trait(tamiops_mcclellandii, body_covering, fur_or_hair).
+trait(tamiops_mcclellandii, movement_seen, climbing).
+trait(tamiops_mcclellandii, time_seen, day).
 trait(tamiops_mcclellandii, primary_color, brown).
 trait(tamiops_mcclellandii, body_pattern, striped).
 trait(tamiops_mcclellandii, tail_impression, long).
+trait(tamiops_mcclellandii, tail_shape, bushy).
 trait(tamiops_mcclellandii, rodent_tail_type, furry_not_bushy).
 
 animal(tamiops_swinhoei).
@@ -1511,9 +2588,13 @@ animal_family(tamiops_swinhoei, 'Sciuridae').
 trait(tamiops_swinhoei, body_size_impression, mouse_or_smaller).
 trait(tamiops_swinhoei, body_form, squirrel_like).
 trait(tamiops_swinhoei, body_covering, fur_or_hair).
+trait(tamiops_swinhoei, movement_seen, climbing).
 trait(tamiops_swinhoei, observation_place, tree_or_bush).
+trait(tamiops_swinhoei, time_seen, day).
 trait(tamiops_swinhoei, primary_color, brown).
 trait(tamiops_swinhoei, body_pattern, striped).
+trait(tamiops_swinhoei, tail_shape, bushy).
+trait(tamiops_swinhoei, rodent_tail_type, bushy).
 
 animal(tapirus_indicus).
 scientific_name(tapirus_indicus, "Tapirus indicus").
@@ -1525,6 +2606,29 @@ trait(tapirus_indicus, primary_color, mixed).
 trait(tapirus_indicus, body_pattern, patched).
 trait(tapirus_indicus, snout_shape_simple, trunk_like).
 trait(tapirus_indicus, leg_foot_appearance, hooves).
+
+animal(trachypithecus_barbei).
+scientific_name(trachypithecus_barbei, "Trachypithecus barbei").
+common_name(trachypithecus_barbei, "Tenasserim Langur").
+animal_order(trachypithecus_barbei, 'Primates').
+animal_family(trachypithecus_barbei, 'Cercopithecidae').
+trait(trachypithecus_barbei, body_form, monkey_like).
+trait(trachypithecus_barbei, body_covering, fur_or_hair).
+trait(trachypithecus_barbei, primary_color, black).
+trait(trachypithecus_barbei, body_pattern, plain).
+trait(trachypithecus_barbei, primate_face_marking, eye_rings).
+
+animal(trachypithecus_crepusculus).
+scientific_name(trachypithecus_crepusculus, "Trachypithecus crepusculus").
+common_name(trachypithecus_crepusculus, "Indochinese Gray Langur").
+animal_order(trachypithecus_crepusculus, 'Primates').
+animal_family(trachypithecus_crepusculus, 'Cercopithecidae').
+trait(trachypithecus_crepusculus, body_form, monkey_like).
+trait(trachypithecus_crepusculus, body_covering, fur_or_hair).
+trait(trachypithecus_crepusculus, primary_color, grey).
+trait(trachypithecus_crepusculus, body_pattern, plain).
+trait(trachypithecus_crepusculus, tail_impression, very_long).
+trait(trachypithecus_crepusculus, primate_face_marking, eye_rings).
 
 animal(trachypithecus_obscurus).
 scientific_name(trachypithecus_obscurus, "Trachypithecus obscurus").
@@ -1574,6 +2678,30 @@ trait(trachypithecus_popa, primary_color, dark_brown).
 trait(trachypithecus_popa, tail_impression, very_long).
 trait(trachypithecus_popa, primate_face_marking, mixed).
 
+animal(trachypithecus_shortridgei).
+scientific_name(trachypithecus_shortridgei, "Trachypithecus shortridgei").
+common_name(trachypithecus_shortridgei, "Shortridge's Langur").
+animal_order(trachypithecus_shortridgei, 'Primates').
+animal_family(trachypithecus_shortridgei, 'Cercopithecidae').
+trait(trachypithecus_shortridgei, body_form, monkey_like).
+trait(trachypithecus_shortridgei, body_covering, fur_or_hair).
+trait(trachypithecus_shortridgei, primary_color, grey).
+trait(trachypithecus_shortridgei, body_pattern, plain).
+trait(trachypithecus_shortridgei, tail_impression, very_long).
+
+animal(tragulus_kanchil).
+scientific_name(tragulus_kanchil, "Tragulus kanchil").
+common_name(tragulus_kanchil, "Lesser Indo-Malayan Chevrotain").
+animal_order(tragulus_kanchil, 'Artiodactyla').
+animal_family(tragulus_kanchil, 'Tragulidae').
+trait(tragulus_kanchil, body_form, hoofed_like).
+trait(tragulus_kanchil, body_covering, fur_or_hair).
+trait(tragulus_kanchil, observation_place, ground).
+trait(tragulus_kanchil, primary_color, reddish_or_orange).
+trait(tragulus_kanchil, body_pattern, plain).
+trait(tragulus_kanchil, tail_impression, short).
+trait(tragulus_kanchil, leg_foot_appearance, hooves).
+
 animal(tragulus_napu).
 scientific_name(tragulus_napu, "Tragulus napu").
 common_name(tragulus_napu, "Greater Indo-Malayan Chevrotain").
@@ -1589,6 +2717,19 @@ trait(tragulus_napu, tail_impression, short).
 trait(tragulus_napu, snout_shape_simple, long_pointed).
 trait(tragulus_napu, leg_foot_appearance, hooves).
 trait(tragulus_napu, horns_or_antlers, none_visible).
+
+animal(tragulus_williamsoni).
+scientific_name(tragulus_williamsoni, "Tragulus williamsoni").
+common_name(tragulus_williamsoni, "Northern Chevrotain").
+animal_order(tragulus_williamsoni, 'Artiodactyla').
+animal_family(tragulus_williamsoni, 'Tragulidae').
+trait(tragulus_williamsoni, body_form, hoofed_like).
+trait(tragulus_williamsoni, body_covering, fur_or_hair).
+trait(tragulus_williamsoni, observation_place, ground).
+trait(tragulus_williamsoni, primary_color, brown).
+trait(tragulus_williamsoni, body_pattern, patched).
+trait(tragulus_williamsoni, tail_impression, short).
+trait(tragulus_williamsoni, leg_foot_appearance, hooves).
 
 animal(tupaia_belangeri).
 scientific_name(tupaia_belangeri, "Tupaia belangeri").
@@ -1619,6 +2760,25 @@ trait(tursiops_truncatus, cetacean_dorsal_fin, curved_back).
 trait(tursiops_truncatus, cetacean_beak, short_beak).
 trait(tursiops_truncatus, cetacean_color_pattern, light_belly).
 
+animal(uropsilus_soricipes).
+scientific_name(uropsilus_soricipes, "Uropsilus soricipes").
+common_name(uropsilus_soricipes, "Chinese Shrew Mole").
+animal_order(uropsilus_soricipes, 'Eulipotyphla').
+animal_family(uropsilus_soricipes, 'Talpidae').
+trait(uropsilus_soricipes, body_form, shrew_mole_like).
+trait(uropsilus_soricipes, body_covering, fur_or_hair).
+trait(uropsilus_soricipes, movement_seen, digging_or_burrowing).
+trait(uropsilus_soricipes, observation_place, ground).
+trait(uropsilus_soricipes, primary_color, dark_brown).
+trait(uropsilus_soricipes, body_pattern, plain).
+trait(uropsilus_soricipes, tail_impression, long).
+trait(uropsilus_soricipes, tail_shape, thin).
+trait(uropsilus_soricipes, ear_size_impression, medium).
+trait(uropsilus_soricipes, ear_shape_simple, rounded).
+trait(uropsilus_soricipes, snout_shape_simple, long_pointed).
+trait(uropsilus_soricipes, leg_foot_appearance, small_rodent_like_feet).
+trait(uropsilus_soricipes, mole_front_feet, normal_small_feet).
+
 animal(ursus_thibetanus).
 scientific_name(ursus_thibetanus, "Ursus thibetanus").
 common_name(ursus_thibetanus, "Asian Black Bear").
@@ -1630,6 +2790,33 @@ trait(ursus_thibetanus, primary_color, black).
 trait(ursus_thibetanus, body_pattern, patched).
 trait(ursus_thibetanus, tail_impression, short).
 trait(ursus_thibetanus, snout_shape_simple, long_narrow).
+
+animal(urva_auropunctata).
+scientific_name(urva_auropunctata, "Urva auropunctata").
+common_name(urva_auropunctata, "Small Indian Mongoose").
+animal_order(urva_auropunctata, 'Carnivora').
+animal_family(urva_auropunctata, 'Herpestidae').
+trait(urva_auropunctata, body_form, long_body_short_legs).
+trait(urva_auropunctata, body_covering, fur_or_hair).
+trait(urva_auropunctata, movement_seen, walking_or_running).
+trait(urva_auropunctata, observation_place, ground).
+trait(urva_auropunctata, time_seen, day).
+trait(urva_auropunctata, primary_color, grey).
+trait(urva_auropunctata, tail_impression, long).
+trait(urva_auropunctata, tail_shape, bushy).
+trait(urva_auropunctata, snout_shape_simple, long_pointed).
+
+animal(urva_javanica).
+scientific_name(urva_javanica, "Urva javanica").
+common_name(urva_javanica, "Javan Mongoose").
+animal_order(urva_javanica, 'Carnivora').
+animal_family(urva_javanica, 'Herpestidae').
+trait(urva_javanica, body_form, long_body_short_legs).
+trait(urva_javanica, body_covering, fur_or_hair).
+trait(urva_javanica, observation_place, ground).
+trait(urva_javanica, time_seen, day).
+trait(urva_javanica, primary_color, reddish_or_orange).
+trait(urva_javanica, tail_impression, long).
 
 animal(urva_urva).
 scientific_name(urva_urva, "Urva urva").
@@ -1648,6 +2835,40 @@ trait(urva_urva, tail_shape, bushy).
 trait(urva_urva, snout_shape_simple, long_pointed).
 trait(urva_urva, leg_foot_appearance, webbed_feet).
 trait(urva_urva, carnivore_face_marking, cheek_stripes).
+
+animal(vandeleuria_oleracea).
+scientific_name(vandeleuria_oleracea, "Vandeleuria oleracea").
+common_name(vandeleuria_oleracea, "Vandeleuria oleracea").
+animal_order(vandeleuria_oleracea, 'Rodentia').
+animal_family(vandeleuria_oleracea, 'Muridae').
+trait(vandeleuria_oleracea, body_form, mouse_rat_like).
+trait(vandeleuria_oleracea, body_covering, fur_or_hair).
+trait(vandeleuria_oleracea, movement_seen, climbing).
+trait(vandeleuria_oleracea, observation_place, tree_or_bush).
+trait(vandeleuria_oleracea, primary_color, reddish_or_orange).
+trait(vandeleuria_oleracea, body_pattern, plain).
+trait(vandeleuria_oleracea, tail_impression, very_long).
+trait(vandeleuria_oleracea, tail_shape, thin).
+trait(vandeleuria_oleracea, leg_foot_appearance, small_rodent_like_feet).
+trait(vandeleuria_oleracea, rodent_tail_type, furry_not_bushy).
+
+animal(vernaya_fulva).
+scientific_name(vernaya_fulva, "Vernaya fulva").
+common_name(vernaya_fulva, "Vernay's Climbing Mouse").
+animal_order(vernaya_fulva, 'Rodentia').
+animal_family(vernaya_fulva, 'Muridae').
+trait(vernaya_fulva, body_form, mouse_rat_like).
+trait(vernaya_fulva, body_covering, fur_or_hair).
+trait(vernaya_fulva, movement_seen, climbing).
+trait(vernaya_fulva, observation_place, tree_or_bush).
+trait(vernaya_fulva, primary_color, yellowish_or_buff).
+trait(vernaya_fulva, body_pattern, plain).
+trait(vernaya_fulva, tail_impression, very_long).
+trait(vernaya_fulva, tail_shape, thin).
+trait(vernaya_fulva, ear_size_impression, medium).
+trait(vernaya_fulva, ear_shape_simple, rounded).
+trait(vernaya_fulva, leg_foot_appearance, small_rodent_like_feet).
+trait(vernaya_fulva, rodent_tail_type, furry_not_bushy).
 
 animal(viverra_megaspila).
 scientific_name(viverra_megaspila, "Viverra megaspila").
@@ -1702,6 +2923,21 @@ trait(vulpes_vulpes, tail_shape, bushy).
 trait(vulpes_vulpes, ear_shape_simple, pointed).
 trait(vulpes_vulpes, snout_shape_simple, long_pointed).
 trait(vulpes_vulpes, leg_foot_appearance, paws).
+
+animal(ziphius_cavirostris).
+scientific_name(ziphius_cavirostris, "Ziphius cavirostris").
+common_name(ziphius_cavirostris, "Cuvier's Beaked Whale").
+animal_order(ziphius_cavirostris, 'Artiodactyla').
+animal_family(ziphius_cavirostris, 'Ziphiidae').
+trait(ziphius_cavirostris, body_form, whale_dolphin_like).
+trait(ziphius_cavirostris, body_covering, mostly_smooth_skin).
+trait(ziphius_cavirostris, movement_seen, swimming).
+trait(ziphius_cavirostris, observation_place, sea_or_coast).
+trait(ziphius_cavirostris, primary_color, grey).
+trait(ziphius_cavirostris, body_pattern, mixed).
+trait(ziphius_cavirostris, cetacean_dorsal_fin, curved_back).
+trait(ziphius_cavirostris, cetacean_beak, no_distinct_beak).
+trait(ziphius_cavirostris, cetacean_color_pattern, mottled).
 
 trait_weight(body_size_impression, 2).
 trait_allowed(body_size_impression, [mouse_or_smaller, rabbit_or_cat_sized, dog_sized, deer_sized, cow_or_larger]).
@@ -1933,5 +3169,55 @@ specialized_pool('Sirenia', body_size_impression).
 specialized_pool('Sirenia', body_covering).
 specialized_pool('Sirenia', observation_place).
 
-generated_candidate_count(121).
-generated_trait_fact_count(958).
+domain_gate(cetacean, "cetacean").
+domain_gate_order(cetacean, 'Cetacea').
+domain_gate_body_form(cetacean, whale_dolphin_like).
+question_domain_gate(cetacean_dorsal_fin, cetacean).
+question_domain_gate(cetacean_beak, cetacean).
+question_domain_gate(cetacean_color_pattern, cetacean).
+domain_gate(primate, "primate").
+domain_gate_order(primate, 'Primates').
+domain_gate_body_form(primate, monkey_like).
+question_domain_gate(primate_face_marking, primate).
+question_domain_gate(primate_brow_pattern, primate).
+domain_gate(carnivore, "carnivore").
+domain_gate_order(carnivore, 'Carnivora').
+domain_gate_body_form(carnivore, cat_like).
+domain_gate_body_form(carnivore, dog_like).
+domain_gate_body_form(carnivore, long_body_short_legs).
+domain_gate_body_form(carnivore, bear_like).
+question_domain_gate(carnivore_face_marking, carnivore).
+question_domain_gate(carnivore_tail_marking, carnivore).
+domain_gate(bat, "bat").
+domain_gate_order(bat, 'Chiroptera').
+domain_gate_body_form(bat, bat_like).
+question_domain_gate(bat_nose_shape, bat).
+question_domain_gate(bat_tail_visibility, bat).
+domain_gate(rodent, "rodent").
+domain_gate_order(rodent, 'Rodentia').
+domain_gate_body_form(rodent, mouse_rat_like).
+domain_gate_body_form(rodent, squirrel_like).
+domain_gate_body_form(rodent, porcupine_like).
+domain_gate_body_form(rodent, gliding_mammal_like).
+question_domain_gate(rodent_tail_type, rodent).
+domain_gate(mole_shrew, "mole shrew").
+domain_gate_order(mole_shrew, 'Eulipotyphla').
+domain_gate_body_form(mole_shrew, shrew_mole_like).
+question_domain_gate(mole_front_feet, mole_shrew).
+question_penalty(observation_place, movement_seen, swimming, 35, "Movement already gives strong context; place remains possible but should yield to less overlapping traits.").
+question_penalty(observation_place, movement_seen, flying, 35, "Movement already gives strong context; place remains possible but should yield to less overlapping traits.").
+question_penalty(observation_place, movement_seen, gliding, 35, "Movement already gives strong context; place remains possible but should yield to less overlapping traits.").
+question_penalty(observation_place, movement_seen, climbing, 35, "Movement already gives strong context; place remains possible but should yield to less overlapping traits.").
+question_penalty(movement_seen, observation_place, sea_or_coast, 20, "Place gives partial movement context, so ask movement later unless it is still highly discriminative.").
+question_penalty(movement_seen, observation_place, freshwater_or_wetland, 20, "Place gives partial movement context, so ask movement later unless it is still highly discriminative.").
+question_penalty(movement_seen, observation_place, air, 20, "Place gives partial movement context, so ask movement later unless it is still highly discriminative.").
+question_penalty(movement_seen, observation_place, tree_or_bush, 20, "Place gives partial movement context, so ask movement later unless it is still highly discriminative.").
+question_penalty(tail_shape, tail_impression, no_obvious_tail, 80, "Tail shape is rarely useful after the user reports no obvious tail.").
+question_penalty(ear_shape_simple, ear_size_impression, not_obvious, 60, "Ear shape is hard to answer when ears were not obvious.").
+question_block_if(horn_shape_simple, horns_or_antlers, none_visible, "Horn-shape question is irrelevant when the user says no horns or antlers are visible.").
+question_bonus(horn_shape_simple, horns_or_antlers, horns, 40, "Horn shape is a natural follow-up after visible horns or antlers.").
+question_bonus(horn_shape_simple, horns_or_antlers, branched_antlers, 40, "Horn shape is a natural follow-up after visible horns or antlers.").
+question_bonus(horn_shape_simple, horns_or_antlers, single_horn, 40, "Horn shape is a natural follow-up after visible horns or antlers.").
+
+generated_candidate_count(200).
+generated_trait_fact_count(1711).

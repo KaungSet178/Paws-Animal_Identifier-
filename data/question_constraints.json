@@ -1,0 +1,92 @@
+{
+  "version": "0.1.0",
+  "notes": [
+    "Question-selection metadata only; does not change species traits or biological provenance.",
+    "Hard blocks are limited to questionnaire prerequisites. Semantic penalties reduce redundancy without treating one observation as a false implication."
+  ],
+  "domain_gates": {
+    "cetacean": {
+      "orders": ["Cetacea"],
+      "body_form_values": ["whale_dolphin_like"],
+      "traits": ["cetacean_dorsal_fin", "cetacean_beak", "cetacean_color_pattern"]
+    },
+    "primate": {
+      "orders": ["Primates"],
+      "body_form_values": ["monkey_like"],
+      "traits": ["primate_face_marking", "primate_brow_pattern"]
+    },
+    "carnivore": {
+      "orders": ["Carnivora"],
+      "body_form_values": ["cat_like", "dog_like", "long_body_short_legs", "bear_like"],
+      "traits": ["carnivore_face_marking", "carnivore_tail_marking"]
+    },
+    "bat": {
+      "orders": ["Chiroptera"],
+      "body_form_values": ["bat_like"],
+      "traits": ["bat_nose_shape", "bat_tail_visibility"]
+    },
+    "rodent": {
+      "orders": ["Rodentia"],
+      "body_form_values": ["mouse_rat_like", "squirrel_like", "porcupine_like", "gliding_mammal_like"],
+      "traits": ["rodent_tail_type"]
+    },
+    "mole_shrew": {
+      "orders": ["Eulipotyphla"],
+      "body_form_values": ["shrew_mole_like"],
+      "traits": ["mole_front_feet"]
+    }
+  },
+  "prerequisites": {
+    "horn_shape_simple": {
+      "blocked_by": [
+        {
+          "attribute": "horns_or_antlers",
+          "values": ["none_visible"],
+          "reason": "Horn-shape question is irrelevant when the user says no horns or antlers are visible."
+        }
+      ],
+      "boosted_by": [
+        {
+          "attribute": "horns_or_antlers",
+          "values": ["horns", "branched_antlers", "single_horn"],
+          "bonus": 40,
+          "reason": "Horn shape is a natural follow-up after visible horns or antlers."
+        }
+      ]
+    }
+  },
+  "penalties": {
+    "observation_place": [
+      {
+        "attribute": "movement_seen",
+        "values": ["swimming", "flying", "gliding", "climbing"],
+        "penalty": 35,
+        "reason": "Movement already gives strong context; place remains possible but should yield to less overlapping traits."
+      }
+    ],
+    "movement_seen": [
+      {
+        "attribute": "observation_place",
+        "values": ["sea_or_coast", "freshwater_or_wetland", "air", "tree_or_bush"],
+        "penalty": 20,
+        "reason": "Place gives partial movement context, so ask movement later unless it is still highly discriminative."
+      }
+    ],
+    "tail_shape": [
+      {
+        "attribute": "tail_impression",
+        "values": ["no_obvious_tail"],
+        "penalty": 80,
+        "reason": "Tail shape is rarely useful after the user reports no obvious tail."
+      }
+    ],
+    "ear_shape_simple": [
+      {
+        "attribute": "ear_size_impression",
+        "values": ["not_obvious"],
+        "penalty": 60,
+        "reason": "Ear shape is hard to answer when ears were not obvious."
+      }
+    ]
+  }
+}

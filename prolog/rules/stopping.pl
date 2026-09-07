@@ -3,6 +3,12 @@
 :- use_module(question_selection).
 
 identification_status([], _Ranked, continue) :- !.
+identification_status(_Observations, Ranked, complete) :-
+    nonconflicting_rows(Ranked, [row(_, TopScore, TopMatches, 0, TopKnown, _)]),
+    TopMatches >= 2,
+    TopKnown >= 2,
+    TopScore >= 6,
+    !.
 identification_status(Observations, Ranked, complete) :-
     Ranked = [row(_, TopScore, TopMatches, 0, TopKnown, _), row(_, SecondScore, _, _, _, _)|_],
     TopMatches >= 2,
@@ -33,9 +39,5 @@ identification_status(Observations, _Ranked, insufficient_evidence) :-
     !.
 identification_status(_, _, continue).
 
-nonconflicting_rows([], []).
-nonconflicting_rows([row(A, S, M, 0, K, L)|Rest], [row(A, S, M, 0, K, L)|Filtered]) :-
-    !,
-    nonconflicting_rows(Rest, Filtered).
-nonconflicting_rows([_|Rest], Filtered) :-
-    nonconflicting_rows(Rest, Filtered).
+nonconflicting_rows(Ranked, Filtered) :-
+    findall(row(A, S, M, 0, K, L), member(row(A, S, M, 0, K, L), Ranked), Filtered).

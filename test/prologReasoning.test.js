@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const { parse } = require('csv-parse/sync');
+const { auditSpecies } = require('../scripts/auditPrologIdentification');
 
 const traits = parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'mammal_traits.csv'), 'utf8'), {
   columns: true,
@@ -61,6 +62,74 @@ function assertStrongNonConflictingPair(response, leftKey, rightKey) {
   assert(right.matches >= 2, JSON.stringify(response, null, 2));
   assert.strictEqual(left.evidence, 'strong', JSON.stringify(response, null, 2));
   assert.strictEqual(right.evidence, 'strong', JSON.stringify(response, null, 2));
+}
+
+function assertOracleCompletes(key) {
+  const result = auditSpecies(key);
+  assert.strictEqual(result.analysis_readiness, 'species_ready', JSON.stringify(result, null, 2));
+  assert.strictEqual(result.final_status, 'complete', JSON.stringify(result, null, 2));
+  assert.strictEqual(result.target_rank, 1, JSON.stringify(result, null, 2));
+  assert(Number(result.matches) >= 2, JSON.stringify(result, null, 2));
+  assert.strictEqual(Number(result.conflicts), 0, JSON.stringify(result, null, 2));
+  assert(result.known_answers >= 2, JSON.stringify(result, null, 2));
+}
+
+function assertNextQuestion(observations, predicate) {
+  const response = reason(observations);
+  assert.strictEqual(response.status, 'continue', JSON.stringify(response, null, 2));
+  assert(response.nextQuestion, JSON.stringify(response, null, 2));
+  assert(predicate(response.nextQuestion.id), JSON.stringify(response, null, 2));
+  return response.nextQuestion.id;
+}
+
+function questionScore(observations, trait) {
+  const prologObservations = `[${observations.map(([attribute, value]) => `${attribute}-${value}`).join(',')}]`;
+  const goal = [
+    'use_module(prolog/rules/question_selection)',
+    `question_selection:candidate_focus(${prologObservations}, Candidates)`,
+    `question_score(${prologObservations}, Candidates, ${trait}, Score)`,
+    'write(Score)',
+    'halt'
+  ].join(', ');
+  const result = spawnSync('swipl', ['-q', '-g', goal], {
+    encoding: 'utf8',
+    windowsHide: true
+  });
+  if (result.status !== 0) return null;
+  return Number(result.stdout.trim());
+}
+
+function assertTopComplete(key, observations) {
+  const response = reason(observations);
+  assert.strictEqual(response.status, 'complete', JSON.stringify(response, null, 2));
+  assert.strictEqual(topKey(response), key, JSON.stringify(response, null, 2));
+  const top = response.candidates[0];
+  assert.strictEqual(top.conflicts, 0, JSON.stringify(response, null, 2));
+}
+
+function assertRealisticAdaptivePath(key, initialObservations, options = {}) {
+  const row = traitsByKey.get(key);
+  assert(row, key);
+  const observations = [...initialObservations];
+  const seen = new Set(observations.map(([trait]) => trait));
+  const unknownTraits = new Set(options.unknownTraits || []);
+  let response = null;
+  for (let step = 0; step < 8; step += 1) {
+    response = reason(observations);
+    if (response.status !== 'continue') break;
+    const trait = response.nextQuestion.id;
+    assert(!seen.has(trait), JSON.stringify({ observations, response }, null, 2));
+    seen.add(trait);
+    observations.push([trait, unknownTraits.has(trait) ? 'unknown' : row[trait] || 'unknown']);
+  }
+
+  const acceptableStatuses = options.acceptableStatuses || ['complete'];
+  assert(acceptableStatuses.includes(response.status), JSON.stringify({ observations, response }, null, 2));
+  assert(hasCandidate(response, key), JSON.stringify({ observations, response }, null, 2));
+  assert.strictEqual(candidate(response, key).conflicts, 0, JSON.stringify({ observations, response }, null, 2));
+  if (response.status === 'complete') assert.strictEqual(topKey(response), key, JSON.stringify({ observations, response }, null, 2));
+  assert(observations.some(([, value]) => value === 'unknown'), JSON.stringify(observations, null, 2));
+  return { observations, response };
 }
 
 const empty = reason([]);
@@ -199,5 +268,96 @@ const missingCandidate = missingNeutral.candidates.find(candidate => candidate.k
 assert(missingCandidate);
 assert.strictEqual(missingCandidate.score, 4);
 assert.strictEqual(missingCandidate.conflicts, 0);
+
+assertNextQuestion([['movement_seen', 'swimming']], trait => trait !== 'observation_place');
+assertNextQuestion([['body_form', 'whale_dolphin_like']], trait => [
+  'cetacean_dorsal_fin',
+  'cetacean_beak',
+  'cetacean_color_pattern'
+].includes(trait));
+assertNextQuestion([['body_form', 'cat_like']], trait => ![
+  'bat_nose_shape',
+  'bat_tail_visibility',
+  'primate_face_marking',
+  'primate_brow_pattern',
+  'cetacean_dorsal_fin',
+  'cetacean_beak',
+  'cetacean_color_pattern'
+].includes(trait));
+assertNextQuestion([['gliding_membrane_visible', 'yes']], trait => ![
+  'cetacean_dorsal_fin',
+  'cetacean_beak',
+  'cetacean_color_pattern'
+].includes(trait));
+assertNextQuestion([
+  ['body_form', 'hoofed_like'],
+  ['horns_or_antlers', 'none_visible']
+], trait => trait !== 'horn_shape_simple');
+assert.strictEqual(questionScore([
+  ['body_form', 'hoofed_like'],
+  ['horns_or_antlers', 'none_visible']
+], 'horn_shape_simple'), null);
+assert.notStrictEqual(questionScore([
+  ['body_form', 'unknown'],
+  ['body_covering', 'mostly_smooth_skin'],
+  ['movement_seen', 'swimming']
+], 'cetacean_dorsal_fin'), null);
+
+assertTopComplete('manis_javanica', [
+  ['body_form', 'pangolin_like'],
+  ['body_covering', 'scales'],
+  ['movement_seen', 'climbing']
+]);
+
+const kogiaOrcaellaSharedEvidence = reason([
+  ['body_form', 'whale_dolphin_like'],
+  ['body_covering', 'mostly_smooth_skin'],
+  ['cetacean_dorsal_fin', 'small'],
+  ['cetacean_color_pattern', 'light_belly'],
+  ['observation_place', 'unknown'],
+  ['cetacean_beak', 'unknown']
+]);
+assert.strictEqual(kogiaOrcaellaSharedEvidence.status, 'ambiguous', JSON.stringify(kogiaOrcaellaSharedEvidence, null, 2));
+assert.strictEqual(kogiaOrcaellaSharedEvidence.nextQuestion, null);
+assertStrongNonConflictingPair(kogiaOrcaellaSharedEvidence, 'kogia_sima', 'orcaella_brevirostris');
+
+assertTopComplete('orcaella_brevirostris', [
+  ['body_form', 'whale_dolphin_like'],
+  ['cetacean_dorsal_fin', 'small'],
+  ['cetacean_color_pattern', 'light_belly'],
+  ['cetacean_beak', 'no_distinct_beak'],
+  ['body_covering', 'mostly_smooth_skin'],
+  ['observation_place', 'freshwater_or_wetland']
+]);
+assertTopComplete('ursus_thibetanus', [
+  ['body_form', 'bear_like'],
+  ['snout_shape_simple', 'long_narrow'],
+  ['body_pattern', 'unknown'],
+  ['primary_color', 'black']
+]);
+
+assertRealisticAdaptivePath('moschus_fuscus', [['body_size_impression', 'unknown']]);
+assertRealisticAdaptivePath('urva_javanica', [['movement_seen', 'unknown']]);
+const mustelaUnknownPlace = assertRealisticAdaptivePath('mustela_strigidorsa', [], {
+  acceptableStatuses: ['ambiguous'],
+  unknownTraits: ['observation_place']
+});
+assert.strictEqual(mustelaUnknownPlace.observations.some(([trait, value]) =>
+  trait === 'observation_place' && value === 'unknown'
+), true, JSON.stringify(mustelaUnknownPlace, null, 2));
+assert(hasCandidate(mustelaUnknownPlace.response, 'lutra_lutra'), JSON.stringify(mustelaUnknownPlace, null, 2));
+assert.strictEqual(candidate(mustelaUnknownPlace.response, 'lutra_lutra').conflicts, 0, JSON.stringify(mustelaUnknownPlace, null, 2));
+assert.strictEqual(topKey(mustelaUnknownPlace.response), 'mustela_strigidorsa', JSON.stringify(mustelaUnknownPlace, null, 2));
+
+[
+  'panthera_tigris',
+  'elephas_maximus',
+  'manis_javanica',
+  'moschus_fuscus',
+  'urva_javanica',
+  'mustela_strigidorsa',
+  'orcaella_brevirostris',
+  'ursus_thibetanus'
+].forEach(assertOracleCompletes);
 
 console.log('PASS: Prolog reasoning integration tests');

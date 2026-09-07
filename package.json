@@ -20,6 +20,7 @@
     "generate:prolog": "node scripts/generatePrologKnowledge.js",
     "validate:prolog": "npm run generate:prolog && node scripts/validatePrologKnowledge.js",
     "test:prolog": "npm run generate:prolog && node test/prologReasoning.test.js",
+    "audit:identification": "node scripts/auditPrologIdentification.js",
     "backend:dev": "npm --prefix backend run dev",
     "backend:start": "npm --prefix backend start",
     "backend:test": "npm --prefix backend test"

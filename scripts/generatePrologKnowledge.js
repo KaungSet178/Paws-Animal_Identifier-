@@ -16,6 +16,10 @@ const master = readCsv('myanmar_mammals_master.csv');
 const traits = readCsv('mammal_traits.csv');
 const traitSchema = JSON.parse(fs.readFileSync(path.join(dataDir, 'trait_schema.json'), 'utf8'));
 const questionSchema = JSON.parse(fs.readFileSync(path.join(dataDir, 'question_schema.json'), 'utf8'));
+const questionConstraintsPath = path.join(dataDir, 'question_constraints.json');
+const questionConstraints = fs.existsSync(questionConstraintsPath)
+  ? JSON.parse(fs.readFileSync(questionConstraintsPath, 'utf8'))
+  : {};
 
 const traitDefs = traitSchema.traits.filter(t => t.questionable && t.data_type === 'enum');
 const traitIds = traitDefs.map(t => t.id);
@@ -58,6 +62,8 @@ const lines = [
   '    animal/1, scientific_name/2, common_name/2, animal_order/2, animal_family/2,',
   '    trait/3, trait_weight/2, trait_allowed/2, trait_group/2, trait_applicability/2,',
   '    question/3, question_pool/2, specialized_pool/2,',
+  '    domain_gate/2, domain_gate_order/2, domain_gate_body_form/2,',
+  '    question_domain_gate/2, question_penalty/5, question_block_if/4, question_bonus/5,',
   '    generated_candidate_count/1, generated_trait_fact_count/1',
   ']).',
   ':- discontiguous animal/1.',
@@ -73,6 +79,13 @@ const lines = [
   ':- discontiguous question/3.',
   ':- discontiguous question_pool/2.',
   ':- discontiguous specialized_pool/2.',
+  ':- discontiguous domain_gate/2.',
+  ':- discontiguous domain_gate_order/2.',
+  ':- discontiguous domain_gate_body_form/2.',
+  ':- discontiguous question_domain_gate/2.',
+  ':- discontiguous question_penalty/5.',
+  ':- discontiguous question_block_if/4.',
+  ':- discontiguous question_bonus/5.',
   ''
 ];
 
@@ -116,6 +129,41 @@ for (const id of questionSchema.opening_pool || []) if (traitById.has(id)) lines
 for (const id of questionSchema.general_followup_pool || []) if (traitById.has(id)) lines.push(`question_pool(general_followup, ${atom(id)}).`);
 for (const [pool, ids] of Object.entries(questionSchema.specialized_pools || {})) {
   for (const id of ids) if (traitById.has(id)) lines.push(`specialized_pool(${atom(pool)}, ${atom(id)}).`);
+}
+lines.push('');
+
+for (const [gate, config] of Object.entries(questionConstraints.domain_gates || {})) {
+  lines.push(`domain_gate(${atom(gate)}, ${qstring(gate.replace(/_/g, ' '))}).`);
+  for (const order of config.orders || []) lines.push(`domain_gate_order(${atom(gate)}, ${atom(order)}).`);
+  for (const value of config.body_form_values || []) lines.push(`domain_gate_body_form(${atom(gate)}, ${atom(value)}).`);
+  for (const trait of config.traits || []) {
+    if (traitById.has(trait)) lines.push(`question_domain_gate(${atom(trait)}, ${atom(gate)}).`);
+  }
+}
+for (const [trait, entries] of Object.entries(questionConstraints.penalties || {})) {
+  if (!traitById.has(trait)) continue;
+  for (const entry of entries || []) {
+    for (const value of entry.values || []) {
+      lines.push(
+        `question_penalty(${atom(trait)}, ${atom(entry.attribute)}, ${atom(value)}, ${Number(entry.penalty || 0)}, ${qstring(entry.reason || '')}).`
+      );
+    }
+  }
+}
+for (const [trait, config] of Object.entries(questionConstraints.prerequisites || {})) {
+  if (!traitById.has(trait)) continue;
+  for (const entry of config.blocked_by || []) {
+    for (const value of entry.values || []) {
+      lines.push(`question_block_if(${atom(trait)}, ${atom(entry.attribute)}, ${atom(value)}, ${qstring(entry.reason || '')}).`);
+    }
+  }
+  for (const entry of config.boosted_by || []) {
+    for (const value of entry.values || []) {
+      lines.push(
+        `question_bonus(${atom(trait)}, ${atom(entry.attribute)}, ${atom(value)}, ${Number(entry.bonus || 0)}, ${qstring(entry.reason || '')}).`
+      );
+    }
+  }
 }
 lines.push('');
 lines.push(`generated_candidate_count(${activeRows.length}).`);
