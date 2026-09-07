@@ -4,6 +4,7 @@ import { AlertTriangle, ArrowLeft, CircleHelp, Loader2, RotateCcw, SearchX } fro
 import SafetyBanner from '../components/SafetyBanner'
 import SpeciesPanel from '../components/SpeciesPanel'
 import { identify } from '../api'
+import { getQuestionOptionImage } from '../questionOptionImages'
 
 const CORRECTABLE_CODES = new Set([
   'INVALID_OBSERVATION',
@@ -18,6 +19,23 @@ function attributeLabel(attribute) {
     .filter(Boolean)
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(' ')
+}
+
+function QuestionOptionImage({ src, label }) {
+  const [failed, setFailed] = useState(false)
+
+  if (!src || failed) return null
+
+  return (
+    <span className="option-card-image-wrap">
+      <img
+        src={src}
+        alt={label}
+        className="option-card-image"
+        onError={() => setFailed(true)}
+      />
+    </span>
+  )
 }
 
 export default function Identify() {
@@ -166,24 +184,31 @@ export default function Identify() {
 
           <div className="option-box">
             <div className="option-grid">
-              {currentQuestion.options.map((option) => (
-                <button
-                  type="button"
-                  key={option.value}
-                  className={
-                    option.value === 'unknown' ? 'option-card option-card-muted' : 'option-card'
-                  }
-                  onClick={() => answer(option)}
-                  disabled={loading}
-                >
-                  {option.value === 'unknown' && (
-                    <span className="option-card-icon">
-                      <CircleHelp size={28} strokeWidth={1.75} />
-                    </span>
-                  )}
-                  <span>{option.label}</span>
-                </button>
-              ))}
+              {currentQuestion.options.map((option) => {
+                const imageSrc = getQuestionOptionImage(currentQuestion.id, option.value)
+
+                return (
+                  <button
+                    type="button"
+                    key={option.value}
+                    className={[
+                      'option-card',
+                      option.value === 'unknown' ? 'option-card-muted' : '',
+                      imageSrc ? 'option-card-with-image' : '',
+                    ].filter(Boolean).join(' ')}
+                    onClick={() => answer(option)}
+                    disabled={loading}
+                  >
+                    {option.value === 'unknown' && (
+                      <span className="option-card-icon">
+                        <CircleHelp size={28} strokeWidth={1.75} />
+                      </span>
+                    )}
+                    <QuestionOptionImage src={imageSrc} label={option.label} />
+                    <span className="option-card-label">{option.label}</span>
+                  </button>
+                )
+              })}
             </div>
           </div>
 
