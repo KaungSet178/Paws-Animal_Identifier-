@@ -9,6 +9,7 @@ const traitsPath = path.join(root, 'data', 'mammal_traits.csv');
 const readinessPath = path.join(root, 'analysis', 'species_readiness.csv');
 const auditPath = path.join(root, 'analysis', 'runtime_identification_audit.csv');
 const prologApiPath = path.join(root, 'prolog', 'backend_api.pl');
+const prologBatchAuditPath = path.join(root, 'prolog', 'audit_identification.pl');
 const safetyLimit = 25;
 
 const targetSpecies = [
@@ -30,6 +31,12 @@ const traitRows = readCsv(traitsPath);
 const readinessRows = fs.existsSync(readinessPath) ? readCsv(readinessPath) : [];
 const traitsByKey = new Map(traitRows.map(row => [row.species_key, row]));
 const readinessByKey = new Map(readinessRows.map(row => [row.species_key, row]));
+const reasoningCache = new Map();
+const rankingCache = new Map();
+
+function observationsCacheKey(observations) {
+  return observations.map(observation => `${observation.attribute}=${observation.value}`).join('|');
+}
 
 function prologAtom(value) {
   if (!/^[a-z][a-zA-Z0-9_]*$/.test(value)) {
@@ -39,6 +46,9 @@ function prologAtom(value) {
 }
 
 function callReasoningApi(observations) {
+  const cacheKey = observationsCacheKey(observations);
+  if (reasoningCache.has(cacheKey)) return reasoningCache.get(cacheKey);
+
   const payload = JSON.stringify({ observations });
   const result = spawnSync('swipl', ['-q', '-s', prologApiPath], {
     cwd: root,
@@ -53,10 +63,15 @@ function callReasoningApi(observations) {
   if (result.stderr.trim()) {
     throw new Error(result.stderr.trim());
   }
-  return JSON.parse(result.stdout);
+  const response = JSON.parse(result.stdout);
+  reasoningCache.set(cacheKey, response);
+  return response;
 }
 
 function fullRanking(observations) {
+  const cacheKey = observationsCacheKey(observations);
+  if (rankingCache.has(cacheKey)) return rankingCache.get(cacheKey);
+
   const prologObservations = `[${observations
     .map(observation => `${prologAtom(observation.attribute)}-${prologAtom(observation.value)}`)
     .join(',')}]`;
@@ -81,7 +96,63 @@ function fullRanking(observations) {
   if (result.stderr.trim()) {
     throw new Error(result.stderr.trim());
   }
-  return JSON.parse(result.stdout).candidates;
+  const ranking = JSON.parse(result.stdout).candidates;
+  rankingCache.set(cacheKey, ranking);
+  return ranking;
+}
+
+function failureReasonFromRow(result) {
+  const finalStatus = result.final_status;
+  if (finalStatus === 'max_question_limit') return 'hit safety question limit';
+  if (finalStatus === 'insufficient_evidence') {
+    if (Number(result.target_rank) === 1 && Number(result.conflicts) === 0) {
+      return 'top target lacked enough stopping evidence or separable gap';
+    }
+    if (Number(result.unknown_answers) > 0) {
+      return 'question path included unknown target traits';
+    }
+    return 'target was not sufficiently supported by answered traits';
+  }
+  if (finalStatus === 'ambiguous') return 'remaining candidates were not separable by available questions';
+  return '';
+}
+
+function batchAuditSpecies(keys) {
+  const result = spawnSync('swipl', ['-q', '-s', prologBatchAuditPath], {
+    cwd: root,
+    input: JSON.stringify({ keys }),
+    encoding: 'utf8',
+    windowsHide: true
+  });
+
+  if (result.status !== 0) {
+    throw new Error(result.stderr.trim() || result.stdout.trim() || 'Prolog batch audit failed');
+  }
+  if (result.stderr.trim()) {
+    throw new Error(result.stderr.trim());
+  }
+
+  return JSON.parse(result.stdout).results.map(row => {
+    const readiness = readinessByKey.get(row.species_key);
+    return {
+      species_key: row.species_key,
+      scientific_name: row.scientific_name,
+      analysis_readiness: readiness ? readiness.readiness : '',
+      analyzer_questions: readiness ? readiness.simulated_questions_used : '',
+      final_status: row.final_status,
+      questions_asked: row.questions_asked,
+      target_rank: row.target_rank,
+      target_score: row.target_score,
+      matches: row.matches,
+      conflicts: row.conflicts,
+      known_answers: row.known_answers,
+      unknown_answers: row.unknown_answers,
+      failure_reason: failureReasonFromRow(row),
+      question_path: row.question_path,
+      trace: [],
+      finalRanking: []
+    };
+  });
 }
 
 function questionScoreDetails(observations, trait) {
@@ -158,6 +229,7 @@ function auditSpecies(key, options = {}) {
 
   const observations = [];
   const trace = [];
+  const includeDetails = options.includeDetails === true;
   let response = callReasoningApi(observations);
   let finalStatus = response.status;
 
@@ -173,7 +245,7 @@ function auditSpecies(key, options = {}) {
 
     const questionId = response.nextQuestion.id;
     const answer = questionValueFor(row, questionId);
-    const details = questionScoreDetails(observations, questionId);
+    const details = includeDetails ? questionScoreDetails(observations, questionId) : null;
     const observation = {
       attribute: questionId,
       value: answer.value
@@ -267,6 +339,10 @@ function printDetailedResult(result) {
         : '';
       console.log(`${step.question}. ${step.id} -> ${step.answer} [${step.source}]${details}`);
     }
+  } else if (result.question_path) {
+    for (const [index, step] of result.question_path.split('|').entries()) {
+      console.log(`${index + 1}. ${step}`);
+    }
   } else {
     console.log('(no questions asked)');
   }
@@ -276,17 +352,20 @@ function printDetailedResult(result) {
   console.log(`score: ${result.target_score}`);
   console.log(`matches: ${result.matches}`);
   console.log(`conflicts: ${result.conflicts}`);
-  console.log('top ranking:');
-  for (const [index, candidate] of result.finalRanking.slice(0, 10).entries()) {
-    console.log(
-      `${index + 1}. ${candidate.key} score=${candidate.score} matches=${candidate.matches} conflicts=${candidate.conflicts}`
-    );
+  if (result.finalRanking.length) {
+    console.log('top ranking:');
+    for (const [index, candidate] of result.finalRanking.slice(0, 10).entries()) {
+      console.log(
+        `${index + 1}. ${candidate.key} score=${candidate.score} matches=${candidate.matches} conflicts=${candidate.conflicts}`
+      );
+    }
   }
 }
 
 function runCli() {
   const args = process.argv.slice(2);
   const fiveOnly = args.includes('--five');
+  const includeDetails = args.includes('--details');
   const allReady = args.includes('--all-ready') || !fiveOnly;
   const requestedKeys = args.filter(arg => !arg.startsWith('--'));
   const keys = requestedKeys.length
@@ -297,7 +376,10 @@ function runCli() {
         ? readinessRows.filter(row => row.readiness === 'species_ready').map(row => row.species_key)
         : targetSpecies;
 
-  const results = keys.map(key => auditSpecies(key));
+  const useBatchAudit = !includeDetails && !requestedKeys.length && !fiveOnly;
+  const results = useBatchAudit
+    ? batchAuditSpecies(keys)
+    : keys.map(key => auditSpecies(key, { includeDetails }));
   const summary = summarize(results);
 
   for (const result of results.filter(result => targetSpecies.includes(result.species_key) || requestedKeys.length)) {

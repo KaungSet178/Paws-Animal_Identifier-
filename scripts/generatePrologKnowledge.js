@@ -62,6 +62,7 @@ const lines = [
   '    animal/1, scientific_name/2, common_name/2, animal_order/2, animal_family/2,',
   '    trait/3, trait_weight/2, trait_allowed/2, trait_group/2, trait_applicability/2,',
   '    question/3, question_pool/2, specialized_pool/2,',
+  '    semantic_observation_group/2,',
   '    domain_gate/2, domain_gate_order/2, domain_gate_body_form/2,',
   '    question_domain_gate/2, question_penalty/5, question_block_if/4, question_bonus/5,',
   '    generated_candidate_count/1, generated_trait_fact_count/1',
@@ -79,6 +80,7 @@ const lines = [
   ':- discontiguous question/3.',
   ':- discontiguous question_pool/2.',
   ':- discontiguous specialized_pool/2.',
+  ':- discontiguous semantic_observation_group/2.',
   ':- discontiguous domain_gate/2.',
   ':- discontiguous domain_gate_order/2.',
   ':- discontiguous domain_gate_body_form/2.',
@@ -129,6 +131,13 @@ for (const id of questionSchema.opening_pool || []) if (traitById.has(id)) lines
 for (const id of questionSchema.general_followup_pool || []) if (traitById.has(id)) lines.push(`question_pool(general_followup, ${atom(id)}).`);
 for (const [pool, ids] of Object.entries(questionSchema.specialized_pools || {})) {
   for (const id of ids) if (traitById.has(id)) lines.push(`specialized_pool(${atom(pool)}, ${atom(id)}).`);
+}
+lines.push('');
+
+for (const [group, ids] of Object.entries(questionConstraints.semantic_observation_groups || {})) {
+  for (const id of ids || []) {
+    if (traitById.has(id)) lines.push(`semantic_observation_group(${atom(group)}, ${atom(id)}).`);
+  }
 }
 lines.push('');
 

@@ -3,6 +3,7 @@
     animal/1, scientific_name/2, common_name/2, animal_order/2, animal_family/2,
     trait/3, trait_weight/2, trait_allowed/2, trait_group/2, trait_applicability/2,
     question/3, question_pool/2, specialized_pool/2,
+    semantic_observation_group/2,
     domain_gate/2, domain_gate_order/2, domain_gate_body_form/2,
     question_domain_gate/2, question_penalty/5, question_block_if/4, question_bonus/5,
     generated_candidate_count/1, generated_trait_fact_count/1
@@ -20,6 +21,7 @@
 :- discontiguous question/3.
 :- discontiguous question_pool/2.
 :- discontiguous specialized_pool/2.
+:- discontiguous semantic_observation_group/2.
 :- discontiguous domain_gate/2.
 :- discontiguous domain_gate_order/2.
 :- discontiguous domain_gate_body_form/2.
@@ -174,6 +176,8 @@ trait(axis_porcinus, primary_color, dark_brown).
 trait(axis_porcinus, ear_size_impression, large).
 trait(axis_porcinus, ear_shape_simple, rounded).
 trait(axis_porcinus, snout_shape_simple, short_blunt).
+trait(axis_porcinus, ungulate_marking_layout, plain_no_obvious_marking).
+trait(axis_porcinus, ungulate_horn_or_antler_layout, branched_antlers).
 
 animal(balaenoptera_acutorostrata).
 scientific_name(balaenoptera_acutorostrata, "Balaenoptera acutorostrata").
@@ -186,7 +190,9 @@ trait(balaenoptera_acutorostrata, movement_seen, swimming).
 trait(balaenoptera_acutorostrata, observation_place, sea_or_coast).
 trait(balaenoptera_acutorostrata, primary_color, grey).
 trait(balaenoptera_acutorostrata, cetacean_dorsal_fin, curved_back).
+trait(balaenoptera_acutorostrata, cetacean_beak, no_distinct_beak).
 trait(balaenoptera_acutorostrata, cetacean_color_pattern, light_belly).
+trait(balaenoptera_acutorostrata, cetacean_head_or_body_marking, white_flipper_band).
 
 animal(balaenoptera_borealis).
 scientific_name(balaenoptera_borealis, "Balaenoptera borealis").
@@ -199,7 +205,9 @@ trait(balaenoptera_borealis, movement_seen, swimming).
 trait(balaenoptera_borealis, observation_place, sea_or_coast).
 trait(balaenoptera_borealis, primary_color, grey).
 trait(balaenoptera_borealis, cetacean_dorsal_fin, curved_back).
+trait(balaenoptera_borealis, cetacean_beak, no_distinct_beak).
 trait(balaenoptera_borealis, cetacean_color_pattern, light_belly).
+trait(balaenoptera_borealis, cetacean_head_or_body_marking, single_rostrum_ridge_plain_jaw).
 
 animal(balaenoptera_edeni).
 scientific_name(balaenoptera_edeni, "Balaenoptera edeni").
@@ -212,7 +220,9 @@ trait(balaenoptera_edeni, movement_seen, swimming).
 trait(balaenoptera_edeni, observation_place, sea_or_coast).
 trait(balaenoptera_edeni, primary_color, grey).
 trait(balaenoptera_edeni, cetacean_dorsal_fin, curved_back).
+trait(balaenoptera_edeni, cetacean_beak, no_distinct_beak).
 trait(balaenoptera_edeni, cetacean_color_pattern, light_belly).
+trait(balaenoptera_edeni, cetacean_head_or_body_marking, three_rostrum_ridges).
 
 animal(balaenoptera_musculus).
 scientific_name(balaenoptera_musculus, "Balaenoptera musculus").
@@ -242,7 +252,9 @@ trait(balaenoptera_physalus, movement_seen, swimming).
 trait(balaenoptera_physalus, observation_place, sea_or_coast).
 trait(balaenoptera_physalus, primary_color, grey).
 trait(balaenoptera_physalus, cetacean_dorsal_fin, curved_back).
+trait(balaenoptera_physalus, cetacean_beak, no_distinct_beak).
 trait(balaenoptera_physalus, cetacean_color_pattern, light_belly).
+trait(balaenoptera_physalus, cetacean_head_or_body_marking, asymmetric_white_lower_jaw).
 
 animal(bandicota_bengalensis).
 scientific_name(bandicota_bengalensis, "Bandicota bengalensis").
@@ -343,6 +355,8 @@ trait(bos_gaurus, body_covering, fur_or_hair).
 trait(bos_gaurus, primary_color, dark_brown).
 trait(bos_gaurus, body_pattern, patched).
 trait(bos_gaurus, horns_or_antlers, horns).
+trait(bos_gaurus, ungulate_marking_layout, white_lower_legs).
+trait(bos_gaurus, ungulate_horn_or_antler_layout, upright_inward_curved_horns).
 
 animal(bos_javanicus).
 scientific_name(bos_javanicus, "Bos javanicus").
@@ -371,6 +385,8 @@ trait(bubalus_arnee, primary_color, dark_brown).
 trait(bubalus_arnee, leg_foot_appearance, hooves).
 trait(bubalus_arnee, horns_or_antlers, horns).
 trait(bubalus_arnee, horn_shape_simple, curved).
+trait(bubalus_arnee, ungulate_marking_layout, white_lower_legs).
+trait(bubalus_arnee, ungulate_horn_or_antler_layout, massive_wide_sweeping_horns).
 
 animal(budorcas_taxicolor).
 scientific_name(budorcas_taxicolor, "Budorcas taxicolor").
@@ -403,6 +419,7 @@ trait(callosciurus_caniceps, body_pattern, plain).
 trait(callosciurus_caniceps, tail_impression, long).
 trait(callosciurus_caniceps, tail_shape, bushy).
 trait(callosciurus_caniceps, rodent_tail_type, bushy).
+trait(callosciurus_caniceps, squirrel_ventral_or_side_pattern, pale_or_grey_belly).
 
 animal(callosciurus_erythraeus).
 scientific_name(callosciurus_erythraeus, "Callosciurus erythraeus").
@@ -418,6 +435,7 @@ trait(callosciurus_erythraeus, primary_color, mixed).
 trait(callosciurus_erythraeus, tail_impression, long).
 trait(callosciurus_erythraeus, tail_shape, bushy).
 trait(callosciurus_erythraeus, rodent_tail_type, bushy).
+trait(callosciurus_erythraeus, squirrel_ventral_or_side_pattern, reddish_or_orange_belly).
 
 animal(callosciurus_finlaysonii).
 scientific_name(callosciurus_finlaysonii, "Callosciurus finlaysonii").
@@ -446,12 +464,14 @@ trait(callosciurus_pygerythrus, primary_color, brown).
 trait(callosciurus_pygerythrus, tail_impression, long).
 trait(callosciurus_pygerythrus, tail_shape, bushy).
 trait(callosciurus_pygerythrus, rodent_tail_type, bushy).
+trait(callosciurus_pygerythrus, squirrel_ventral_or_side_pattern, pale_or_grey_belly).
 
 animal(callosciurus_quinquestriatus).
 scientific_name(callosciurus_quinquestriatus, "Callosciurus quinquestriatus").
 common_name(callosciurus_quinquestriatus, "Anderson's Squirrel").
 animal_order(callosciurus_quinquestriatus, 'Rodentia').
 animal_family(callosciurus_quinquestriatus, 'Sciuridae').
+trait(callosciurus_quinquestriatus, body_size_impression, rabbit_or_cat_sized).
 trait(callosciurus_quinquestriatus, body_form, squirrel_like).
 trait(callosciurus_quinquestriatus, body_covering, fur_or_hair).
 trait(callosciurus_quinquestriatus, movement_seen, climbing).
@@ -461,6 +481,7 @@ trait(callosciurus_quinquestriatus, body_pattern, striped).
 trait(callosciurus_quinquestriatus, tail_impression, long).
 trait(callosciurus_quinquestriatus, tail_shape, bushy).
 trait(callosciurus_quinquestriatus, rodent_tail_type, bushy).
+trait(callosciurus_quinquestriatus, squirrel_ventral_or_side_pattern, bold_side_stripes).
 
 animal(canis_aureus).
 scientific_name(canis_aureus, "Canis aureus").
@@ -512,12 +533,15 @@ scientific_name(capricornis_milneedwardsi, "Capricornis milneedwardsi").
 common_name(capricornis_milneedwardsi, "Capricornis milneedwardsi").
 animal_order(capricornis_milneedwardsi, 'Artiodactyla').
 animal_family(capricornis_milneedwardsi, 'Bovidae').
+trait(capricornis_milneedwardsi, body_size_impression, deer_sized).
 trait(capricornis_milneedwardsi, body_form, hoofed_like).
 trait(capricornis_milneedwardsi, body_covering, fur_or_hair).
 trait(capricornis_milneedwardsi, primary_color, dark_brown).
 trait(capricornis_milneedwardsi, tail_impression, short).
 trait(capricornis_milneedwardsi, ear_size_impression, large).
 trait(capricornis_milneedwardsi, horns_or_antlers, horns).
+trait(capricornis_milneedwardsi, ungulate_marking_layout, pale_moustache_or_throat).
+trait(capricornis_milneedwardsi, ungulate_horn_or_antler_layout, short_backward_curved_horns).
 
 animal(capricornis_rubidus).
 scientific_name(capricornis_rubidus, "Capricornis rubidus").
@@ -531,6 +555,8 @@ trait(capricornis_rubidus, body_pattern, dorsal_stripe).
 trait(capricornis_rubidus, tail_impression, short).
 trait(capricornis_rubidus, horns_or_antlers, horns).
 trait(capricornis_rubidus, horn_shape_simple, curved).
+trait(capricornis_rubidus, ungulate_marking_layout, white_throat_bib).
+trait(capricornis_rubidus, ungulate_horn_or_antler_layout, short_backward_curved_horns).
 
 animal(catopuma_temminckii).
 scientific_name(catopuma_temminckii, "Catopuma temminckii").
@@ -601,8 +627,12 @@ trait(chiropodomys_gliroides, body_form, mouse_rat_like).
 trait(chiropodomys_gliroides, body_covering, fur_or_hair).
 trait(chiropodomys_gliroides, movement_seen, climbing).
 trait(chiropodomys_gliroides, observation_place, tree_or_bush).
+trait(chiropodomys_gliroides, primary_color, grey).
+trait(chiropodomys_gliroides, body_pattern, patched).
 trait(chiropodomys_gliroides, tail_impression, very_long).
 trait(chiropodomys_gliroides, tail_shape, tufted_tip).
+trait(chiropodomys_gliroides, ear_size_impression, large).
+trait(chiropodomys_gliroides, ear_shape_simple, rounded).
 trait(chiropodomys_gliroides, leg_foot_appearance, small_rodent_like_feet).
 trait(chiropodomys_gliroides, rodent_tail_type, furry_not_bushy).
 
@@ -698,6 +728,7 @@ trait(dremomys_lokriah, body_pattern, patched).
 trait(dremomys_lokriah, tail_impression, long).
 trait(dremomys_lokriah, tail_shape, bushy).
 trait(dremomys_lokriah, rodent_tail_type, bushy).
+trait(dremomys_lokriah, squirrel_ventral_or_side_pattern, reddish_or_orange_belly).
 
 animal(dremomys_pernyi).
 scientific_name(dremomys_pernyi, "Dremomys pernyi").
@@ -713,6 +744,7 @@ trait(dremomys_pernyi, primary_color, grey).
 trait(dremomys_pernyi, tail_shape, bushy).
 trait(dremomys_pernyi, snout_shape_simple, long_pointed).
 trait(dremomys_pernyi, rodent_tail_type, bushy).
+trait(dremomys_pernyi, squirrel_ventral_or_side_pattern, pale_or_grey_belly).
 
 animal(dremomys_rufigenis).
 scientific_name(dremomys_rufigenis, "Dremomys rufigenis").
@@ -816,6 +848,7 @@ trait(eupetaurus_nivamons, ear_size_impression, medium).
 trait(eupetaurus_nivamons, ear_shape_simple, pointed).
 trait(eupetaurus_nivamons, gliding_membrane_visible, yes).
 trait(eupetaurus_nivamons, rodent_tail_type, bushy).
+trait(eupetaurus_nivamons, gliding_mammal_marking_pattern, long_black_tail_tip).
 
 animal(euroscaptor_grandis).
 scientific_name(euroscaptor_grandis, "Euroscaptor grandis").
@@ -876,6 +909,7 @@ trait(galeopterus_variegatus, body_pattern, patched).
 trait(galeopterus_variegatus, ear_size_impression, small).
 trait(galeopterus_variegatus, snout_shape_simple, short_blunt).
 trait(galeopterus_variegatus, gliding_membrane_visible, yes).
+trait(galeopterus_variegatus, gliding_mammal_marking_pattern, spotted_or_mottled_body).
 
 animal(globicephala_macrorhynchus).
 scientific_name(globicephala_macrorhynchus, "Globicephala macrorhynchus").
@@ -904,6 +938,7 @@ trait(grampus_griseus, primary_color, grey).
 trait(grampus_griseus, cetacean_dorsal_fin, curved_back).
 trait(grampus_griseus, cetacean_beak, no_distinct_beak).
 trait(grampus_griseus, cetacean_color_pattern, mottled).
+trait(grampus_griseus, cetacean_head_or_body_marking, heavily_scarred_blunt_head).
 
 animal(helarctos_malayanus).
 scientific_name(helarctos_malayanus, "Helarctos malayanus").
@@ -946,7 +981,10 @@ trait(hipposideros_armiger, body_covering, fur_or_hair).
 trait(hipposideros_armiger, movement_seen, flying).
 trait(hipposideros_armiger, observation_place, cave).
 trait(hipposideros_armiger, primary_color, brown).
+trait(hipposideros_armiger, body_pattern, plain).
 trait(hipposideros_armiger, bat_nose_shape, leaf_like).
+trait(hipposideros_armiger, bat_tail_visibility, tail_tip_beyond_membrane).
+trait(hipposideros_armiger, bat_face_or_shoulder_layout, roundleaf_four_side_leaflets).
 
 animal(hipposideros_diadema).
 scientific_name(hipposideros_diadema, "Hipposideros diadema").
@@ -964,6 +1002,7 @@ trait(hipposideros_diadema, ear_size_impression, medium).
 trait(hipposideros_diadema, ear_shape_simple, pointed).
 trait(hipposideros_diadema, bat_nose_shape, leaf_like).
 trait(hipposideros_diadema, bat_tail_visibility, tail_within_membrane).
+trait(hipposideros_diadema, bat_face_or_shoulder_layout, white_or_pale_shoulder_patches).
 
 animal(hoolock_hoolock).
 scientific_name(hoolock_hoolock, "Hoolock hoolock").
@@ -1066,6 +1105,7 @@ trait(hylopetes_phayrei, observation_place, tree_or_bush).
 trait(hylopetes_phayrei, primary_color, brown).
 trait(hylopetes_phayrei, body_pattern, patched).
 trait(hylopetes_phayrei, gliding_membrane_visible, yes).
+trait(hylopetes_phayrei, gliding_mammal_marking_pattern, pale_throat_or_belly).
 
 animal(hylopetes_spadiceus).
 scientific_name(hylopetes_spadiceus, "Hylopetes spadiceus").
@@ -1221,9 +1261,11 @@ trait(lyroderma_lyra, body_form, bat_like).
 trait(lyroderma_lyra, body_covering, fur_or_hair).
 trait(lyroderma_lyra, movement_seen, flying).
 trait(lyroderma_lyra, primary_color, grey).
+trait(lyroderma_lyra, body_pattern, plain).
 trait(lyroderma_lyra, ear_size_impression, very_large).
 trait(lyroderma_lyra, bat_nose_shape, leaf_like).
 trait(lyroderma_lyra, bat_tail_visibility, no_tail_visible).
+trait(lyroderma_lyra, bat_face_or_shoulder_layout, lyre_shaped_noseleaf).
 
 animal(macaca_arctoides).
 scientific_name(macaca_arctoides, "Macaca arctoides").
@@ -1381,6 +1423,7 @@ trait(megaderma_spasma, body_pattern, plain).
 trait(megaderma_spasma, ear_size_impression, very_large).
 trait(megaderma_spasma, bat_nose_shape, leaf_like).
 trait(megaderma_spasma, bat_tail_visibility, no_tail_visible).
+trait(megaderma_spasma, bat_face_or_shoulder_layout, joined_large_ears_broad_noseleaf).
 
 animal(megaerops_niphanae).
 scientific_name(megaerops_niphanae, "Megaerops niphanae").
@@ -1412,6 +1455,7 @@ trait(megaptera_novaeangliae, tail_shape, fluked).
 trait(megaptera_novaeangliae, cetacean_dorsal_fin, small).
 trait(megaptera_novaeangliae, cetacean_beak, no_distinct_beak).
 trait(megaptera_novaeangliae, cetacean_color_pattern, mixed).
+trait(megaptera_novaeangliae, cetacean_head_or_body_marking, long_white_flippers_or_knobbly_head).
 
 animal(melogale_moschata).
 scientific_name(melogale_moschata, "Melogale moschata").
@@ -1457,6 +1501,7 @@ trait(menetes_berdmorei, time_seen, day).
 trait(menetes_berdmorei, primary_color, grey).
 trait(menetes_berdmorei, body_pattern, striped).
 trait(menetes_berdmorei, rodent_tail_type, bushy).
+trait(menetes_berdmorei, squirrel_ventral_or_side_pattern, bold_side_stripes).
 
 animal(moschus_fuscus).
 scientific_name(moschus_fuscus, "Moschus fuscus").
@@ -1491,12 +1536,15 @@ scientific_name(muntiacus_gongshanensis, "Muntiacus gongshanensis").
 common_name(muntiacus_gongshanensis, "Gongshan Muntjac").
 animal_order(muntiacus_gongshanensis, 'Artiodactyla').
 animal_family(muntiacus_gongshanensis, 'Cervidae').
+trait(muntiacus_gongshanensis, body_size_impression, dog_sized).
 trait(muntiacus_gongshanensis, body_form, hoofed_like).
 trait(muntiacus_gongshanensis, body_covering, fur_or_hair).
 trait(muntiacus_gongshanensis, observation_place, ground).
 trait(muntiacus_gongshanensis, primary_color, dark_brown).
 trait(muntiacus_gongshanensis, body_pattern, patched).
 trait(muntiacus_gongshanensis, leg_foot_appearance, hooves).
+trait(muntiacus_gongshanensis, ungulate_marking_layout, pale_rump_patch).
+trait(muntiacus_gongshanensis, ungulate_horn_or_antler_layout, small_hidden_antlers).
 
 animal(muntiacus_putaoensis).
 scientific_name(muntiacus_putaoensis, "Muntiacus putaoensis").
@@ -1646,6 +1694,8 @@ trait(naemorhedus_cranbrooki, body_pattern, dorsal_stripe).
 trait(naemorhedus_cranbrooki, leg_foot_appearance, hooves).
 trait(naemorhedus_cranbrooki, horns_or_antlers, horns).
 trait(naemorhedus_cranbrooki, horn_shape_simple, curved).
+trait(naemorhedus_cranbrooki, ungulate_marking_layout, plain_no_obvious_marking).
+trait(naemorhedus_cranbrooki, ungulate_horn_or_antler_layout, short_backward_curved_horns).
 
 animal(naemorhedus_evansi).
 scientific_name(naemorhedus_evansi, "Naemorhedus evansi").
@@ -1905,6 +1955,7 @@ trait(peponocephala_electra, observation_place, sea_or_coast).
 trait(peponocephala_electra, primary_color, black).
 trait(peponocephala_electra, cetacean_beak, no_distinct_beak).
 trait(peponocephala_electra, cetacean_color_pattern, mixed).
+trait(peponocephala_electra, cetacean_head_or_body_marking, bulbous_head_no_beak).
 
 animal(petaurista_alborufus).
 scientific_name(petaurista_alborufus, "Petaurista alborufus").
@@ -1935,6 +1986,7 @@ trait(petaurista_caniceps, tail_impression, very_long).
 trait(petaurista_caniceps, tail_shape, bushy).
 trait(petaurista_caniceps, gliding_membrane_visible, yes).
 trait(petaurista_caniceps, rodent_tail_type, bushy).
+trait(petaurista_caniceps, gliding_mammal_marking_pattern, grey_head_white_throat_eye_ring).
 
 animal(petaurista_elegans).
 scientific_name(petaurista_elegans, "Petaurista elegans").
@@ -1950,6 +2002,7 @@ trait(petaurista_elegans, primary_color, dark_brown).
 trait(petaurista_elegans, tail_impression, very_long).
 trait(petaurista_elegans, tail_shape, bushy).
 trait(petaurista_elegans, gliding_membrane_visible, yes).
+trait(petaurista_elegans, gliding_mammal_marking_pattern, spotted_or_mottled_body).
 
 animal(petaurista_magnificus).
 scientific_name(petaurista_magnificus, "Petaurista magnificus").
@@ -1966,6 +2019,7 @@ trait(petaurista_magnificus, tail_impression, very_long).
 trait(petaurista_magnificus, tail_shape, bushy).
 trait(petaurista_magnificus, gliding_membrane_visible, yes).
 trait(petaurista_magnificus, rodent_tail_type, bushy).
+trait(petaurista_magnificus, gliding_mammal_marking_pattern, spotted_or_mottled_body).
 
 animal(petaurista_petaurista).
 scientific_name(petaurista_petaurista, "Petaurista petaurista").
@@ -1980,6 +2034,7 @@ trait(petaurista_petaurista, primary_color, reddish_or_orange).
 trait(petaurista_petaurista, tail_impression, very_long).
 trait(petaurista_petaurista, tail_shape, bushy).
 trait(petaurista_petaurista, gliding_membrane_visible, yes).
+trait(petaurista_petaurista, gliding_mammal_marking_pattern, plain_reddish_body).
 
 animal(petaurista_philippensis).
 scientific_name(petaurista_philippensis, "Petaurista philippensis").
@@ -1995,6 +2050,7 @@ trait(petaurista_philippensis, primary_color, dark_brown).
 trait(petaurista_philippensis, tail_impression, very_long).
 trait(petaurista_philippensis, tail_shape, bushy).
 trait(petaurista_philippensis, gliding_membrane_visible, yes).
+trait(petaurista_philippensis, gliding_mammal_marking_pattern, pale_face_dark_tail).
 
 animal(petinomys_vordermanni).
 scientific_name(petinomys_vordermanni, "Petinomys vordermanni").
@@ -2197,6 +2253,7 @@ trait(rattus_andamanensis, ear_shape_simple, rounded).
 trait(rattus_andamanensis, snout_shape_simple, long_pointed).
 trait(rattus_andamanensis, leg_foot_appearance, small_rodent_like_feet).
 trait(rattus_andamanensis, rodent_tail_type, mostly_bare_or_scaly).
+trait(rattus_andamanensis, rodent_tail_relative_length, tail_longer_than_body).
 
 animal(rattus_exulans).
 scientific_name(rattus_exulans, "Rattus exulans").
@@ -2253,6 +2310,7 @@ trait(rattus_norvegicus, ear_shape_simple, rounded).
 trait(rattus_norvegicus, snout_shape_simple, long_pointed).
 trait(rattus_norvegicus, leg_foot_appearance, small_rodent_like_feet).
 trait(rattus_norvegicus, rodent_tail_type, mostly_bare_or_scaly).
+trait(rattus_norvegicus, rodent_tail_relative_length, tail_shorter_than_body).
 
 animal(rattus_rattus).
 scientific_name(rattus_rattus, "Rattus rattus").
@@ -2424,6 +2482,7 @@ trait(rusa_unicolor, body_covering, fur_or_hair).
 trait(rusa_unicolor, primary_color, dark_brown).
 trait(rusa_unicolor, body_pattern, plain).
 trait(rusa_unicolor, tail_shape, bushy).
+trait(rusa_unicolor, ungulate_horn_or_antler_layout, branched_antlers).
 
 animal(scotomanes_ornatus).
 scientific_name(scotomanes_ornatus, "Scotomanes ornatus").
@@ -2509,8 +2568,10 @@ trait(stenella_longirostris, movement_seen, swimming).
 trait(stenella_longirostris, observation_place, sea_or_coast).
 trait(stenella_longirostris, primary_color, grey).
 trait(stenella_longirostris, tail_shape, fluked).
+trait(stenella_longirostris, cetacean_dorsal_fin, tall).
 trait(stenella_longirostris, cetacean_beak, obvious_long_beak).
 trait(stenella_longirostris, cetacean_color_pattern, light_belly).
+trait(stenella_longirostris, cetacean_head_or_body_marking, long_thin_beak).
 
 animal(steno_bredanensis).
 scientific_name(steno_bredanensis, "Steno bredanensis").
@@ -2525,6 +2586,7 @@ trait(steno_bredanensis, primary_color, grey).
 trait(steno_bredanensis, cetacean_dorsal_fin, tall).
 trait(steno_bredanensis, cetacean_beak, obvious_long_beak).
 trait(steno_bredanensis, cetacean_color_pattern, light_belly).
+trait(steno_bredanensis, cetacean_head_or_body_marking, smooth_sloping_head_to_beak).
 
 animal(suncus_etruscus).
 scientific_name(suncus_etruscus, "Suncus etruscus").
@@ -2595,6 +2657,7 @@ trait(tamiops_swinhoei, primary_color, brown).
 trait(tamiops_swinhoei, body_pattern, striped).
 trait(tamiops_swinhoei, tail_shape, bushy).
 trait(tamiops_swinhoei, rodent_tail_type, bushy).
+trait(tamiops_swinhoei, squirrel_ventral_or_side_pattern, bold_side_stripes).
 
 animal(tapirus_indicus).
 scientific_name(tapirus_indicus, "Tapirus indicus").
@@ -2688,6 +2751,7 @@ trait(trachypithecus_shortridgei, body_covering, fur_or_hair).
 trait(trachypithecus_shortridgei, primary_color, grey).
 trait(trachypithecus_shortridgei, body_pattern, plain).
 trait(trachypithecus_shortridgei, tail_impression, very_long).
+trait(trachypithecus_shortridgei, primate_face_marking, dark_face).
 
 animal(tragulus_kanchil).
 scientific_name(tragulus_kanchil, "Tragulus kanchil").
@@ -2701,6 +2765,7 @@ trait(tragulus_kanchil, primary_color, reddish_or_orange).
 trait(tragulus_kanchil, body_pattern, plain).
 trait(tragulus_kanchil, tail_impression, short).
 trait(tragulus_kanchil, leg_foot_appearance, hooves).
+trait(tragulus_kanchil, ungulate_marking_layout, plain_no_obvious_marking).
 
 animal(tragulus_napu).
 scientific_name(tragulus_napu, "Tragulus napu").
@@ -2717,6 +2782,7 @@ trait(tragulus_napu, tail_impression, short).
 trait(tragulus_napu, snout_shape_simple, long_pointed).
 trait(tragulus_napu, leg_foot_appearance, hooves).
 trait(tragulus_napu, horns_or_antlers, none_visible).
+trait(tragulus_napu, ungulate_marking_layout, side_throat_stripes).
 
 animal(tragulus_williamsoni).
 scientific_name(tragulus_williamsoni, "Tragulus williamsoni").
@@ -2744,6 +2810,7 @@ trait(tupaia_belangeri, primary_color, grey).
 trait(tupaia_belangeri, tail_impression, long).
 trait(tupaia_belangeri, tail_shape, bushy).
 trait(tupaia_belangeri, snout_shape_simple, long_pointed).
+trait(tupaia_belangeri, squirrel_ventral_or_side_pattern, no_obvious_contrast).
 
 animal(tursiops_truncatus).
 scientific_name(tursiops_truncatus, "Tursiops truncatus").
@@ -2759,6 +2826,7 @@ trait(tursiops_truncatus, tail_shape, fluked).
 trait(tursiops_truncatus, cetacean_dorsal_fin, curved_back).
 trait(tursiops_truncatus, cetacean_beak, short_beak).
 trait(tursiops_truncatus, cetacean_color_pattern, light_belly).
+trait(tursiops_truncatus, cetacean_head_or_body_marking, bulbous_head_no_beak).
 
 animal(uropsilus_soricipes).
 scientific_name(uropsilus_soricipes, "Uropsilus soricipes").
@@ -2938,6 +3006,7 @@ trait(ziphius_cavirostris, body_pattern, mixed).
 trait(ziphius_cavirostris, cetacean_dorsal_fin, curved_back).
 trait(ziphius_cavirostris, cetacean_beak, no_distinct_beak).
 trait(ziphius_cavirostris, cetacean_color_pattern, mottled).
+trait(ziphius_cavirostris, cetacean_head_or_body_marking, sloping_head_indistinct_beak).
 
 trait_weight(body_size_impression, 2).
 trait_allowed(body_size_impression, [mouse_or_smaller, rabbit_or_cat_sized, dog_sized, deer_sized, cow_or_larger]).
@@ -3059,6 +3128,34 @@ trait_weight(primate_brow_pattern, 4).
 trait_allowed(primate_brow_pattern, [connected_or_nearly_connected, two_separate_brows, thin_separate_wide_gap, not_clear]).
 trait_group(primate_brow_pattern, primates).
 trait_applicability(primate_brow_pattern, adult_male_hoolock_when_white_brows_are_clearly_visible).
+trait_weight(squirrel_ventral_or_side_pattern, 3).
+trait_allowed(squirrel_ventral_or_side_pattern, [pale_or_grey_belly, reddish_or_orange_belly, bold_side_stripes, variable_or_mixed_belly, no_obvious_contrast]).
+trait_group(squirrel_ventral_or_side_pattern, rodentia).
+trait_applicability(squirrel_ventral_or_side_pattern, squirrel_like_rodents).
+trait_weight(gliding_mammal_marking_pattern, 3).
+trait_allowed(gliding_mammal_marking_pattern, [spotted_or_mottled_body, pale_face_dark_tail, long_black_tail_tip, pale_throat_or_belly, plain_reddish_body, grey_head_white_throat_eye_ring]).
+trait_group(gliding_mammal_marking_pattern, rodentia).
+trait_applicability(gliding_mammal_marking_pattern, gliding_mammals).
+trait_weight(ungulate_marking_layout, 3).
+trait_allowed(ungulate_marking_layout, [white_lower_legs, pale_rump_patch, white_throat_bib, pale_moustache_or_throat, plain_no_obvious_marking, side_throat_stripes]).
+trait_group(ungulate_marking_layout, ungulate).
+trait_applicability(ungulate_marking_layout, 'Artiodactyla_or_Perissodactyla_terrestrial').
+trait_weight(cetacean_head_or_body_marking, 3).
+trait_allowed(cetacean_head_or_body_marking, [asymmetric_white_lower_jaw, three_rostrum_ridges, single_rostrum_ridge_plain_jaw, white_flipper_band, long_white_flippers_or_knobbly_head, bulbous_head_no_beak, long_thin_beak, smooth_sloping_head_to_beak, heavily_scarred_blunt_head, sloping_head_indistinct_beak]).
+trait_group(cetacean_head_or_body_marking, cetacea).
+trait_applicability(cetacean_head_or_body_marking, 'Cetacea').
+trait_weight(ungulate_horn_or_antler_layout, 3).
+trait_allowed(ungulate_horn_or_antler_layout, [branched_antlers, short_backward_curved_horns, upright_inward_curved_horns, massive_wide_sweeping_horns, small_hidden_antlers, no_horns_or_antlers_seen]).
+trait_group(ungulate_horn_or_antler_layout, ungulate).
+trait_applicability(ungulate_horn_or_antler_layout, horned_ungulates).
+trait_weight(bat_face_or_shoulder_layout, 3).
+trait_allowed(bat_face_or_shoulder_layout, [roundleaf_four_side_leaflets, white_or_pale_shoulder_patches, joined_large_ears_broad_noseleaf, lyre_shaped_noseleaf, no_obvious_face_or_shoulder_mark]).
+trait_group(bat_face_or_shoulder_layout, chiroptera).
+trait_applicability(bat_face_or_shoulder_layout, 'Chiroptera').
+trait_weight(rodent_tail_relative_length, 2).
+trait_allowed(rodent_tail_relative_length, [tail_longer_than_body, tail_about_body_length, tail_shorter_than_body, tail_not_clear]).
+trait_group(rodent_tail_relative_length, rodentia).
+trait_applicability(rodent_tail_relative_length, 'Rodentia_when_tail_visible').
 
 question(body_size_impression, "Roughly how big did it look?", [option(mouse_or_smaller, "Mouse-sized or smaller"), option(rabbit_or_cat_sized, "About rabbit/cat sized"), option(dog_sized, "About dog sized"), option(deer_sized, "About deer sized"), option(cow_or_larger, "Cow-sized or larger"), option(unknown, "Not sure")]).
 question(body_form, "Which overall body shape looked closest?", [option(bat_like, "Bat-like"), option(mouse_rat_like, "Mouse/rat-like"), option(squirrel_like, "Squirrel-like"), option(rabbit_hare_like, "Rabbit/hare-like"), option(shrew_mole_like, "Shrew/mole-like"), option(monkey_like, "Monkey-like"), option(cat_like, "Cat-like"), option(dog_like, "Dog-like"), option(long_body_short_legs, "Long body with short legs"), option(hoofed_like, "Deer/cattle-like"), option(elephant_like, "Elephant-like"), option(pangolin_like, "Pangolin-like"), option(gliding_mammal_like, "Gliding mammal-like"), option(whale_dolphin_like, "Whale/dolphin-like"), option(dugong_like, "Dugong-like"), option(bear_like, "Bear-like"), option(pig_like, "Pig-like"), option(rhino_like, "Rhino-like"), option(tapir_like, "Tapir-like"), option(porcupine_like, "Stocky porcupine-like"), option(other, "Other"), option(unknown, "Not sure")]).
@@ -3090,6 +3187,13 @@ question(cetacean_beak, "Did the head have an obvious dolphin-like beak?", [opti
 question(cetacean_color_pattern, "What large color pattern was visible?", [option(uniform_dark, "Mostly dark"), option(mostly_grey, "Mostly grey"), option(light_belly, "Light belly"), option(side_patch, "Light/contrasting side patch"), option(eye_patch, "Eye patch"), option(saddle_patch, "Saddle-like back patch"), option(mottled, "Mottled"), option(striped, "Striped"), option(mixed, "Mixed pattern"), option(not_clear, "Not clear"), option(unknown, "Not sure")]).
 question(mole_front_feet, "If the front feet were visible, did they look unusually broad for digging?", [option(normal_small_feet, "No"), option(broad_digging_feet, "Yes, broad digging feet"), option(not_clear, "Not clear"), option(unknown, "Not sure")]).
 question(primate_brow_pattern, "If it was a black adult hoolock gibbon, what did the white eyebrows look like?", [option(connected_or_nearly_connected, "Joined or almost joined"), option(two_separate_brows, "Two separate white brows"), option(thin_separate_wide_gap, "Thin brows with a wide gap"), option(not_clear, "Not clear"), option(unknown, "Not sure")]).
+question(squirrel_ventral_or_side_pattern, "What stood out on the belly or sides?", [option(pale_or_grey_belly, "Pale or grey belly"), option(reddish_or_orange_belly, "Reddish/orange belly"), option(bold_side_stripes, "Bold side stripes"), option(variable_or_mixed_belly, "Mixed or variable belly color"), option(no_obvious_contrast, "No obvious contrast"), option(unknown, "Not sure")]).
+question(gliding_mammal_marking_pattern, "What markings stood out on the gliding animal?", [option(spotted_or_mottled_body, "Spotted or mottled body"), option(pale_face_dark_tail, "Pale face with dark tail"), option(long_black_tail_tip, "Long black tail tip"), option(pale_throat_or_belly, "Pale throat or belly"), option(plain_reddish_body, "Mostly plain reddish body"), option(grey_head_white_throat_eye_ring, "Grey head with pale throat/eye ring"), option(unknown, "Not sure")]).
+question(ungulate_marking_layout, "What large marking was easiest to see?", [option(white_lower_legs, "White or pale lower legs"), option(pale_rump_patch, "Pale rump patch"), option(white_throat_bib, "White throat bib"), option(pale_moustache_or_throat, "Pale moustache or throat"), option(plain_no_obvious_marking, "No obvious marking"), option(side_throat_stripes, "Side or throat stripes"), option(unknown, "Not sure")]).
+question(cetacean_head_or_body_marking, "Which head, flipper, or body mark was visible?", [option(asymmetric_white_lower_jaw, "White lower jaw on one side"), option(three_rostrum_ridges, "Three ridges on top of the head"), option(single_rostrum_ridge_plain_jaw, "One head ridge, plain jaw"), option(white_flipper_band, "White band on the flipper"), option(long_white_flippers_or_knobbly_head, "Long white flippers or bumpy head"), option(bulbous_head_no_beak, "Rounded head with no beak"), option(long_thin_beak, "Long thin beak"), option(smooth_sloping_head_to_beak, "Smooth slope from head to beak"), option(heavily_scarred_blunt_head, "Blunt head with heavy scarring"), option(sloping_head_indistinct_beak, "Sloping head with indistinct beak"), option(unknown, "Not sure")]).
+question(ungulate_horn_or_antler_layout, "What did the horns or antlers look like?", [option(branched_antlers, "Branched antlers"), option(short_backward_curved_horns, "Short backward-curved horns"), option(upright_inward_curved_horns, "Upright horns curving inward"), option(massive_wide_sweeping_horns, "Massive horns sweeping sideways"), option(small_hidden_antlers, "Small antlers partly hidden by hair"), option(no_horns_or_antlers_seen, "No horns or antlers seen"), option(unknown, "Not sure")]).
+question(bat_face_or_shoulder_layout, "If the bat was seen close up, what stood out?", [option(roundleaf_four_side_leaflets, "Round noseleaf with side leaflets"), option(white_or_pale_shoulder_patches, "Pale shoulder patches"), option(joined_large_ears_broad_noseleaf, "Joined large ears and broad noseleaf"), option(lyre_shaped_noseleaf, "Tall lyre-shaped noseleaf"), option(no_obvious_face_or_shoulder_mark, "No obvious mark"), option(unknown, "Not sure")]).
+question(rodent_tail_relative_length, "Compared with the body, how long did the tail look?", [option(tail_longer_than_body, "Longer than the body"), option(tail_about_body_length, "About body length"), option(tail_shorter_than_body, "Shorter than the body"), option(tail_not_clear, "Not clear"), option(unknown, "Not sure")]).
 
 question_pool(opening, body_covering).
 question_pool(opening, body_form).
@@ -3109,12 +3213,16 @@ specialized_pool('Chiroptera', ear_shape_simple).
 specialized_pool('Chiroptera', bat_tail_visibility).
 specialized_pool('Chiroptera', primary_color).
 specialized_pool('Chiroptera', observation_place).
+specialized_pool('Chiroptera', bat_face_or_shoulder_layout).
 specialized_pool('Rodentia', rodent_tail_type).
 specialized_pool('Rodentia', quills_or_spines_visible).
 specialized_pool('Rodentia', gliding_membrane_visible).
 specialized_pool('Rodentia', body_pattern).
 specialized_pool('Rodentia', ear_size_impression).
 specialized_pool('Rodentia', observation_place).
+specialized_pool('Rodentia', squirrel_ventral_or_side_pattern).
+specialized_pool('Rodentia', gliding_mammal_marking_pattern).
+specialized_pool('Rodentia', rodent_tail_relative_length).
 specialized_pool('Primates', tail_impression).
 specialized_pool('Primates', primate_face_marking).
 specialized_pool('Primates', primary_color).
@@ -3148,6 +3256,7 @@ specialized_pool('Dermoptera', gliding_membrane_visible).
 specialized_pool('Dermoptera', body_form).
 specialized_pool('Dermoptera', movement_seen).
 specialized_pool('Dermoptera', tail_impression).
+specialized_pool('Dermoptera', gliding_mammal_marking_pattern).
 specialized_pool('Scandentia', body_form).
 specialized_pool('Scandentia', snout_shape_simple).
 specialized_pool('Scandentia', tail_impression).
@@ -3159,15 +3268,21 @@ specialized_pool('Terrestrial_Artiodactyla_Perissodactyla', body_size_impression
 specialized_pool('Terrestrial_Artiodactyla_Perissodactyla', body_pattern).
 specialized_pool('Terrestrial_Artiodactyla_Perissodactyla', tail_impression).
 specialized_pool('Terrestrial_Artiodactyla_Perissodactyla', leg_foot_appearance).
+specialized_pool('Terrestrial_Artiodactyla_Perissodactyla', ungulate_marking_layout).
+specialized_pool('Terrestrial_Artiodactyla_Perissodactyla', ungulate_horn_or_antler_layout).
 specialized_pool('Cetacea', cetacean_dorsal_fin).
 specialized_pool('Cetacea', cetacean_beak).
 specialized_pool('Cetacea', cetacean_color_pattern).
 specialized_pool('Cetacea', body_size_impression).
 specialized_pool('Cetacea', observation_place).
+specialized_pool('Cetacea', cetacean_head_or_body_marking).
 specialized_pool('Sirenia', tail_shape).
 specialized_pool('Sirenia', body_size_impression).
 specialized_pool('Sirenia', body_covering).
 specialized_pool('Sirenia', observation_place).
+
+semantic_observation_group(nose_or_snout, bat_nose_shape).
+semantic_observation_group(nose_or_snout, snout_shape_simple).
 
 domain_gate(cetacean, "cetacean").
 domain_gate_order(cetacean, 'Cetacea').
@@ -3175,6 +3290,7 @@ domain_gate_body_form(cetacean, whale_dolphin_like).
 question_domain_gate(cetacean_dorsal_fin, cetacean).
 question_domain_gate(cetacean_beak, cetacean).
 question_domain_gate(cetacean_color_pattern, cetacean).
+question_domain_gate(cetacean_head_or_body_marking, cetacean).
 domain_gate(primate, "primate").
 domain_gate_order(primate, 'Primates').
 domain_gate_body_form(primate, monkey_like).
@@ -3193,6 +3309,7 @@ domain_gate_order(bat, 'Chiroptera').
 domain_gate_body_form(bat, bat_like).
 question_domain_gate(bat_nose_shape, bat).
 question_domain_gate(bat_tail_visibility, bat).
+question_domain_gate(bat_face_or_shoulder_layout, bat).
 domain_gate(rodent, "rodent").
 domain_gate_order(rodent, 'Rodentia').
 domain_gate_body_form(rodent, mouse_rat_like).
@@ -3200,10 +3317,48 @@ domain_gate_body_form(rodent, squirrel_like).
 domain_gate_body_form(rodent, porcupine_like).
 domain_gate_body_form(rodent, gliding_mammal_like).
 question_domain_gate(rodent_tail_type, rodent).
+question_domain_gate(squirrel_ventral_or_side_pattern, rodent).
+question_domain_gate(gliding_mammal_marking_pattern, rodent).
+question_domain_gate(rodent_tail_relative_length, rodent).
 domain_gate(mole_shrew, "mole shrew").
 domain_gate_order(mole_shrew, 'Eulipotyphla').
 domain_gate_body_form(mole_shrew, shrew_mole_like).
 question_domain_gate(mole_front_feet, mole_shrew).
+domain_gate(ungulate, "ungulate").
+domain_gate_order(ungulate, 'Artiodactyla').
+domain_gate_order(ungulate, 'Perissodactyla').
+domain_gate_body_form(ungulate, hoofed_like).
+domain_gate_body_form(ungulate, rhino_like).
+domain_gate_body_form(ungulate, tapir_like).
+question_domain_gate(horns_or_antlers, ungulate).
+question_domain_gate(horn_shape_simple, ungulate).
+question_domain_gate(ungulate_marking_layout, ungulate).
+question_domain_gate(ungulate_horn_or_antler_layout, ungulate).
+domain_gate(gliding_mammal, "gliding mammal").
+domain_gate_order(gliding_mammal, 'Dermoptera').
+domain_gate_order(gliding_mammal, 'Rodentia').
+domain_gate_body_form(gliding_mammal, gliding_mammal_like).
+question_domain_gate(gliding_mammal_marking_pattern, gliding_mammal).
+question_penalty(body_pattern, cetacean_color_pattern, uniform_dark, 20, "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful.").
+question_penalty(body_pattern, cetacean_color_pattern, mostly_grey, 20, "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful.").
+question_penalty(body_pattern, cetacean_color_pattern, light_belly, 20, "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful.").
+question_penalty(body_pattern, cetacean_color_pattern, side_patch, 20, "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful.").
+question_penalty(body_pattern, cetacean_color_pattern, eye_patch, 20, "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful.").
+question_penalty(body_pattern, cetacean_color_pattern, saddle_patch, 20, "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful.").
+question_penalty(body_pattern, cetacean_color_pattern, mottled, 20, "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful.").
+question_penalty(body_pattern, cetacean_color_pattern, striped, 20, "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful.").
+question_penalty(body_pattern, cetacean_color_pattern, mixed, 20, "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful.").
+question_penalty(body_pattern, cetacean_color_pattern, not_clear, 20, "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful.").
+question_penalty(primary_color, cetacean_color_pattern, uniform_dark, 20, "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative.").
+question_penalty(primary_color, cetacean_color_pattern, mostly_grey, 20, "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative.").
+question_penalty(primary_color, cetacean_color_pattern, light_belly, 20, "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative.").
+question_penalty(primary_color, cetacean_color_pattern, side_patch, 20, "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative.").
+question_penalty(primary_color, cetacean_color_pattern, eye_patch, 20, "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative.").
+question_penalty(primary_color, cetacean_color_pattern, saddle_patch, 20, "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative.").
+question_penalty(primary_color, cetacean_color_pattern, mottled, 20, "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative.").
+question_penalty(primary_color, cetacean_color_pattern, striped, 20, "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative.").
+question_penalty(primary_color, cetacean_color_pattern, mixed, 20, "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative.").
+question_penalty(primary_color, cetacean_color_pattern, not_clear, 20, "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative.").
 question_penalty(observation_place, movement_seen, swimming, 35, "Movement already gives strong context; place remains possible but should yield to less overlapping traits.").
 question_penalty(observation_place, movement_seen, flying, 35, "Movement already gives strong context; place remains possible but should yield to less overlapping traits.").
 question_penalty(observation_place, movement_seen, gliding, 35, "Movement already gives strong context; place remains possible but should yield to less overlapping traits.").
@@ -3218,6 +3373,12 @@ question_block_if(horn_shape_simple, horns_or_antlers, none_visible, "Horn-shape
 question_bonus(horn_shape_simple, horns_or_antlers, horns, 40, "Horn shape is a natural follow-up after visible horns or antlers.").
 question_bonus(horn_shape_simple, horns_or_antlers, branched_antlers, 40, "Horn shape is a natural follow-up after visible horns or antlers.").
 question_bonus(horn_shape_simple, horns_or_antlers, single_horn, 40, "Horn shape is a natural follow-up after visible horns or antlers.").
+question_bonus(gliding_mammal_marking_pattern, body_form, gliding_mammal_like, 35, "Gliding-mammal markings are useful after the animal has a gliding-mammal silhouette.").
+question_bonus(gliding_mammal_marking_pattern, gliding_membrane_visible, yes, 35, "A visible gliding membrane makes gliding-mammal markings relevant.").
+question_block_if(ungulate_horn_or_antler_layout, horns_or_antlers, none_visible, "Horn or antler layout is irrelevant when none are visible.").
+question_bonus(ungulate_horn_or_antler_layout, horns_or_antlers, horns, 40, "Horn or antler layout is a natural follow-up after visible horns or antlers.").
+question_bonus(ungulate_horn_or_antler_layout, horns_or_antlers, branched_antlers, 40, "Horn or antler layout is a natural follow-up after visible horns or antlers.").
+question_bonus(ungulate_horn_or_antler_layout, horns_or_antlers, single_horn, 40, "Horn or antler layout is a natural follow-up after visible horns or antlers.").
 
 generated_candidate_count(200).
-generated_trait_fact_count(1711).
+generated_trait_fact_count(1778).

@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.4.0",
+  "schema_version": "0.5.0",
   "project": "Myanmar Mammal Expert System",
   "scope": "365 canonical mammals from the 2024 Myanmar checklist",
   "principles": {
@@ -602,6 +602,139 @@
       "user_unknown_value": "unknown",
       "evidence_weight": 4,
       "description": "Typical adult-male hoolock white-eyebrow pattern. Ask only when a black adult hoolock and its brows are clearly visible; otherwise use unknown."
+    },
+    {
+      "id": "squirrel_ventral_or_side_pattern",
+      "group": "rodentia",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "squirrel_like_rodents",
+      "allowed_values": [
+        "pale_or_grey_belly",
+        "reddish_or_orange_belly",
+        "bold_side_stripes",
+        "variable_or_mixed_belly",
+        "no_obvious_contrast"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Broad belly or side markings on squirrel-like rodents, visible from an ordinary photo when the underside or flank is seen."
+    },
+    {
+      "id": "gliding_mammal_marking_pattern",
+      "group": "rodentia",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "gliding_mammals",
+      "allowed_values": [
+        "spotted_or_mottled_body",
+        "pale_face_dark_tail",
+        "long_black_tail_tip",
+        "pale_throat_or_belly",
+        "plain_reddish_body",
+        "grey_head_white_throat_eye_ring"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Obvious coat, face, throat, or tail-color layout in gliding mammals; no measurements or skull characters."
+    },
+    {
+      "id": "ungulate_marking_layout",
+      "group": "ungulate",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Artiodactyla_or_Perissodactyla_terrestrial",
+      "allowed_values": [
+        "white_lower_legs",
+        "pale_rump_patch",
+        "white_throat_bib",
+        "pale_moustache_or_throat",
+        "plain_no_obvious_marking",
+        "side_throat_stripes"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Large visible marking layout on hoofed mammals, such as lower-leg stockings, throat bibs, flank stripes, or rump patches."
+    },
+    {
+      "id": "cetacean_head_or_body_marking",
+      "group": "cetacea",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Cetacea",
+      "allowed_values": [
+        "asymmetric_white_lower_jaw",
+        "three_rostrum_ridges",
+        "single_rostrum_ridge_plain_jaw",
+        "white_flipper_band",
+        "long_white_flippers_or_knobbly_head",
+        "bulbous_head_no_beak",
+        "long_thin_beak",
+        "smooth_sloping_head_to_beak",
+        "heavily_scarred_blunt_head",
+        "sloping_head_indistinct_beak"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Simple visible head, flipper, jaw, or scarring marks useful for whales and dolphins when seen clearly."
+    },
+    {
+      "id": "ungulate_horn_or_antler_layout",
+      "group": "ungulate",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "horned_ungulates",
+      "allowed_values": [
+        "branched_antlers",
+        "short_backward_curved_horns",
+        "upright_inward_curved_horns",
+        "massive_wide_sweeping_horns",
+        "small_hidden_antlers",
+        "no_horns_or_antlers_seen"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Plain visual horn or antler layout for hoofed mammals, avoiding exact tine counts or measurements."
+    },
+    {
+      "id": "bat_face_or_shoulder_layout",
+      "group": "chiroptera",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Chiroptera",
+      "allowed_values": [
+        "roundleaf_four_side_leaflets",
+        "white_or_pale_shoulder_patches",
+        "joined_large_ears_broad_noseleaf",
+        "lyre_shaped_noseleaf",
+        "no_obvious_face_or_shoulder_mark"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 3,
+      "description": "Close-photo bat face or shoulder pattern used only for bat-like candidates."
+    },
+    {
+      "id": "rodent_tail_relative_length",
+      "group": "rodentia",
+      "data_type": "enum",
+      "questionable": true,
+      "applicability": "Rodentia_when_tail_visible",
+      "allowed_values": [
+        "tail_longer_than_body",
+        "tail_about_body_length",
+        "tail_shorter_than_body",
+        "tail_not_clear"
+      ],
+      "missing_value": "blank",
+      "user_unknown_value": "unknown",
+      "evidence_weight": 2,
+      "description": "Coarse visual comparison of tail length to body length in rodents; no exact measurement required."
     }
   ]
 }

@@ -23,18 +23,34 @@ reason_dict(Observations, _{
     response_question(Status, Observations, NextQuestion).
 
 response_candidates(continue, Ranked, CandidateRows) :- take(10, Ranked, CandidateRows), !.
-response_candidates(complete, Ranked, CandidateRows) :- take(1, Ranked, CandidateRows), !.
-response_candidates(ambiguous, Ranked, CandidateRows) :-
-    Ranked = [row(_, TopScore, _, _, _, _)|_],
-    findall(Row, (
-        member(Row, Ranked),
-        Row = row(_, Score, _, 0, _, _),
-        Gap is TopScore - Score,
-        Gap =< 3
-    ), Rows),
-    take(5, Rows, CandidateRows),
+response_candidates(complete, Ranked, CandidateRows) :-
+    result_candidate_limit(Ranked, Limit),
+    take(Limit, Ranked, CandidateRows),
     !.
+response_candidates(ambiguous, Ranked, CandidateRows) :- take(3, Ranked, CandidateRows), !.
 response_candidates(_, Ranked, CandidateRows) :- take(10, Ranked, CandidateRows).
+
+result_candidate_limit(Ranked, 1) :-
+    high_confidence_result(Ranked),
+    !.
+result_candidate_limit(_, 3).
+
+high_confidence_result([row(_, TopScore, TopMatches, 0, TopKnown, _)|Rest]) :-
+    TopMatches >= 3,
+    TopKnown >= 3,
+    TopScore >= 10,
+    Rest = [row(_, SecondScore, _, _, _, _)|_],
+    Gap is TopScore - SecondScore,
+    Gap >= 4,
+    \+ plausible_contradicted_alternative(TopScore, Rest).
+
+plausible_contradicted_alternative(TopScore, Rows) :-
+    take(2, Rows, Alternatives),
+    member(row(_, Score, Matches, Conflicts, _, _), Alternatives),
+    Matches >= 3,
+    Conflicts > 0,
+    Gap is TopScore - Score,
+    Gap =< 6.
 
 candidate_dict(row(Key, Score, Matches, Conflicts, Known, Label), _{
     key: KeyText,

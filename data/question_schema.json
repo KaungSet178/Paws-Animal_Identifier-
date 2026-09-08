@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "policy": {
     "selection": "adaptive_information_gain_with_weighted_discrimination",
     "fixed_category_selection": false,
@@ -34,7 +34,8 @@
       "ear_shape_simple",
       "bat_tail_visibility",
       "primary_color",
-      "observation_place"
+      "observation_place",
+      "bat_face_or_shoulder_layout"
     ],
     "Rodentia": [
       "rodent_tail_type",
@@ -42,7 +43,10 @@
       "gliding_membrane_visible",
       "body_pattern",
       "ear_size_impression",
-      "observation_place"
+      "observation_place",
+      "squirrel_ventral_or_side_pattern",
+      "gliding_mammal_marking_pattern",
+      "rodent_tail_relative_length"
     ],
     "Primates": [
       "tail_impression",
@@ -89,7 +93,8 @@
       "gliding_membrane_visible",
       "body_form",
       "movement_seen",
-      "tail_impression"
+      "tail_impression",
+      "gliding_mammal_marking_pattern"
     ],
     "Scandentia": [
       "body_form",
@@ -104,14 +109,17 @@
       "body_size_impression",
       "body_pattern",
       "tail_impression",
-      "leg_foot_appearance"
+      "leg_foot_appearance",
+      "ungulate_marking_layout",
+      "ungulate_horn_or_antler_layout"
     ],
     "Cetacea": [
       "cetacean_dorsal_fin",
       "cetacean_beak",
       "cetacean_color_pattern",
       "body_size_impression",
-      "observation_place"
+      "observation_place",
+      "cetacean_head_or_body_marking"
     ],
     "Sirenia": [
       "tail_shape",
@@ -499,6 +507,90 @@
       },
       "always_offer_unknown": true,
       "usage_note": "Only ask for a clearly seen black adult hoolock. Females, juveniles, or unclear views should answer Not sure."
+    },
+    "squirrel_ventral_or_side_pattern": {
+      "prompt": "What stood out on the belly or sides?",
+      "option_labels": {
+        "pale_or_grey_belly": "Pale or grey belly",
+        "reddish_or_orange_belly": "Reddish/orange belly",
+        "bold_side_stripes": "Bold side stripes",
+        "variable_or_mixed_belly": "Mixed or variable belly color",
+        "no_obvious_contrast": "No obvious contrast"
+      },
+      "always_offer_unknown": true
+    },
+    "gliding_mammal_marking_pattern": {
+      "prompt": "What markings stood out on the gliding animal?",
+      "option_labels": {
+        "spotted_or_mottled_body": "Spotted or mottled body",
+        "pale_face_dark_tail": "Pale face with dark tail",
+        "long_black_tail_tip": "Long black tail tip",
+        "pale_throat_or_belly": "Pale throat or belly",
+        "plain_reddish_body": "Mostly plain reddish body",
+        "grey_head_white_throat_eye_ring": "Grey head with pale throat/eye ring"
+      },
+      "always_offer_unknown": true
+    },
+    "ungulate_marking_layout": {
+      "prompt": "What large marking was easiest to see?",
+      "option_labels": {
+        "white_lower_legs": "White or pale lower legs",
+        "pale_rump_patch": "Pale rump patch",
+        "white_throat_bib": "White throat bib",
+        "pale_moustache_or_throat": "Pale moustache or throat",
+        "plain_no_obvious_marking": "No obvious marking",
+        "side_throat_stripes": "Side or throat stripes"
+      },
+      "always_offer_unknown": true
+    },
+    "cetacean_head_or_body_marking": {
+      "prompt": "Which head, flipper, or body mark was visible?",
+      "option_labels": {
+        "asymmetric_white_lower_jaw": "White lower jaw on one side",
+        "three_rostrum_ridges": "Three ridges on top of the head",
+        "single_rostrum_ridge_plain_jaw": "One head ridge, plain jaw",
+        "white_flipper_band": "White band on the flipper",
+        "long_white_flippers_or_knobbly_head": "Long white flippers or bumpy head",
+        "bulbous_head_no_beak": "Rounded head with no beak",
+        "long_thin_beak": "Long thin beak",
+        "smooth_sloping_head_to_beak": "Smooth slope from head to beak",
+        "heavily_scarred_blunt_head": "Blunt head with heavy scarring",
+        "sloping_head_indistinct_beak": "Sloping head with indistinct beak"
+      },
+      "always_offer_unknown": true
+    },
+    "ungulate_horn_or_antler_layout": {
+      "prompt": "What did the horns or antlers look like?",
+      "option_labels": {
+        "branched_antlers": "Branched antlers",
+        "short_backward_curved_horns": "Short backward-curved horns",
+        "upright_inward_curved_horns": "Upright horns curving inward",
+        "massive_wide_sweeping_horns": "Massive horns sweeping sideways",
+        "small_hidden_antlers": "Small antlers partly hidden by hair",
+        "no_horns_or_antlers_seen": "No horns or antlers seen"
+      },
+      "always_offer_unknown": true
+    },
+    "bat_face_or_shoulder_layout": {
+      "prompt": "If the bat was seen close up, what stood out?",
+      "option_labels": {
+        "roundleaf_four_side_leaflets": "Round noseleaf with side leaflets",
+        "white_or_pale_shoulder_patches": "Pale shoulder patches",
+        "joined_large_ears_broad_noseleaf": "Joined large ears and broad noseleaf",
+        "lyre_shaped_noseleaf": "Tall lyre-shaped noseleaf",
+        "no_obvious_face_or_shoulder_mark": "No obvious mark"
+      },
+      "always_offer_unknown": true
+    },
+    "rodent_tail_relative_length": {
+      "prompt": "Compared with the body, how long did the tail look?",
+      "option_labels": {
+        "tail_longer_than_body": "Longer than the body",
+        "tail_about_body_length": "About body length",
+        "tail_shorter_than_body": "Shorter than the body",
+        "tail_not_clear": "Not clear"
+      },
+      "always_offer_unknown": true
     }
   },
   "stopping_guidance": {

@@ -2,6 +2,7 @@
     observation_trait/2,
     observation_value/3,
     answered_trait/2,
+    uncertainty_answer/1,
     evidence_for/7,
     candidate_totals/6,
     compatible_candidate/2
@@ -13,7 +14,14 @@ observation_trait(Trait-_, Trait).
 observation_value(Observations, Trait, Value) :- member(Trait-Value, Observations).
 answered_trait(Observations, Trait) :- observation_value(Observations, Trait, _).
 
-evidence_for(_Animal, _Trait-unknown, 0, 0, 0, 0, unknown) :- !.
+uncertainty_answer(unknown).
+uncertainty_answer(not_clear).
+uncertainty_answer(not_sure).
+uncertainty_answer(tail_not_clear).
+
+evidence_for(_Animal, _Trait-Answer, 0, 0, 0, 0, unknown) :-
+    uncertainty_answer(Answer),
+    !.
 evidence_for(Animal, Trait-Answer, Weight, 1, 0, 1, match) :-
     trait_weight(Trait, Weight),
     trait(Animal, Trait, Answer),
@@ -23,7 +31,8 @@ evidence_for(Animal, Trait-Answer, NegWeight, 0, 1, 1, conflict) :-
     trait(Animal, Trait, Known),
     Known \= Answer,
     !,
-    NegWeight is -Weight.
+    Penalty is (Weight + 1) // 2,
+    NegWeight is -Penalty.
 evidence_for(_Animal, Trait-_, 0, 0, 0, 0, missing) :-
     trait_weight(Trait, _),
     !.

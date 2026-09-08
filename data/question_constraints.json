@@ -1,39 +1,126 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "notes": [
     "Question-selection metadata only; does not change species traits or biological provenance.",
     "Hard blocks are limited to questionnaire prerequisites. Semantic penalties reduce redundancy without treating one observation as a false implication."
   ],
+  "semantic_observation_groups": {
+    "nose_or_snout": [
+      "bat_nose_shape",
+      "snout_shape_simple"
+    ]
+  },
   "domain_gates": {
     "cetacean": {
-      "orders": ["Cetacea"],
-      "body_form_values": ["whale_dolphin_like"],
-      "traits": ["cetacean_dorsal_fin", "cetacean_beak", "cetacean_color_pattern"]
+      "orders": [
+        "Cetacea"
+      ],
+      "body_form_values": [
+        "whale_dolphin_like"
+      ],
+      "traits": [
+        "cetacean_dorsal_fin",
+        "cetacean_beak",
+        "cetacean_color_pattern",
+        "cetacean_head_or_body_marking"
+      ]
     },
     "primate": {
-      "orders": ["Primates"],
-      "body_form_values": ["monkey_like"],
-      "traits": ["primate_face_marking", "primate_brow_pattern"]
+      "orders": [
+        "Primates"
+      ],
+      "body_form_values": [
+        "monkey_like"
+      ],
+      "traits": [
+        "primate_face_marking",
+        "primate_brow_pattern"
+      ]
     },
     "carnivore": {
-      "orders": ["Carnivora"],
-      "body_form_values": ["cat_like", "dog_like", "long_body_short_legs", "bear_like"],
-      "traits": ["carnivore_face_marking", "carnivore_tail_marking"]
+      "orders": [
+        "Carnivora"
+      ],
+      "body_form_values": [
+        "cat_like",
+        "dog_like",
+        "long_body_short_legs",
+        "bear_like"
+      ],
+      "traits": [
+        "carnivore_face_marking",
+        "carnivore_tail_marking"
+      ]
     },
     "bat": {
-      "orders": ["Chiroptera"],
-      "body_form_values": ["bat_like"],
-      "traits": ["bat_nose_shape", "bat_tail_visibility"]
+      "orders": [
+        "Chiroptera"
+      ],
+      "body_form_values": [
+        "bat_like"
+      ],
+      "traits": [
+        "bat_nose_shape",
+        "bat_tail_visibility",
+        "bat_face_or_shoulder_layout"
+      ]
     },
     "rodent": {
-      "orders": ["Rodentia"],
-      "body_form_values": ["mouse_rat_like", "squirrel_like", "porcupine_like", "gliding_mammal_like"],
-      "traits": ["rodent_tail_type"]
+      "orders": [
+        "Rodentia"
+      ],
+      "body_form_values": [
+        "mouse_rat_like",
+        "squirrel_like",
+        "porcupine_like",
+        "gliding_mammal_like"
+      ],
+      "traits": [
+        "rodent_tail_type",
+        "squirrel_ventral_or_side_pattern",
+        "gliding_mammal_marking_pattern",
+        "rodent_tail_relative_length"
+      ]
     },
     "mole_shrew": {
-      "orders": ["Eulipotyphla"],
-      "body_form_values": ["shrew_mole_like"],
-      "traits": ["mole_front_feet"]
+      "orders": [
+        "Eulipotyphla"
+      ],
+      "body_form_values": [
+        "shrew_mole_like"
+      ],
+      "traits": [
+        "mole_front_feet"
+      ]
+    },
+    "ungulate": {
+      "orders": [
+        "Artiodactyla",
+        "Perissodactyla"
+      ],
+      "body_form_values": [
+        "hoofed_like",
+        "rhino_like",
+        "tapir_like"
+      ],
+      "traits": [
+        "horns_or_antlers",
+        "horn_shape_simple",
+        "ungulate_marking_layout",
+        "ungulate_horn_or_antler_layout"
+      ]
+    },
+    "gliding_mammal": {
+      "orders": [
+        "Dermoptera",
+        "Rodentia"
+      ],
+      "body_form_values": [
+        "gliding_mammal_like"
+      ],
+      "traits": [
+        "gliding_mammal_marking_pattern"
+      ]
     }
   },
   "prerequisites": {
@@ -41,25 +128,117 @@
       "blocked_by": [
         {
           "attribute": "horns_or_antlers",
-          "values": ["none_visible"],
+          "values": [
+            "none_visible"
+          ],
           "reason": "Horn-shape question is irrelevant when the user says no horns or antlers are visible."
         }
       ],
       "boosted_by": [
         {
           "attribute": "horns_or_antlers",
-          "values": ["horns", "branched_antlers", "single_horn"],
+          "values": [
+            "horns",
+            "branched_antlers",
+            "single_horn"
+          ],
           "bonus": 40,
           "reason": "Horn shape is a natural follow-up after visible horns or antlers."
+        }
+      ]
+    },
+    "gliding_mammal_marking_pattern": {
+      "boosted_by": [
+        {
+          "attribute": "body_form",
+          "values": [
+            "gliding_mammal_like"
+          ],
+          "bonus": 35,
+          "reason": "Gliding-mammal markings are useful after the animal has a gliding-mammal silhouette."
+        },
+        {
+          "attribute": "gliding_membrane_visible",
+          "values": [
+            "yes"
+          ],
+          "bonus": 35,
+          "reason": "A visible gliding membrane makes gliding-mammal markings relevant."
+        }
+      ]
+    },
+    "ungulate_horn_or_antler_layout": {
+      "blocked_by": [
+        {
+          "attribute": "horns_or_antlers",
+          "values": [
+            "none_visible"
+          ],
+          "reason": "Horn or antler layout is irrelevant when none are visible."
+        }
+      ],
+      "boosted_by": [
+        {
+          "attribute": "horns_or_antlers",
+          "values": [
+            "horns",
+            "branched_antlers",
+            "single_horn"
+          ],
+          "bonus": 40,
+          "reason": "Horn or antler layout is a natural follow-up after visible horns or antlers."
         }
       ]
     }
   },
   "penalties": {
+    "body_pattern": [
+      {
+        "attribute": "cetacean_color_pattern",
+        "values": [
+          "uniform_dark",
+          "mostly_grey",
+          "light_belly",
+          "side_patch",
+          "eye_patch",
+          "saddle_patch",
+          "mottled",
+          "striped",
+          "mixed",
+          "not_clear"
+        ],
+        "penalty": 20,
+        "reason": "Cetacean color pattern already captures the main large-scale pattern; ask broader body pattern later only if still useful."
+      }
+    ],
+    "primary_color": [
+      {
+        "attribute": "cetacean_color_pattern",
+        "values": [
+          "uniform_dark",
+          "mostly_grey",
+          "light_belly",
+          "side_patch",
+          "eye_patch",
+          "saddle_patch",
+          "mottled",
+          "striped",
+          "mixed",
+          "not_clear"
+        ],
+        "penalty": 20,
+        "reason": "Cetacean color pattern gives stronger color context; ask primary color later only if it remains highly discriminative."
+      }
+    ],
     "observation_place": [
       {
         "attribute": "movement_seen",
-        "values": ["swimming", "flying", "gliding", "climbing"],
+        "values": [
+          "swimming",
+          "flying",
+          "gliding",
+          "climbing"
+        ],
         "penalty": 35,
         "reason": "Movement already gives strong context; place remains possible but should yield to less overlapping traits."
       }
@@ -67,7 +246,12 @@
     "movement_seen": [
       {
         "attribute": "observation_place",
-        "values": ["sea_or_coast", "freshwater_or_wetland", "air", "tree_or_bush"],
+        "values": [
+          "sea_or_coast",
+          "freshwater_or_wetland",
+          "air",
+          "tree_or_bush"
+        ],
         "penalty": 20,
         "reason": "Place gives partial movement context, so ask movement later unless it is still highly discriminative."
       }
@@ -75,7 +259,9 @@
     "tail_shape": [
       {
         "attribute": "tail_impression",
-        "values": ["no_obvious_tail"],
+        "values": [
+          "no_obvious_tail"
+        ],
         "penalty": 80,
         "reason": "Tail shape is rarely useful after the user reports no obvious tail."
       }
@@ -83,7 +269,9 @@
     "ear_shape_simple": [
       {
         "attribute": "ear_size_impression",
-        "values": ["not_obvious"],
+        "values": [
+          "not_obvious"
+        ],
         "penalty": 60,
         "reason": "Ear shape is hard to answer when ears were not obvious."
       }
