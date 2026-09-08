@@ -50,7 +50,7 @@ export default function Explore() {
           <span className="explore-hero-accent">Catalogue</span>
         </h1>
         <p className="explore-hero-sub">
-          Browse every mammal on the Myanmar checklist &mdash; {speciesData.length} species in all.
+          Browse the implemented Myanmar mammal identifier catalogue &mdash; {speciesData.length} species in all.
         </p>
       </header>
 

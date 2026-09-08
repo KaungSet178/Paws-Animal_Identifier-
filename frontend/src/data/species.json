@@ -1,27 +1,5 @@
 [
   {
-    "key": "rhinolophus_acuminatus",
-    "commonName": "Acuminate Horseshoe Bat",
-    "scientificName": "Rhinolophus acuminatus",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_gentilis",
-    "commonName": "Andersen's Roundleaf Bat",
-    "scientificName": "Hipposideros gentilis",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "callosciurus_quinquestriatus",
     "commonName": "Anderson's Squirrel",
     "scientificName": "Callosciurus quinquestriatus",
@@ -30,18 +8,48 @@
     "genus": "Callosciurus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "episoriculus_macrurus",
-    "commonName": "Arboreal Brown-toothed Shrew",
-    "scientificName": "Episoriculus macrurus",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Episoriculus",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Size",
+        "value": "About rabbit/cat sized"
+      },
+      {
+        "label": "Body shape",
+        "value": "Squirrel-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Stripes"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
+      }
+    ]
   },
   {
     "key": "ursus_thibetanus",
@@ -204,17 +212,6 @@
     ]
   },
   {
-    "key": "crocidura_attenuata",
-    "commonName": "Asian Gray White-toothed Shrew",
-    "scientificName": "Crocidura attenuata",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Crocidura",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "suncus_murinus",
     "commonName": "Asian House Shrew",
     "scientificName": "Suncus murinus",
@@ -259,17 +256,6 @@
     ]
   },
   {
-    "key": "miniopterus_fuliginosus",
-    "commonName": "Asian Long-fingered Bat",
-    "scientificName": "Miniopterus fuliginosus",
-    "order": "Chiroptera",
-    "family": "Miniopteridae",
-    "genus": "Miniopterus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "dremomys_rufigenis",
     "commonName": "Asian Red-cheeked Squirrel",
     "scientificName": "Dremomys rufigenis",
@@ -286,6 +272,14 @@
       {
         "label": "Body covering",
         "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Active",
+        "value": "Daytime"
       },
       {
         "label": "Main colour",
@@ -338,6 +332,14 @@
       {
         "label": "Main colour",
         "value": "Dark brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Flattened/paddle-like"
       },
       {
         "label": "Feet",
@@ -398,17 +400,6 @@
     ]
   },
   {
-    "key": "anourosorex_assamensis",
-    "commonName": "Assam Mole Shrew",
-    "scientificName": "Anourosorex assamensis",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Anourosorex",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "macaca_assamensis",
     "commonName": "Assamese Macaque",
     "scientificName": "Macaca assamensis",
@@ -459,6 +450,10 @@
         "value": "Fur or hair"
       },
       {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
         "label": "Main colour",
         "value": "Dark brown"
       },
@@ -471,17 +466,6 @@
         "value": "Long"
       }
     ]
-  },
-  {
-    "key": "episoriculus_baileyi",
-    "commonName": "Bailey's Brown-toothed Shrew",
-    "scientificName": "Episoriculus baileyi",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Episoriculus",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "prionodon_linsang",
@@ -604,17 +588,6 @@
     ]
   },
   {
-    "key": "saccolaimus_saccolaimus",
-    "commonName": "Bare-rumped Sheath-tailed Bat",
-    "scientificName": "Saccolaimus saccolaimus",
-    "order": "Chiroptera",
-    "family": "Emballonuridae",
-    "genus": "Saccolaimus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "nycticebus_bengalensis",
     "commonName": "Bengal Slow Loris",
     "scientificName": "Nycticebus bengalensis",
@@ -675,7 +648,52 @@
     "genus": "Berylmys",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Digging/burrowing"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Furry but not bushy"
+      }
+    ]
   },
   {
     "key": "berylmys_bowersi",
@@ -686,29 +704,52 @@
     "genus": "Berylmys",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_bicolor",
-    "commonName": "Bicolored Roundleaf Bat",
-    "scientificName": "Hipposideros bicolor",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_macrotis",
-    "commonName": "Big-eared Horseshoe Bat",
-    "scientificName": "Rhinolophus macrotis",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Digging/burrowing"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Furry but not bushy"
+      }
+    ]
   },
   {
     "key": "arctictis_binturong",
@@ -767,40 +808,32 @@
     "genus": "Moschus",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "taphozous_melanopogon",
-    "commonName": "Black-bearded Tomb Bat",
-    "scientificName": "Taphozous melanopogon",
-    "order": "Chiroptera",
-    "family": "Emballonuridae",
-    "genus": "Taphozous",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "mesoplodon_densirostris",
-    "commonName": "Blainville's Beaked Whale",
-    "scientificName": "Mesoplodon densirostris",
-    "order": "Artiodactyla",
-    "family": "Ziphiidae",
-    "genus": "Mesoplodon",
-    "group": "hoofed",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hesperoptenus_blanfordi",
-    "commonName": "Blanford's False Serotine",
-    "scientificName": "Hesperoptenus blanfordi",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Hesperoptenus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Hopping"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Spots"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      }
+    ]
   },
   {
     "key": "sphaerias_blanfordi",
@@ -947,50 +980,6 @@
     ]
   },
   {
-    "key": "rhinolophus_lepidus",
-    "commonName": "Blyth's Horseshoe Bat",
-    "scientificName": "Rhinolophus lepidus",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "mus_nitidulus",
-    "commonName": "Blyth's Mouse",
-    "scientificName": "Mus nitidulus",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Mus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "niviventer_brahma",
-    "commonName": "Brahman White-bellied Rat",
-    "scientificName": "Niviventer brahma",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Niviventer",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "arielulus_circumdatus",
-    "commonName": "Bronze Sprite",
-    "scientificName": "Arielulus circumdatus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Arielulus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "rucervus_eldii",
     "commonName": "Brow-antlered Deer",
     "scientificName": "Rucervus eldii",
@@ -1013,8 +1002,16 @@
         "value": "Fur or hair"
       },
       {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
         "label": "Main colour",
         "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
       },
       {
         "label": "Tail length",
@@ -1035,7 +1032,60 @@
     "genus": "Rattus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "naemorhedus_evansi",
@@ -1046,7 +1096,36 @@
     "genus": "Naemorhedus",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Stripe along the back"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Horns / antlers",
+        "value": "Horns"
+      },
+      {
+        "label": "Horn shape",
+        "value": "Curved"
+      }
+    ]
   },
   {
     "key": "lepus_peguensis",
@@ -1101,39 +1180,6 @@
     ]
   },
   {
-    "key": "hypsugo_lophurus",
-    "commonName": "Burmese Pipistrelle",
-    "scientificName": "Hypsugo lophurus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Hypsugo",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "blarinella_wardi",
-    "commonName": "Burmese Short-tailed Shrew",
-    "scientificName": "Blarinella wardi",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Blarinella",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "millardia_kathleenae",
-    "commonName": "Burmese Soft-furred Rat",
-    "scientificName": "Millardia kathleenae",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Millardia",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "chiromyscus_chiropus",
     "commonName": "Burmese Tree Rat",
     "scientificName": "Chiromyscus chiropus",
@@ -1142,40 +1188,52 @@
     "genus": "Chiromyscus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "myotis_montivagus",
-    "commonName": "Burmese Whiskered Myotis",
-    "scientificName": "Myotis montivagus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Myotis",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hypsugo_cadornae",
-    "commonName": "Cadorna's Pipistrelle",
-    "scientificName": "Hypsugo cadornae",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Hypsugo",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_galeritus",
-    "commonName": "Cantor's Roundleaf Bat",
-    "scientificName": "Hipposideros galeritus",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Furry but not bushy"
+      }
+    ]
   },
   {
     "key": "trachypithecus_pileatus",
@@ -1218,7 +1276,36 @@
     "genus": "Capricornis",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Size",
+        "value": "About deer sized"
+      },
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Main colour",
+        "value": "Dark brown"
+      },
+      {
+        "label": "Tail length",
+        "value": "Short"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Horns / antlers",
+        "value": "Horns"
+      }
+    ]
   },
   {
     "key": "rhizomys_sinensis",
@@ -1269,7 +1356,40 @@
     "genus": "Naemorhedus",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Stripe along the back"
+      },
+      {
+        "label": "Feet",
+        "value": "Hooves"
+      },
+      {
+        "label": "Horns / antlers",
+        "value": "Horns"
+      },
+      {
+        "label": "Horn shape",
+        "value": "Curved"
+      }
+    ]
   },
   {
     "key": "anourosorex_squamipes",
@@ -1320,28 +1440,6 @@
     ]
   },
   {
-    "key": "hypsugo_pulveratus",
-    "commonName": "Chinese Pipistrelle",
-    "scientificName": "Hypsugo pulveratus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Hypsugo",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_sinicus",
-    "commonName": "Chinese Rufous Horseshoe Bat",
-    "scientificName": "Rhinolophus sinicus",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "uropsilus_soricipes",
     "commonName": "Chinese Shrew Mole",
     "scientificName": "Uropsilus soricipes",
@@ -1350,7 +1448,56 @@
     "genus": "Uropsilus",
     "group": "shrews",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Shrew/mole-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Digging/burrowing"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Dark brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Thin"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      }
+    ]
   },
   {
     "key": "chimarrogale_styani",
@@ -1361,29 +1508,44 @@
     "genus": "Chimarrogale",
     "group": "shrews",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "crocidura_rapax",
-    "commonName": "Chinese White-toothed Shrew",
-    "scientificName": "Crocidura rapax",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Crocidura",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hypsugo_affinis",
-    "commonName": "Chocolate Pipistrelle",
-    "scientificName": "Hypsugo affinis",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Hypsugo",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Shrew/mole-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Freshwater/wetland"
+      },
+      {
+        "label": "Main colour",
+        "value": "Dark brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Webbed feet"
+      }
+    ]
   },
   {
     "key": "tursiops_truncatus",
@@ -1494,51 +1656,36 @@
     "genus": "Balaenoptera",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "nyctalus_noctula",
-    "commonName": "Common Noctule",
-    "scientificName": "Nyctalus noctula",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Nyctalus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "myotis_mystacinus",
-    "commonName": "Common Whiskered Myotis",
-    "scientificName": "Myotis mystacinus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Myotis",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "niviventer_confucianus",
-    "commonName": "Confucian White-bellied Rat",
-    "scientificName": "Niviventer confucianus",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Niviventer",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "mus_cookii",
-    "commonName": "Cook's Mouse",
-    "scientificName": "Mus cookii",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Mus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Curved-back fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Light belly"
+      }
+    ]
   },
   {
     "key": "urva_urva",
@@ -1609,40 +1756,40 @@
     "genus": "Naemorhedus",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "crocidura_cranbrooki",
-    "commonName": "Cranbrook's White-toothed Shrew",
-    "scientificName": "Crocidura cranbrooki",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Crocidura",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_coelophyllus",
-    "commonName": "Croslet Horseshoe Bat",
-    "scientificName": "Rhinolophus coelophyllus",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "diomys_crumpi",
-    "commonName": "Crump's Rat",
-    "scientificName": "Diomys crumpi",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Diomys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Stripe along the back"
+      },
+      {
+        "label": "Feet",
+        "value": "Hooves"
+      },
+      {
+        "label": "Horns / antlers",
+        "value": "Horns"
+      },
+      {
+        "label": "Horn shape",
+        "value": "Curved"
+      }
+    ]
   },
   {
     "key": "ziphius_cavirostris",
@@ -1653,29 +1800,40 @@
     "genus": "Ziphius",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "kerivoula_furva",
-    "commonName": "Dark Woolly Bat",
-    "scientificName": "Kerivoula furva",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Kerivoula",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "delphinus_capensis",
-    "commonName": "Delphinus capensis",
-    "scientificName": "Delphinus capensis",
-    "order": "Artiodactyla",
-    "family": "Delphinidae",
-    "genus": "Delphinus",
-    "group": "hoofed",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mixed pattern"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Curved-back fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Mottled"
+      }
+    ]
   },
   {
     "key": "cuon_alpinus",
@@ -1746,29 +1904,52 @@
     "genus": "Hipposideros",
     "group": "bats",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "eudiscopus_denticulus",
-    "commonName": "Disk-footed Bat",
-    "scientificName": "Eudiscopus denticulus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Eudiscopus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_yunanensis",
-    "commonName": "Dobson's Horseshoe Bat",
-    "scientificName": "Rhinolophus yunanensis",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Bat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Flying"
+      },
+      {
+        "label": "Seen at",
+        "value": "Cave"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Pointed"
+      },
+      {
+        "label": "Bat nose",
+        "value": "Leaf-like flap"
+      },
+      {
+        "label": "Bat tail",
+        "value": "Tail mostly within the rear membrane"
+      }
+    ]
   },
   {
     "key": "dugong_dugon",
@@ -1805,17 +1986,6 @@
         "value": "Two-lobed fluke"
       }
     ]
-  },
-  {
-    "key": "chodsigoa_furva",
-    "commonName": "Dusky Brown-toothed Shrew",
-    "scientificName": "Chodsigoa furva",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Chodsigoa",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "trachypithecus_obscurus",
@@ -1870,29 +2040,36 @@
     "genus": "Kogia",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rattus_tanezumi",
-    "commonName": "East Asian House Rat",
-    "scientificName": "Rattus tanezumi",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Rattus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "coelops_frithii",
-    "commonName": "East Asian Tailless Roundleaf Bat",
-    "scientificName": "Coelops frithii",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Coelops",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Small fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Light belly"
+      }
+    ]
   },
   {
     "key": "hoolock_leuconedys",
@@ -1951,18 +2128,36 @@
     "genus": "Balaenoptera",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "leopoldamys_edwardsi",
-    "commonName": "Edwards's Long-tailed Giant Rat",
-    "scientificName": "Leopoldamys edwardsi",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Leopoldamys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Curved-back fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Light belly"
+      }
+    ]
   },
   {
     "key": "nectogale_elegans",
@@ -2009,50 +2204,6 @@
     ]
   },
   {
-    "key": "murina_eleryi",
-    "commonName": "Elery's Tube-nosed Bat",
-    "scientificName": "Murina eleryi",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Murina",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "eothenomys_cachinus",
-    "commonName": "Eothenomys cachinus",
-    "scientificName": "Eothenomys cachinus",
-    "order": "Rodentia",
-    "family": "Cricetidae",
-    "genus": "Eothenomys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "episoriculus_umbrinus",
-    "commonName": "Episoriculus umbrinus",
-    "scientificName": "Episoriculus umbrinus",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Episoriculus",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "eptesicus_pachyotis",
-    "commonName": "Eptesicus pachyotis",
-    "scientificName": "Eptesicus pachyotis",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Eptesicus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "suncus_etruscus",
     "commonName": "Etruscan Shrew",
     "scientificName": "Suncus etruscus",
@@ -2081,6 +2232,18 @@
       {
         "label": "Main colour",
         "value": "Grey"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
       }
     ]
   },
@@ -2161,17 +2324,6 @@
     ]
   },
   {
-    "key": "tadarida_teniotis",
-    "commonName": "European Free-tailed Bat",
-    "scientificName": "Tadarida teniotis",
-    "order": "Chiroptera",
-    "family": "Molossidae",
-    "genus": "Tadarida",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "pseudorca_crassidens",
     "commonName": "False Killer Whale",
     "scientificName": "Pseudorca crassidens",
@@ -2180,7 +2332,36 @@
     "genus": "Pseudorca",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Black"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Curved-back fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Light belly"
+      }
+    ]
   },
   {
     "key": "mus_cervicolor",
@@ -2191,7 +2372,56 @@
     "genus": "Mus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "muntiacus_feae",
@@ -2242,17 +2472,6 @@
     ]
   },
   {
-    "key": "murina_feae",
-    "commonName": "Fea's Tube-nosed Bat",
-    "scientificName": "Murina feae",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Murina",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "balaenoptera_physalus",
     "commonName": "Fin Whale",
     "scientificName": "Balaenoptera physalus",
@@ -2261,7 +2480,36 @@
     "genus": "Balaenoptera",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Curved-back fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Light belly"
+      }
+    ]
   },
   {
     "key": "callosciurus_finlaysonii",
@@ -2282,6 +2530,14 @@
         "value": "Fur or hair"
       },
       {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Active",
+        "value": "Daytime"
+      },
+      {
         "label": "Main colour",
         "value": "Mixed colors"
       },
@@ -2291,6 +2547,10 @@
       },
       {
         "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Rodent tail",
         "value": "Bushy"
       }
     ]
@@ -2352,28 +2612,6 @@
     ]
   },
   {
-    "key": "kerivoula_depressa",
-    "commonName": "Flat-skulled Woolly Bat",
-    "scientificName": "Kerivoula depressa",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Kerivoula",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "neodon_forresti",
-    "commonName": "Forrest's Mountain Vole",
-    "scientificName": "Neodon forresti",
-    "order": "Rodentia",
-    "family": "Cricetidae",
-    "genus": "Neodon",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "ochotona_forresti",
     "commonName": "Forrest's Pika",
     "scientificName": "Ochotona forresti",
@@ -2404,17 +2642,6 @@
         "value": "Dark brown"
       }
     ]
-  },
-  {
-    "key": "lagenodelphis_hosei",
-    "commonName": "Fraser's Dolphin",
-    "scientificName": "Lagenodelphis hosei",
-    "order": "Artiodactyla",
-    "family": "Delphinidae",
-    "genus": "Lagenodelphis",
-    "group": "hoofed",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "bos_gaurus",
@@ -2461,18 +2688,48 @@
     "genus": "Rousettus",
     "group": "bats",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "mesoplodon_ginkgodens",
-    "commonName": "Ginkgo-toothed Beaked Whale",
-    "scientificName": "Mesoplodon ginkgodens",
-    "order": "Artiodactyla",
-    "family": "Ziphiidae",
-    "genus": "Mesoplodon",
-    "group": "hoofed",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Bat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Flying"
+      },
+      {
+        "label": "Seen at",
+        "value": "Cave"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Bat nose",
+        "value": "Plain/simple nose"
+      },
+      {
+        "label": "Bat tail",
+        "value": "Tail clearly visible"
+      }
+    ]
   },
   {
     "key": "canis_aureus",
@@ -2523,29 +2780,36 @@
     "genus": "Muntiacus",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "uropsilus_gracilis",
-    "commonName": "Gracile Shrew Mole",
-    "scientificName": "Uropsilus gracilis",
-    "order": "Eulipotyphla",
-    "family": "Talpidae",
-    "genus": "Uropsilus",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_grandis",
-    "commonName": "Grand Roundleaf Bat",
-    "scientificName": "Hipposideros grandis",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Size",
+        "value": "About dog sized"
+      },
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Dark brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Feet",
+        "value": "Hooves"
+      }
+    ]
   },
   {
     "key": "canis_lupus",
@@ -2608,18 +2872,48 @@
     "genus": "Petaurista",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "ia_io",
-    "commonName": "Great Evening Bat",
-    "scientificName": "Ia io",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Ia",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Gliding mammal-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Gliding"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Mixed colors"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Gliding membrane",
+        "value": "Yes"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
+      }
+    ]
   },
   {
     "key": "hipposideros_armiger",
@@ -2656,21 +2950,18 @@
         "value": "Brown"
       },
       {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
         "label": "Bat nose",
         "value": "Leaf-like flap"
+      },
+      {
+        "label": "Bat tail",
+        "value": "Tail tip extends beyond the rear membrane"
       }
     ]
-  },
-  {
-    "key": "scotophilus_heathii",
-    "commonName": "Greater Asian Yellow Bat",
-    "scientificName": "Scotophilus heathii",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Scotophilus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "bandicota_indica",
@@ -2681,7 +2972,52 @@
     "genus": "Bandicota",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Digging/burrowing"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Dark brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Medium"
+      },
+      {
+        "label": "Snout",
+        "value": "Short/blunt"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "euroscaptor_grandis",
@@ -2692,7 +3028,48 @@
     "genus": "Euroscaptor",
     "group": "shrews",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Shrew/mole-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Digging/burrowing"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Dark brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Short"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Broad digging feet"
+      },
+      {
+        "label": "Front feet",
+        "value": "Yes, broad digging feet"
+      }
+    ]
   },
   {
     "key": "arctonyx_collaris",
@@ -2805,6 +3182,10 @@
         "value": "Flying"
       },
       {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
         "label": "Main colour",
         "value": "Reddish/orange"
       },
@@ -2821,17 +3202,6 @@
         "value": "Long and narrow"
       }
     ]
-  },
-  {
-    "key": "hapalomys_longicaudatus",
-    "commonName": "Greater Marmoset Rat",
-    "scientificName": "Hapalomys longicaudatus",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Hapalomys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "rhinoceros_unicornis",
@@ -2902,6 +3272,10 @@
       {
         "label": "Snout",
         "value": "Long and narrow"
+      },
+      {
+        "label": "Bat tail",
+        "value": "Tail tip extends beyond the rear membrane"
       }
     ]
   },
@@ -2914,7 +3288,56 @@
     "genus": "Belomys",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Gliding mammal-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Gliding"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mixed pattern"
+      },
+      {
+        "label": "Tail length",
+        "value": "Medium"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Gliding membrane",
+        "value": "Yes"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
+      }
+    ]
   },
   {
     "key": "lutra_sumatrana",
@@ -2961,28 +3384,6 @@
     ]
   },
   {
-    "key": "harpiocephalus_harpia",
-    "commonName": "Hairy-winged Bat",
-    "scientificName": "Harpiocephalus harpia",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Harpiocephalus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "kerivoula_hardwickii",
-    "commonName": "Hardwicke's Woolly Bat",
-    "scientificName": "Kerivoula hardwickii",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Kerivoula",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "scotomanes_ornatus",
     "commonName": "Harlequin Bat",
     "scientificName": "Scotomanes ornatus",
@@ -2991,62 +3392,44 @@
     "genus": "Scotomanes",
     "group": "bats",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "murina_harrisoni",
-    "commonName": "Harrison's Tube-nosed Bat",
-    "scientificName": "Murina harrisoni",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Murina",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "leopoldamys_herberti",
-    "commonName": "Herbert's Long-tailed Giant Rat",
-    "scientificName": "Leopoldamys herberti",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Leopoldamys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "soriculus_nigrescens",
-    "commonName": "Himalayan Large-clawed Shrew",
-    "scientificName": "Soriculus nigrescens",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Soriculus",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "priapomys_leonardi",
-    "commonName": "Himalayan Large-eared Flying Squirrel",
-    "scientificName": "Priapomys leonardi",
-    "order": "Rodentia",
-    "family": "Sciuridae",
-    "genus": "Priapomys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rattus_pyctoris",
-    "commonName": "Himalayan Rat",
-    "scientificName": "Rattus pyctoris",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Rattus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Bat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Flying"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mixed pattern"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Bat nose",
+        "value": "Plain/simple nose"
+      }
+    ]
   },
   {
     "key": "tamiops_mcclellandii",
@@ -3071,6 +3454,14 @@
         "value": "Fur or hair"
       },
       {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Active",
+        "value": "Daytime"
+      },
+      {
         "label": "Main colour",
         "value": "Brown"
       },
@@ -3081,6 +3472,10 @@
       {
         "label": "Tail length",
         "value": "Long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
       },
       {
         "label": "Rodent tail",
@@ -3189,50 +3584,6 @@
     ]
   },
   {
-    "key": "myotis_siligorensis",
-    "commonName": "Himalayan Whiskered Myotis",
-    "scientificName": "Myotis siligorensis",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Myotis",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "niviventer_niviventer",
-    "commonName": "Himalayan White-bellied Rat",
-    "scientificName": "Niviventer niviventer",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Niviventer",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_pratti",
-    "commonName": "Hipposideros pratti",
-    "scientificName": "Hipposideros pratti",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "murina_hkakaboraziensis",
-    "commonName": "Hkakabo Razi Tube-nosed Bat",
-    "scientificName": "Murina hkakaboraziensis",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Murina",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "rhizomys_pruinosus",
     "commonName": "Hoary Bamboo Rat",
     "scientificName": "Rhizomys pruinosus",
@@ -3253,6 +3604,14 @@
       {
         "label": "Body covering",
         "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
       },
       {
         "label": "Main colour",
@@ -3279,17 +3638,6 @@
         "value": "Mostly bare/scaly"
       }
     ]
-  },
-  {
-    "key": "episoriculus_caudatus",
-    "commonName": "Hodgson's Brown-toothed Shrew",
-    "scientificName": "Episoriculus caudatus",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Episoriculus",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "axis_porcinus",
@@ -3332,28 +3680,6 @@
     ]
   },
   {
-    "key": "myotis_horsfieldii",
-    "commonName": "Horsfield's Myotis",
-    "scientificName": "Myotis horsfieldii",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Myotis",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_larvatus",
-    "commonName": "Horsfield's Roundleaf Bat",
-    "scientificName": "Hipposideros larvatus",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "mus_musculus",
     "commonName": "House Mouse",
     "scientificName": "Mus musculus",
@@ -3362,18 +3688,60 @@
     "genus": "Mus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_einnaythu",
-    "commonName": "House-dwelling Roundleaf Bat",
-    "scientificName": "Hipposideros einnaythu",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "Building/roof"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "megaptera_novaeangliae",
@@ -3436,7 +3804,48 @@
     "genus": "Pteropus",
     "group": "bats",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Bat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Flying"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Mixed colors"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Bat nose",
+        "value": "Plain/simple nose"
+      }
+    ]
   },
   {
     "key": "petaurista_philippensis",
@@ -3517,6 +3926,10 @@
         "value": "Grey"
       },
       {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
         "label": "Ear size",
         "value": "Very large"
       },
@@ -3527,39 +3940,6 @@
     ]
   },
   {
-    "key": "hipposideros_lankadiva",
-    "commonName": "Indian Roundleaf Bat",
-    "scientificName": "Hipposideros lankadiva",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_rouxii",
-    "commonName": "Indian Rufous Horseshoe Bat",
-    "scientificName": "Rhinolophus rouxii",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "tursiops_aduncus",
-    "commonName": "Indo-Pacific Bottlenose Dolphin",
-    "scientificName": "Tursiops aduncus",
-    "order": "Artiodactyla",
-    "family": "Delphinidae",
-    "genus": "Tursiops",
-    "group": "hoofed",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "neophocaena_phocaenoides",
     "commonName": "Indo-Pacific Finless Porpoise",
     "scientificName": "Neophocaena phocaenoides",
@@ -3568,7 +3948,32 @@
     "genus": "Neophocaena",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Light belly"
+      }
+    ]
   },
   {
     "key": "sousa_chinensis",
@@ -3579,7 +3984,40 @@
     "genus": "Sousa",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "White/cream"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Small fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Mottled"
+      },
+      {
+        "label": "Beak",
+        "value": "Long obvious beak"
+      }
+    ]
   },
   {
     "key": "hylopetes_phayrei",
@@ -3630,7 +4068,60 @@
     "genus": "Rattus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "trachypithecus_crepusculus",
@@ -3641,7 +4132,32 @@
     "genus": "Trachypithecus",
     "group": "primates",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Monkey-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Face marking",
+        "value": "Eye rings"
+      }
+    ]
   },
   {
     "key": "menetes_berdmorei",
@@ -3670,25 +4186,22 @@
         "value": "On the ground"
       },
       {
+        "label": "Active",
+        "value": "Daytime"
+      },
+      {
         "label": "Main colour",
         "value": "Grey"
       },
       {
         "label": "Pattern",
         "value": "Stripes"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
       }
     ]
-  },
-  {
-    "key": "niviventer_tenaster",
-    "commonName": "Indochinese Mountain White-bellied Rat",
-    "scientificName": "Niviventer tenaster",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Niviventer",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "mus_pahari",
@@ -3699,18 +4212,56 @@
     "genus": "Mus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "glischropus_bucephalus",
-    "commonName": "Indochinese Thick-thumbed Bat",
-    "scientificName": "Glischropus bucephalus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Glischropus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear size",
+        "value": "Small"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Furry but not bushy"
+      }
+    ]
   },
   {
     "key": "niviventer_fulvescens",
@@ -3721,40 +4272,48 @@
     "genus": "Niviventer",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "crocidura_indochinensis",
-    "commonName": "Indochinese White-toothed Shrew",
-    "scientificName": "Crocidura indochinensis",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Crocidura",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhizomys_sumatrensis",
-    "commonName": "Indomalayan Bamboo Rat",
-    "scientificName": "Rhizomys sumatrensis",
-    "order": "Rodentia",
-    "family": "Spalacidae",
-    "genus": "Rhizomys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "tylonycteris_fulvida",
-    "commonName": "Indomalayan Lesser Bamboo Bat",
-    "scientificName": "Tylonycteris fulvida",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Tylonycteris",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Furry but not bushy"
+      }
+    ]
   },
   {
     "key": "chiropodomys_gliroides",
@@ -3765,7 +4324,56 @@
     "genus": "Chiropodomys",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Tuft at the tip"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Furry but not bushy"
+      }
+    ]
   },
   {
     "key": "maxomys_surifer",
@@ -3776,29 +4384,48 @@
     "genus": "Maxomys",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "uropsilus_investigator",
-    "commonName": "Inquisitive Shrew Mole",
-    "scientificName": "Uropsilus investigator",
-    "order": "Eulipotyphla",
-    "family": "Talpidae",
-    "genus": "Uropsilus",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_affinis",
-    "commonName": "Intermediate Horseshoe Bat",
-    "scientificName": "Rhinolophus affinis",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "orcaella_brevirostris",
@@ -3863,6 +4490,14 @@
         "value": "Fur or hair"
       },
       {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Active",
+        "value": "Daytime"
+      },
+      {
         "label": "Main colour",
         "value": "Brown"
       },
@@ -3872,6 +4507,10 @@
       },
       {
         "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Rodent tail",
         "value": "Bushy"
       }
     ]
@@ -3921,17 +4560,6 @@
     ]
   },
   {
-    "key": "murina_jaintiana",
-    "commonName": "Jaintia Tube-nosed Bat",
-    "scientificName": "Murina jaintiana",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Murina",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "urva_javanica",
     "commonName": "Javan Mongoose",
     "scientificName": "Urva javanica",
@@ -3940,7 +4568,32 @@
     "genus": "Urva",
     "group": "carnivores",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Long body with short legs"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Active",
+        "value": "Daytime"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      }
+    ]
   },
   {
     "key": "hylomys_suillus",
@@ -3951,18 +4604,52 @@
     "genus": "Hylomys",
     "group": "shrews",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "mirostrellus_joffrei",
-    "commonName": "Joffre's Bat",
-    "scientificName": "Mirostrellus joffrei",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Mirostrellus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Shrew/mole-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Short"
+      },
+      {
+        "label": "Ear size",
+        "value": "Small"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      }
+    ]
   },
   {
     "key": "felis_chaus",
@@ -4007,28 +4694,6 @@
         "value": "Rings"
       }
     ]
-  },
-  {
-    "key": "kerivoula_kachinensis",
-    "commonName": "Kachin Woolly Bat",
-    "scientificName": "Kerivoula kachinensis",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Kerivoula",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_rex",
-    "commonName": "King Horseshoe Bat",
-    "scientificName": "Rhinolophus rex",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "craseonycteris_thonglongyai",
@@ -4081,39 +4746,6 @@
         "value": "Other"
       }
     ]
-  },
-  {
-    "key": "euroscaptor_klossi",
-    "commonName": "Kloss's Mole",
-    "scientificName": "Euroscaptor klossi",
-    "order": "Eulipotyphla",
-    "family": "Talpidae",
-    "genus": "Euroscaptor",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "apodemus_peninsulae",
-    "commonName": "Korean Field Mouse",
-    "scientificName": "Apodemus peninsulae",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Apodemus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "chiromyscus_langbianis",
-    "commonName": "Langbian Tree Rat",
-    "scientificName": "Chiromyscus langbianis",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Chiromyscus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "hylobates_lar",
@@ -4248,50 +4880,6 @@
     ]
   },
   {
-    "key": "miniopterus_magnater",
-    "commonName": "Large Long-fingered Bat",
-    "scientificName": "Miniopterus magnater",
-    "order": "Chiroptera",
-    "family": "Miniopteridae",
-    "genus": "Miniopterus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "myotis_chinensis",
-    "commonName": "Large Myotis",
-    "scientificName": "Myotis chinensis",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Myotis",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "crocidura_dracula",
-    "commonName": "Large White-toothed Shrew",
-    "scientificName": "Crocidura dracula",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Crocidura",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "apodemus_latronum",
-    "commonName": "Large-eared Field Mouse",
-    "scientificName": "Apodemus latronum",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Apodemus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "viverra_megaspila",
     "commonName": "Large-spotted Civet",
     "scientificName": "Viverra megaspila",
@@ -4384,29 +4972,32 @@
     "genus": "Muntiacus",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_pusillus",
-    "commonName": "Least Horseshoe Bat",
-    "scientificName": "Rhinolophus pusillus",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_cineraceus",
-    "commonName": "Least Roundleaf Bat",
-    "scientificName": "Hipposideros cineraceus",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Yellowish/buff"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mask-like marking"
+      },
+      {
+        "label": "Feet",
+        "value": "Hooves"
+      }
+    ]
   },
   {
     "key": "panthera_pardus",
@@ -4449,17 +5040,6 @@
     ]
   },
   {
-    "key": "leopoldamys_vociferans",
-    "commonName": "Leopoldamys vociferans",
-    "scientificName": "Leopoldamys vociferans",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Leopoldamys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "rousettus_leschenaultii",
     "commonName": "Leschenault's Rousette",
     "scientificName": "Rousettus leschenaultii",
@@ -4468,7 +5048,48 @@
     "genus": "Rousettus",
     "group": "bats",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Bat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Flying"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Tail length",
+        "value": "Short"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Pointed"
+      },
+      {
+        "label": "Snout",
+        "value": "Long and narrow"
+      },
+      {
+        "label": "Bat nose",
+        "value": "Plain/simple nose"
+      },
+      {
+        "label": "Bat tail",
+        "value": "Tail tip extends beyond the rear membrane"
+      }
+    ]
   },
   {
     "key": "megaderma_spasma",
@@ -4513,17 +5134,6 @@
         "value": "Leaf-like flap"
       }
     ]
-  },
-  {
-    "key": "scotophilus_kuhlii",
-    "commonName": "Lesser Asian Yellow Bat",
-    "scientificName": "Scotophilus kuhlii",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Scotophilus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "cannomys_badius",
@@ -4586,18 +5196,60 @@
     "genus": "Bandicota",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_stheno",
-    "commonName": "Lesser Brown Horseshoe Bat",
-    "scientificName": "Rhinolophus stheno",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Digging/burrowing"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear size",
+        "value": "Small"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Short/blunt"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "eonycteris_spelaea",
@@ -4660,18 +5312,36 @@
     "genus": "Tragulus",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "myotis_hasseltii",
-    "commonName": "Lesser Large-footed Myotis",
-    "scientificName": "Myotis hasseltii",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Myotis",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Short"
+      },
+      {
+        "label": "Feet",
+        "value": "Hooves"
+      }
+    ]
   },
   {
     "key": "rhinoceros_sondaicus",
@@ -4722,17 +5392,6 @@
     ]
   },
   {
-    "key": "emballonura_monticola",
-    "commonName": "Lesser Sheath-tailed Bat",
-    "scientificName": "Emballonura monticola",
-    "order": "Chiroptera",
-    "family": "Emballonuridae",
-    "genus": "Emballonura",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "cynopterus_brachyotis",
     "commonName": "Lesser Short-nosed Fruit Bat",
     "scientificName": "Cynopterus brachyotis",
@@ -4781,50 +5440,6 @@
     ]
   },
   {
-    "key": "sorex_bedfordiae",
-    "commonName": "Lesser Striped Shrew",
-    "scientificName": "Sorex bedfordiae",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Sorex",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "mus_lepidoides",
-    "commonName": "Little Burmese Field Mouse",
-    "scientificName": "Mus lepidoides",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Mus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "mus_booduga",
-    "commonName": "Little Indian Field Mouse",
-    "scientificName": "Mus booduga",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Mus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_subbadius",
-    "commonName": "Little Nepalese Horseshoe Bat",
-    "scientificName": "Rhinolophus subbadius",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "macaca_fascicularis",
     "commonName": "Long-tailed Macaque",
     "scientificName": "Macaca fascicularis",
@@ -4871,61 +5486,6 @@
         "value": "Prominent cheek whiskers"
       }
     ]
-  },
-  {
-    "key": "hypsugo_dolichodon",
-    "commonName": "Long-toothed Pipistrelle",
-    "scientificName": "Hypsugo dolichodon",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Hypsugo",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "taphozous_longimanus",
-    "commonName": "Long-winged Sheath-tailed Bat",
-    "scientificName": "Taphozous longimanus",
-    "order": "Chiroptera",
-    "family": "Emballonuridae",
-    "genus": "Taphozous",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "indopacetus_pacificus",
-    "commonName": "Longman's Beaked Whale",
-    "scientificName": "Indopacetus pacificus",
-    "order": "Artiodactyla",
-    "family": "Ziphiidae",
-    "genus": "Indopacetus",
-    "group": "hoofed",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "chodsigoa_parca",
-    "commonName": "Lowe's Brown-toothed Shrew",
-    "scientificName": "Chodsigoa parca",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Chodsigoa",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "berylmys_mackenziei",
-    "commonName": "Mackenzie's White-toothed Rat",
-    "scientificName": "Berylmys mackenziei",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Berylmys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "neofelis_nebulosa",
@@ -5024,28 +5584,6 @@
     ]
   },
   {
-    "key": "tylonycteris_malayana",
-    "commonName": "Malayan Greater Bamboo Bat",
-    "scientificName": "Tylonycteris malayana",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Tylonycteris",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_malayanus",
-    "commonName": "Malayan Horseshoe Bat",
-    "scientificName": "Rhinolophus malayanus",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "hystrix_brachyura",
     "commonName": "Malayan Porcupine",
     "scientificName": "Hystrix brachyura",
@@ -5090,17 +5628,6 @@
     ]
   },
   {
-    "key": "nycteris_tragata",
-    "commonName": "Malayan Slit-faced Bat",
-    "scientificName": "Nycteris tragata",
-    "order": "Chiroptera",
-    "family": "Nycteridae",
-    "genus": "Nycteris",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "tapirus_indicus",
     "commonName": "Malayan Tapir",
     "scientificName": "Tapirus indicus",
@@ -5131,17 +5658,6 @@
         "value": "Hooves"
       }
     ]
-  },
-  {
-    "key": "berylmys_manipulus",
-    "commonName": "Manipur White-toothed Rat",
-    "scientificName": "Berylmys manipulus",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Berylmys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "pardofelis_marmorata",
@@ -5194,17 +5710,6 @@
         "value": "Dark tip"
       }
     ]
-  },
-  {
-    "key": "rhinolophus_marshalli",
-    "commonName": "Marshall's Horseshoe Bat",
-    "scientificName": "Rhinolophus marshalli",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "paguma_larvata",
@@ -5267,18 +5772,32 @@
     "genus": "Peponocephala",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "microtus_clarkei",
-    "commonName": "Microtus clarkei",
-    "scientificName": "Microtus clarkei",
-    "order": "Rodentia",
-    "family": "Cricetidae",
-    "genus": "Microtus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Black"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Mixed pattern"
+      }
+    ]
   },
   {
     "key": "echinosorex_gymnura",
@@ -5325,17 +5844,6 @@
     ]
   },
   {
-    "key": "olisthomys_morrisi",
-    "commonName": "Morris's Flying Squirrel",
-    "scientificName": "Olisthomys morrisi",
-    "order": "Rodentia",
-    "family": "Sciuridae",
-    "genus": "Olisthomys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "ochotona_thibetana",
     "commonName": "Moupin Pika",
     "scientificName": "Ochotona thibetana",
@@ -5344,51 +5852,40 @@
     "genus": "Ochotona",
     "group": "other",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "sundamys_muelleri",
-    "commonName": "Müller's Rat",
-    "scientificName": "Sundamys muelleri",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Sundamys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "murina_huttoni",
-    "commonName": "Murina huttoni",
-    "scientificName": "Murina huttoni",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Murina",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "taphozous_nudiventris",
-    "commonName": "Naked-rumped Tomb Bat",
-    "scientificName": "Taphozous nudiventris",
-    "order": "Chiroptera",
-    "family": "Emballonuridae",
-    "genus": "Taphozous",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "myotis_muricola",
-    "commonName": "Nepalese Whiskered Myotis",
-    "scientificName": "Myotis muricola",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Myotis",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Rabbit/hare-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Active",
+        "value": "Daytime"
+      },
+      {
+        "label": "Main colour",
+        "value": "Yellowish/buff"
+      },
+      {
+        "label": "Tail length",
+        "value": "No obvious tail"
+      },
+      {
+        "label": "Ear size",
+        "value": "Small"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      }
+    ]
   },
   {
     "key": "tragulus_williamsoni",
@@ -5399,7 +5896,36 @@
     "genus": "Tragulus",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Short"
+      },
+      {
+        "label": "Feet",
+        "value": "Hooves"
+      }
+    ]
   },
   {
     "key": "callosciurus_caniceps",
@@ -5410,7 +5936,44 @@
     "genus": "Callosciurus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Squirrel-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Mixed colors"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
+      }
+    ]
   },
   {
     "key": "arctonyx_albogularis",
@@ -5421,7 +5984,28 @@
     "genus": "Arctonyx",
     "group": "carnivores",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Long body with short legs"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Main colour",
+        "value": "Mixed colors"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Short"
+      }
+    ]
   },
   {
     "key": "macaca_leonina",
@@ -5460,7 +6044,32 @@
     "genus": "Muntiacus",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Snout",
+        "value": "Long and narrow"
+      },
+      {
+        "label": "Feet",
+        "value": "Hooves"
+      }
+    ]
   },
   {
     "key": "tupaia_belangeri",
@@ -5507,28 +6116,6 @@
     ]
   },
   {
-    "key": "rhinolophus_perniger",
-    "commonName": "Northern Woolly Horseshoe Bat",
-    "scientificName": "Rhinolophus perniger",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "balaenoptera_omurai",
-    "commonName": "Omura's Whale",
-    "scientificName": "Balaenoptera omurai",
-    "order": "Artiodactyla",
-    "family": "Balaenopteridae",
-    "genus": "Balaenoptera",
-    "group": "hoofed",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "dremomys_lokriah",
     "commonName": "Orange-bellied Himalayan Squirrel",
     "scientificName": "Dremomys lokriah",
@@ -5537,7 +6124,44 @@
     "genus": "Dremomys",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Squirrel-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
+      }
+    ]
   },
   {
     "key": "rattus_exulans",
@@ -5548,7 +6172,60 @@
     "genus": "Rattus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "kerivoula_picta",
@@ -5559,7 +6236,48 @@
     "genus": "Kerivoula",
     "group": "bats",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Bat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Flying"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mixed pattern"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Funnel-like"
+      },
+      {
+        "label": "Bat nose",
+        "value": "Plain/simple nose"
+      }
+    ]
   },
   {
     "key": "callosciurus_erythraeus",
@@ -5588,6 +6306,10 @@
         "value": "In a tree or bush"
       },
       {
+        "label": "Active",
+        "value": "Daytime"
+      },
+      {
         "label": "Main colour",
         "value": "Mixed colors"
       },
@@ -5597,6 +6319,10 @@
       },
       {
         "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Rodent tail",
         "value": "Bushy"
       }
     ]
@@ -5610,7 +6336,40 @@
     "genus": "Stenella",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Mixed colors"
+      },
+      {
+        "label": "Pattern",
+        "value": "Spots"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Mottled"
+      },
+      {
+        "label": "Beak",
+        "value": "Long obvious beak"
+      }
+    ]
   },
   {
     "key": "paradoxurus_musangus",
@@ -5621,7 +6380,44 @@
     "genus": "Paradoxurus",
     "group": "carnivores",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Long body with short legs"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Dark brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mixed pattern"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Face marking",
+        "value": "Dark mask"
+      }
+    ]
   },
   {
     "key": "hylopetes_alboniger",
@@ -5664,28 +6460,6 @@
     ]
   },
   {
-    "key": "rhinolophus_pearsonii",
-    "commonName": "Pearson's Horseshoe Bat",
-    "scientificName": "Rhinolophus pearsonii",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "eothenomys_melanogaster",
-    "commonName": "Pere David's Red-backed Vole",
-    "scientificName": "Eothenomys melanogaster",
-    "order": "Rodentia",
-    "family": "Cricetidae",
-    "genus": "Eothenomys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "dremomys_pernyi",
     "commonName": "Perny's Long-nosed Squirrel",
     "scientificName": "Dremomys pernyi",
@@ -5726,6 +6500,10 @@
       {
         "label": "Snout",
         "value": "Long/pointed"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
       }
     ]
   },
@@ -5738,40 +6516,48 @@
     "genus": "Petaurista",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "petaurista_sybilla",
-    "commonName": "Petaurista sybilla",
-    "scientificName": "Petaurista sybilla",
-    "order": "Rodentia",
-    "family": "Sciuridae",
-    "genus": "Petaurista",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "petaurista_yunanensis",
-    "commonName": "Petaurista yunanensis",
-    "scientificName": "Petaurista yunanensis",
-    "order": "Rodentia",
-    "family": "Sciuridae",
-    "genus": "Petaurista",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "phoniscus_jagorii",
-    "commonName": "Peters's Trumpet-eared Bat",
-    "scientificName": "Phoniscus jagorii",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Phoniscus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Gliding mammal-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Gliding"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mixed pattern"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Gliding membrane",
+        "value": "Yes"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
+      }
+    ]
   },
   {
     "key": "trachypithecus_phayrei",
@@ -5810,94 +6596,6 @@
     ]
   },
   {
-    "key": "callosciurus_phayrei",
-    "commonName": "Phayre's Squirrel",
-    "scientificName": "Callosciurus phayrei",
-    "order": "Rodentia",
-    "family": "Sciuridae",
-    "genus": "Callosciurus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "pipistrellus_abramus",
-    "commonName": "Pipistrellus abramus",
-    "scientificName": "Pipistrellus abramus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Pipistrellus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "pipistrellus_ceylonicus",
-    "commonName": "Pipistrellus ceylonicus",
-    "scientificName": "Pipistrellus ceylonicus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Pipistrellus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "pipistrellus_coromandra",
-    "commonName": "Pipistrellus coromandra",
-    "scientificName": "Pipistrellus coromandra",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Pipistrellus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "pipistrellus_javanicus",
-    "commonName": "Pipistrellus javanicus",
-    "scientificName": "Pipistrellus javanicus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Pipistrellus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "pipistrellus_paterculus",
-    "commonName": "Pipistrellus paterculus",
-    "scientificName": "Pipistrellus paterculus",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Pipistrellus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "pipistrellus_tenuis",
-    "commonName": "Pipistrellus tenuis",
-    "scientificName": "Pipistrellus tenuis",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Pipistrellus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_pomona",
-    "commonName": "Pomona Roundleaf Bat",
-    "scientificName": "Hipposideros pomona",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "trachypithecus_popa",
     "commonName": "Popa Langur",
     "scientificName": "Trachypithecus popa",
@@ -5930,17 +6628,6 @@
     ]
   },
   {
-    "key": "micromys_pygmaeus",
-    "commonName": "Pygmy Harvest Mouse",
-    "scientificName": "Micromys pygmaeus",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Micromys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "feresa_attenuata",
     "commonName": "Pygmy Killer Whale",
     "scientificName": "Feresa attenuata",
@@ -5949,7 +6636,36 @@
     "genus": "Feresa",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Black"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Tall fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Light belly"
+      }
+    ]
   },
   {
     "key": "kogia_breviceps",
@@ -5960,7 +6676,36 @@
     "genus": "Kogia",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Low/rounded fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Light belly"
+      }
+    ]
   },
   {
     "key": "presbytis_femoralis",
@@ -5971,18 +6716,40 @@
     "genus": "Presbytis",
     "group": "primates",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "murina_pluvialis",
-    "commonName": "Rainforest Tube-nosed Bat",
-    "scientificName": "Murina pluvialis",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Murina",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Monkey-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Active",
+        "value": "Daytime"
+      },
+      {
+        "label": "Main colour",
+        "value": "Black"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Face marking",
+        "value": "Eye rings"
+      }
+    ]
   },
   {
     "key": "megaerops_niphanae",
@@ -6129,7 +6896,36 @@
     "genus": "Capricornis",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Deer/cattle-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Stripe along the back"
+      },
+      {
+        "label": "Tail length",
+        "value": "Short"
+      },
+      {
+        "label": "Horns / antlers",
+        "value": "Horns"
+      },
+      {
+        "label": "Horn shape",
+        "value": "Curved"
+      }
+    ]
   },
   {
     "key": "petaurista_alborufus",
@@ -6224,17 +7020,6 @@
     ]
   },
   {
-    "key": "micromys_erythrotis",
-    "commonName": "Red-eared Harvest Mouse",
-    "scientificName": "Micromys erythrotis",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Micromys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "macaca_mulatta",
     "commonName": "Rhesus Macaque",
     "scientificName": "Macaca mulatta",
@@ -6287,7 +7072,36 @@
     "genus": "Grampus",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Curved-back fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Mottled"
+      }
+    ]
   },
   {
     "key": "rattus_rattus",
@@ -6298,7 +7112,60 @@
     "genus": "Rattus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "Building/roof"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Black"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Large"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "steno_bredanensis",
@@ -6309,18 +7176,40 @@
     "genus": "Steno",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "murina_cyclotis",
-    "commonName": "Round-eared Tube-nosed Bat",
-    "scientificName": "Murina cyclotis",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Murina",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Tall fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Light belly"
+      },
+      {
+        "label": "Beak",
+        "value": "Long obvious beak"
+      }
+    ]
   },
   {
     "key": "mus_caroli",
@@ -6331,7 +7220,56 @@
     "genus": "Mus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "rusa_unicolor",
@@ -6370,39 +7308,6 @@
     ]
   },
   {
-    "key": "bandicota_savilei",
-    "commonName": "Savile's Bandicoot Rat",
-    "scientificName": "Bandicota savilei",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Bandicota",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "scaptonyx_fusicaudus",
-    "commonName": "Scaptonyx fusicaudus",
-    "scientificName": "Scaptonyx fusicaudus",
-    "order": "Eulipotyphla",
-    "family": "Talpidae",
-    "genus": "Scaptonyx",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_speoris",
-    "commonName": "Schneider's Roundleaf Bat",
-    "scientificName": "Hipposideros speoris",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "balaenoptera_borealis",
     "commonName": "Sei Whale",
     "scientificName": "Balaenoptera borealis",
@@ -6411,29 +7316,36 @@
     "genus": "Balaenoptera",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_shameli",
-    "commonName": "Shamel's Horseshoe Bat",
-    "scientificName": "Rhinolophus shameli",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hipposideros_lylei",
-    "commonName": "Shield-faced Roundleaf Bat",
-    "scientificName": "Hipposideros lylei",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Hipposideros",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Curved-back fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Light belly"
+      }
+    ]
   },
   {
     "key": "globicephala_macrorhynchus",
@@ -6444,7 +7356,36 @@
     "genus": "Globicephala",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Black"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Low/rounded fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Saddle-like back patch"
+      }
+    ]
   },
   {
     "key": "manis_pentadactyla",
@@ -6483,17 +7424,6 @@
     ]
   },
   {
-    "key": "rhinolophus_shortridgei",
-    "commonName": "Shortridge's Horseshoe Bat",
-    "scientificName": "Rhinolophus shortridgei",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "trachypithecus_shortridgei",
     "commonName": "Shortridge's Langur",
     "scientificName": "Trachypithecus shortridgei",
@@ -6502,18 +7432,32 @@
     "genus": "Trachypithecus",
     "group": "primates",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "mus_shortridgei",
-    "commonName": "Shortridge's Mouse",
-    "scientificName": "Mus shortridgei",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Mus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Monkey-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Face marking",
+        "value": "Dark face"
+      }
+    ]
   },
   {
     "key": "neotetracus_sinensis",
@@ -6564,7 +7508,32 @@
     "genus": "Mustela",
     "group": "carnivores",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Long body with short legs"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Main colour",
+        "value": "Yellowish/buff"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mask-like marking"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Face marking",
+        "value": "Dark mask"
+      }
+    ]
   },
   {
     "key": "hoolock_tianxing",
@@ -6663,18 +7632,44 @@
     "genus": "Urva",
     "group": "carnivores",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "miniopterus_pusillus",
-    "commonName": "Small Long-fingered Bat",
-    "scientificName": "Miniopterus pusillus",
-    "order": "Chiroptera",
-    "family": "Miniopteridae",
-    "genus": "Miniopterus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Long body with short legs"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Active",
+        "value": "Daytime"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      }
+    ]
   },
   {
     "key": "melogale_moschata",
@@ -6693,6 +7688,14 @@
       {
         "label": "Body covering",
         "value": "Fur or hair"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
       },
       {
         "label": "Main colour",
@@ -6769,17 +7772,6 @@
     ]
   },
   {
-    "key": "niviventer_eha",
-    "commonName": "Smoke-bellied White-bellied Rat",
-    "scientificName": "Niviventer eha",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Niviventer",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "lutrogale_perspicillata",
     "commonName": "Smooth-coated Otter",
     "scientificName": "Lutrogale perspicillata",
@@ -6810,6 +7802,10 @@
         "value": "Brown"
       },
       {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
         "label": "Tail shape",
         "value": "Flattened/paddle-like"
       },
@@ -6822,39 +7818,6 @@
         "value": "Webbed feet"
       }
     ]
-  },
-  {
-    "key": "uropsilus_nivatus",
-    "commonName": "Snow Mountain Shrew Mole",
-    "scientificName": "Uropsilus nivatus",
-    "order": "Eulipotyphla",
-    "family": "Talpidae",
-    "genus": "Uropsilus",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "apodemus_draco",
-    "commonName": "South China Field Mouse",
-    "scientificName": "Apodemus draco",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Apodemus",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "crocidura_fuliginosa",
-    "commonName": "Southeast Asian White-toothed Shrew",
-    "scientificName": "Crocidura fuliginosa",
-    "order": "Eulipotyphla",
-    "family": "Soricidae",
-    "genus": "Crocidura",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
   },
   {
     "key": "ratufa_bicolor",
@@ -6971,6 +7934,10 @@
         "value": "Two-lobed fluke"
       },
       {
+        "label": "Dorsal fin",
+        "value": "Tall fin"
+      },
+      {
         "label": "Colour pattern",
         "value": "Light belly"
       },
@@ -7085,17 +8052,6 @@
     ]
   },
   {
-    "key": "aselliscus_stoliczkanus",
-    "commonName": "Stoliczka's Trident Roundleaf Bat",
-    "scientificName": "Aselliscus stoliczkanus",
-    "order": "Chiroptera",
-    "family": "Hipposideridae",
-    "genus": "Aselliscus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "martes_foina",
     "commonName": "Stone Marten",
     "scientificName": "Martes foina",
@@ -7104,18 +8060,32 @@
     "genus": "Martes",
     "group": "carnivores",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "mesoplodon_layardii",
-    "commonName": "Strap-toothed Whale",
-    "scientificName": "Mesoplodon layardii",
-    "order": "Artiodactyla",
-    "family": "Ziphiidae",
-    "genus": "Mesoplodon",
-    "group": "hoofed",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Long body with short legs"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      }
+    ]
   },
   {
     "key": "stenella_coeruleoalba",
@@ -7126,7 +8096,44 @@
     "genus": "Stenella",
     "group": "hoofed",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Whale/dolphin-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Mostly smooth-looking skin"
+      },
+      {
+        "label": "Movement",
+        "value": "Swimming"
+      },
+      {
+        "label": "Seen at",
+        "value": "Sea/coast"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Stripes"
+      },
+      {
+        "label": "Dorsal fin",
+        "value": "Tall fin"
+      },
+      {
+        "label": "Colour pattern",
+        "value": "Striped"
+      },
+      {
+        "label": "Beak",
+        "value": "Long obvious beak"
+      }
+    ]
   },
   {
     "key": "apodemus_agrarius",
@@ -7137,7 +8144,56 @@
     "genus": "Apodemus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Walking/running"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Stripe along the back"
+      },
+      {
+        "label": "Tail length",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear size",
+        "value": "Small"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "rhinopithecus_strykeri",
@@ -7388,17 +8444,6 @@
     ]
   },
   {
-    "key": "niviventer_cremoriventer",
-    "commonName": "Sundaic Arboreal White-bellied Rat",
-    "scientificName": "Niviventer cremoriventer",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Niviventer",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "tamiops_swinhoei",
     "commonName": "Swinhoe's Striped Squirrel",
     "scientificName": "Tamiops swinhoei",
@@ -7421,8 +8466,16 @@
         "value": "Fur or hair"
       },
       {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
         "label": "Seen at",
         "value": "In a tree or bush"
+      },
+      {
+        "label": "Active",
+        "value": "Daytime"
       },
       {
         "label": "Main colour",
@@ -7431,6 +8484,14 @@
       {
         "label": "Pattern",
         "value": "Stripes"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
       }
     ]
   },
@@ -7443,51 +8504,28 @@
     "genus": "Trachypithecus",
     "group": "primates",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_thailandensis",
-    "commonName": "Thailand Horseshoe Bat",
-    "scientificName": "Rhinolophus thailandensis",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "taphozous_theobaldi",
-    "commonName": "Theobald's Tomb Bat",
-    "scientificName": "Taphozous theobaldi",
-    "order": "Chiroptera",
-    "family": "Emballonuridae",
-    "genus": "Taphozous",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_thomasi",
-    "commonName": "Thomas's Horseshoe Bat",
-    "scientificName": "Rhinolophus thomasi",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "hesperoptenus_tickelli",
-    "commonName": "Tickell's False Serotine",
-    "scientificName": "Hesperoptenus tickelli",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Hesperoptenus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Monkey-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Main colour",
+        "value": "Black"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Face marking",
+        "value": "Eye rings"
+      }
+    ]
   },
   {
     "key": "panthera_tigris",
@@ -7526,28 +8564,6 @@
     ]
   },
   {
-    "key": "kerivoula_titania",
-    "commonName": "Titania's Woolly Bat",
-    "scientificName": "Kerivoula titania",
-    "order": "Chiroptera",
-    "family": "Vespertilionidae",
-    "genus": "Kerivoula",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "trachypithecus_melamerus",
-    "commonName": "Trachypithecus melamerus",
-    "scientificName": "Trachypithecus melamerus",
-    "order": "Primates",
-    "family": "Cercopithecidae",
-    "genus": "Trachypithecus",
-    "group": "primates",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
     "key": "rhinolophus_trifoliatus",
     "commonName": "Trefoil Horseshoe Bat",
     "scientificName": "Rhinolophus trifoliatus",
@@ -7556,7 +8572,44 @@
     "genus": "Rhinolophus",
     "group": "bats",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Bat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Flying"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Bat nose",
+        "value": "Horseshoe-shaped fold"
+      },
+      {
+        "label": "Bat tail",
+        "value": "Tail tip extends beyond the rear membrane"
+      }
+    ]
   },
   {
     "key": "elaphodus_cephalophus",
@@ -7619,7 +8672,48 @@
     "genus": "Vandeleuria",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Reddish/orange"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Thin"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Furry but not bushy"
+      }
+    ]
   },
   {
     "key": "vernaya_fulva",
@@ -7630,18 +8724,56 @@
     "genus": "Vernaya",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "rhinolophus_microglobosus",
-    "commonName": "Vietnamese Brown Horseshoe Bat",
-    "scientificName": "Rhinolophus microglobosus",
-    "order": "Chiroptera",
-    "family": "Rhinolophidae",
-    "genus": "Rhinolophus",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Yellowish/buff"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Thin"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Furry but not bushy"
+      }
+    ]
   },
   {
     "key": "petinomys_vordermanni",
@@ -7652,7 +8784,52 @@
     "genus": "Petinomys",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Gliding mammal-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Gliding"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Mixed colors"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mask-like marking"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Gliding membrane",
+        "value": "Yes"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
+      }
+    ]
   },
   {
     "key": "hoolock_hoolock",
@@ -7771,40 +8948,56 @@
     "genus": "Rattus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "parascaptor_leucura",
-    "commonName": "White-tailed Mole",
-    "scientificName": "Parascaptor leucura",
-    "order": "Eulipotyphla",
-    "family": "Talpidae",
-    "genus": "Parascaptor",
-    "group": "shrews",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "maxomys_whiteheadi",
-    "commonName": "Whitehead's Sundaic Spiny Rat",
-    "scientificName": "Maxomys whiteheadi",
-    "order": "Rodentia",
-    "family": "Muridae",
-    "genus": "Maxomys",
-    "group": "rodents",
-    "conservationStatus": "",
-    "traits": []
-  },
-  {
-    "key": "mops_plicatus",
-    "commonName": "Wrinkle-lipped Free-tailed Bat",
-    "scientificName": "Mops plicatus",
-    "order": "Chiroptera",
-    "family": "Molossidae",
-    "genus": "Mops",
-    "group": "bats",
-    "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Mouse/rat-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Climbing"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Main colour",
+        "value": "Grey"
+      },
+      {
+        "label": "Pattern",
+        "value": "Mostly plain"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Rounded"
+      },
+      {
+        "label": "Snout",
+        "value": "Long/pointed"
+      },
+      {
+        "label": "Feet",
+        "value": "Small rodent-like feet"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Mostly bare/scaly"
+      }
+    ]
   },
   {
     "key": "mustela_kathiah",
@@ -7815,7 +9008,40 @@
     "genus": "Mustela",
     "group": "carnivores",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Long body with short legs"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Seen at",
+        "value": "On the ground"
+      },
+      {
+        "label": "Active",
+        "value": "Night"
+      },
+      {
+        "label": "Main colour",
+        "value": "Dark brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      }
+    ]
   },
   {
     "key": "martes_flavigula",
@@ -7894,6 +9120,55 @@
     "genus": "Eupetaurus",
     "group": "rodents",
     "conservationStatus": "",
-    "traits": []
+    "traits": [
+      {
+        "label": "Body shape",
+        "value": "Gliding mammal-like"
+      },
+      {
+        "label": "Body covering",
+        "value": "Fur or hair"
+      },
+      {
+        "label": "Movement",
+        "value": "Gliding"
+      },
+      {
+        "label": "Seen at",
+        "value": "In a tree or bush"
+      },
+      {
+        "label": "Main colour",
+        "value": "Brown"
+      },
+      {
+        "label": "Pattern",
+        "value": "Large patches"
+      },
+      {
+        "label": "Tail length",
+        "value": "Very long"
+      },
+      {
+        "label": "Tail shape",
+        "value": "Bushy"
+      },
+      {
+        "label": "Ear size",
+        "value": "Medium"
+      },
+      {
+        "label": "Ear shape",
+        "value": "Pointed"
+      },
+      {
+        "label": "Gliding membrane",
+        "value": "Yes"
+      },
+      {
+        "label": "Rodent tail",
+        "value": "Bushy"
+      }
+    ]
   }
 ]

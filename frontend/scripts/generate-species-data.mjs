@@ -108,18 +108,23 @@ const ORDER_GROUPS = {
 const groupFor = (order) => ORDER_GROUPS[order] || 'other'
 
 const species = master
-  .filter((row) => row.species_key && row.identification_active !== 'false')
-  .map((row) => ({
-    key: row.species_key,
-    commonName: row.common_name || row.scientific_name,
-    scientificName: row.scientific_name,
-    order: row.order || '',
-    family: row.family || '',
-    genus: row.genus || '',
-    group: groupFor(row.order),
-    conservationStatus: row.conservation_status || '',
-    traits: traitsFor(row.species_key),
-  }))
+  .filter((row) => row.species_key)
+  .map((row) => {
+    const traits = traitsFor(row.species_key)
+    return {
+      key: row.species_key,
+      commonName: row.common_name || row.scientific_name,
+      scientificName: row.scientific_name,
+      order: row.order || '',
+      family: row.family || '',
+      genus: row.genus || '',
+      group: groupFor(row.order),
+      conservationStatus: row.conservation_status || '',
+      traits,
+    }
+  })
+  // Explore shows the implemented identifier catalogue, not the full checklist.
+  .filter((species) => species.traits.length > 0)
   .sort((a, b) => a.commonName.localeCompare(b.commonName))
 
 mkdirSync(dirname(outFile), { recursive: true })

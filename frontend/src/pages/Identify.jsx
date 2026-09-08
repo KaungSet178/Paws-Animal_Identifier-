@@ -235,7 +235,7 @@ export default function Identify() {
         <section className="result-screen">
           <header className="result-header">
             <p className="result-eyebrow">Identification Result</p>
-            <h2>Best match</h2>
+            <h2>{candidates.length > 1 ? 'Primary possible match' : 'Best match'}</h2>
           </header>
 
           {answeredChips.length > 0 && (
@@ -246,7 +246,20 @@ export default function Identify() {
           )}
 
           {candidates.length > 0 ? (
-            <SpeciesPanel candidate={candidates[0]} highlight />
+            <>
+              <SpeciesPanel candidate={candidates[0]} highlight />
+
+              {candidates.length > 1 && (
+                <div className="result-alternatives">
+                  <h3>Alternative possible matches</h3>
+                  <div className="ambiguous-list">
+                    {candidates.slice(1, 3).map((candidate) => (
+                      <SpeciesPanel candidate={candidate} key={candidate.key} />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
           ) : (
             <div className="no-match-card">
               <SearchX size={32} />

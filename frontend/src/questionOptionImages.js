@@ -1,4 +1,17 @@
 const OPTION_IMAGE_FILES = {
+  bat_nose_shape: {
+    horseshoe_like: 'bat_nose_shape_horseshoe_like.jpg',
+    leaf_like: 'bat_nose_shape_leaf_like.jpg',
+    other: 'bat_nose_shape_other.jpg',
+    plain: 'bat_nose_shape_plain.jpg',
+    tube_like: 'bat_nose_shape_tube_like.jpg',
+  },
+  bat_tail_visibility: {
+    no_tail_visible: 'bat_tail_visibility_no_tail_visible.jpg',
+    tail_tip_beyond_membrane: 'bat_tail_visibility_tail_tip_beyond_membrane.jpg',
+    tail_visible: 'bat_tail_visibility_tail_visible.jpg',
+    tail_within_membrane: 'bat_tail_visibility_tail_within_membrane.jpg',
+  },
   body_covering: {
     fur_or_hair: 'body_covering_fur_or_hair.jpg',
     mostly_smooth_skin: 'body_covering_mostly_smooth_skin.jpg',
@@ -22,6 +35,7 @@ const OPTION_IMAGE_FILES = {
     rhino_like: 'body_form_rhino_like.jpg',
     rodent_like: 'body_form_rodent_like.jpg',
     shrew_mole_like: 'body_form_shrew_mole_like.jpg',
+    squirrel_like: 'body_form_squirrel_like.jpg',
     porcupine_like: 'body_form_porcupine_like.jpg',
     tapir_like: 'body_form_tapir_like.jpg',
     whale_dolphin_like: 'body_form_whale_dolphin_like.jpg',
@@ -37,6 +51,13 @@ const OPTION_IMAGE_FILES = {
     spotted: 'body_pattern_spotted.jpg',
     striped: 'body_pattern_striped.jpg',
   },
+  body_size_impression: {
+    cow_or_larger: 'body_size_impression_cow_or_larger.jpg',
+    deer_sized: 'body_size_impression_deer_sized.jpg',
+    dog_sized: 'body_size_impression_dog_sized.jpg',
+    mouse_or_smaller: 'body_size_impression_mouse_or_smaller.jpg',
+    rabbit_or_cat_sized: 'body_size_impression_rabbit_or_cat_sized.jpg',
+  },
   carnivore_face_marking: {
     cheek_stripes: 'carnivore_face_marking_cheek_stripes.jpg',
     eye_stripes: 'carnivore_face_marking_eye_stripes.jpg',
@@ -51,7 +72,9 @@ const OPTION_IMAGE_FILES = {
     white_tip: 'carnivore_tail_marking_white_tip.jpg',
   },
   ear_shape_simple: {
+    broad: 'ear_shape_simple_broad.jpg',
     funnel_like: 'ear_shape_simple_funnel_like.jpg',
+    long_upright: 'ear_shape_simple_long_upright.jpg',
     pointed: 'ear_shape_simple_pointed.jpg',
     rounded: 'ear_shape_simple_rounded.jpg',
   },
@@ -60,13 +83,13 @@ const OPTION_IMAGE_FILES = {
     medium: 'ear_size_impression_medium.jpg',
     not_obvious: 'ear_size_impression_not_obvious.jpg',
     small: 'ear_size_impression_small.jpg',
+    very_large: 'ear_size_impression_very_large.jpg',
   },
   gliding_membrane_visible: {
     no: 'gliding_membrane_visible_no.jpg',
     yes: 'gliding_membrane_visible_yes.jpg',
   },
   horn_shape_simple: {
-    branched: 'horn_shape_simple_branched.jpg',
     curved: 'horn_shape_simple_curved.jpg',
     long_straight: 'horn_shape_simple_long_straight.jpg',
     spiral: 'horn_shape_simple_spiral.jpg',
@@ -75,11 +98,21 @@ const OPTION_IMAGE_FILES = {
     branched_antlers: 'horns_or_antlers_branched_antlers.jpg',
     horns: 'horns_or_antlers_horns.jpg',
     none_visible: 'horns_or_antlers_none_visible.jpg',
+    single_horn: 'horns_or_antlers_single_horn.jpg',
+  },
+  ungulate_horn_or_antler_layout: {
+    branched_antlers: 'ungulate_horn_or_antler_layout_branched_antlers.jpg',
+    short_backward_curved_horns: 'ungulate_horn_or_antler_layout_short_backward_curved_horns.jpg',
+    upright_inward_curved_horns: 'ungulate_horn_or_antler_layout_upright_inward_curved_horns.jpg',
+    massive_wide_sweeping_horns: 'ungulate_horn_or_antler_layout_massive_wide_sweeping_horns.jpg',
+    small_hidden_antlers: 'ungulate_horn_or_antler_layout_small_hidden_antlers.jpg',
+    no_horns_or_antlers_seen: 'ungulate_horn_or_antler_layout_no_horns_or_antlers_seen.jpg',
   },
   leg_foot_appearance: {
     broad_digging_feet: 'leg_foot_appearance_broad_digging_feet.jpg',
     grasping_hands_or_feet: 'leg_foot_appearance_grasping_hands_or_feet.jpg',
     hooves: 'leg_foot_appearance_hooves.jpg',
+    paws: 'leg_foot_appearance_paws.jpg',
     small_rodent_like_feet: 'leg_foot_appearance_small_rodent_like_feet.jpg',
     webbed_feet: 'leg_foot_appearance_webbed_feet.jpg',
   },
@@ -102,20 +135,34 @@ const OPTION_IMAGE_FILES = {
     yes: 'quills_or_spines_visible_yes.jpg',
   },
   tail_impression: {
-    bushy: 'tail_impression_bushy.jpg',
     long: 'tail_impression_long.jpg',
-    not_obvious: 'tail_impression_not_obvious.jpg',
+    medium: 'tail_impression_medium.jpg',
     short: 'tail_impression_short.jpg',
-    thin: 'tail_impression_thin.jpg',
     very_long: 'tail_impression_very_long.jpg',
-    very_short: 'tail_impression_very_short.jpg',
   },
   tail_shape: {
     bushy: 'tail_shape_bushy.jpg',
     flattened: 'tail_shape_flattened.jpg',
     fluked: 'tail_shape_fluked.jpg',
+    ringed: 'tail_shape_ringed.jpg',
+    thick: 'tail_shape_thick.jpg',
     thin: 'tail_shape_thin.jpg',
     tufted_tip: 'tail_shape_tufted_tip.jpg',
+  },
+  snout_shape_simple: {
+    long_narrow: 'snout_shape_simple_long_narrow.jpg',
+    long_pointed: 'snout_shape_simple_long_pointed.jpg',
+    pig_like: 'snout_shape_simple_pig_like.jpg',
+    short_blunt: 'snout_shape_simple_short_blunt.jpg',
+    trunk_like: 'snout_shape_simple_trunk_like.jpg',
+  },
+  ungulate_marking_layout: {
+    white_lower_legs: 'ungulate_marking_layout_white_lower_legs.jpg',
+    pale_rump_patch: 'ungulate_marking_layout_pale_rump_patch.jpg',
+    white_throat_bib: 'ungulate_marking_layout_white_throat_bib.jpg',
+    pale_moustache_or_throat: 'ungulate_marking_layout_pale_moustache_or_throat.jpg',
+    plain_no_obvious_marking: 'ungulate_marking_layout_plain_no_obvious_marking.jpg',
+    side_throat_stripes: 'ungulate_marking_layout_side_throat_stripes.jpg',
   },
 }
 
@@ -123,7 +170,6 @@ const OPTION_IMAGE_OVERRIDES = {
   body_form: {
     hoofed_like: 'deer_like',
     mouse_rat_like: 'rodent_like',
-    squirrel_like: 'rodent_like',
     monkey_like: 'primate_like',
   },
 }

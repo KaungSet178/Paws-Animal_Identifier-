@@ -686,6 +686,15 @@ main {
   margin-top: 0;
 }
 
+.result-alternatives {
+  margin-top: 20px;
+}
+
+.result-alternatives h3 {
+  margin: 0 0 14px;
+  font-size: 18px;
+}
+
 .ambiguous-note {
   margin: 0 0 20px;
   padding: 14px 18px;
